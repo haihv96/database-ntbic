@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\khoa-hoc-cong-nghe;
+namespace App\Http\Controllers\khoa_hoc_cong_nghe;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
