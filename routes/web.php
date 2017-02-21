@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('home');
 });
+//Route::get('hihi','de_tai_du_an_cac_cap\DetailController@a');
+Route::group(['prefix' => 'projects'],function () {
+    Route::get('query1',function () {
+        $data = DB::table('de_tai_du_an_cac_cap')->where('id',1)->get();
+        echo "<pre>";
+        print_r($data);
+        echo "</pre>";
+    });
+});
+//Route::get('some','Panel\PanelControllder@a');
+//Route::get('hihi','Auth\ResetPasswordController@a');
