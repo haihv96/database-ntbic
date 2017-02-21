@@ -21,6 +21,16 @@ Route::group(['prefix'=>'doanh-nghiep'], function(){
     
 });
 
+Route::group(['prefix'=>'de-tai-du-an'], function(){
+    Route::get('{link}','de_tai_du_an\DetailController@index');
+    
+});
+
+//khoa hoc cong nghe lấy id làm link 
+Route::group(['prefix'=>'khoa-hoc-cong-nghe'], function(){
+    Route::get('{link}','khoa_hoc_cong_nghe\DetailController@index');
+    
+});
 //về phần chuyên gia khcn mô hình CSDL em thấy chưa rõ anh Hải xem giúp em nhé
 Route::group(['prefix'=>'chuyen-gia'], function(){
     Route::get('{link}','chuyen_gia\DetailController@index');
