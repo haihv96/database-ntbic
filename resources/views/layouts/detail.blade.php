@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="">
-</head>
-<body>
-	<div class="header">
-		{{-- code --}}
+@extends('layouts.master')
+
+<!-- content -->
+@section('content')
+	<div class="row">
+		<div class="col-md-9 main-content">
+			@yield('main-content')
+		</div>
+		<div class="col-md-3 right-side-bar">
+			SIDEBAR
+		</div>
 	</div>
-	<div class="search-option">
-		@yield('search-option')
-		Phần này chứa thanh search và các lựa chọn nhỏ khi search. đã được khoanh vùng đen ở Requirement
-	</div>
-	<div class="main">
-		@yield('main')
-	</div>
-	<div class="sidebar">
-		@yield('sidebar')
-	</div>
-</body>
-</html>
+@endsection
+<!-- end content -->
