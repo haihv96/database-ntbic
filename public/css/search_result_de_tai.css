@@ -1,6 +1,10 @@
 .head-dataTable{
 	background-color: lightgrey;
 }
+#de-tai{
+	border-bottom: 3px solid orange;
+	color:orange;
+}
 .search-info{
 	margin-top: 10px;
 	margin-left: 15px;

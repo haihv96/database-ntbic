@@ -1,14 +1,14 @@
 .head-dataTable{
 	background-color: lightgrey;
 }
-#chuyen-gia{
-	border-bottom: 3px solid orange;
-	color:orange;
-}
 .search-info{
 	margin-top: 10px;
 	margin-left: 15px;
 	margin-bottom: 0
+}
+#san-pham{
+	border-bottom: 3px solid orange;
+	color:orange;
 }
 #myTable{
 	border: 0.2px solid lightgrey;
@@ -21,7 +21,7 @@
 #myTable th{
 	border: 0.2px solid lightgrey;
 }
-.ten_chuyen_gia{
+.ten_san_pham{
 	color: #1a8cff;
 	font-weight: bold;
 }
@@ -29,7 +29,7 @@
 	margin-bottom: 15px;
 	margin-top:30px 
 }
-.anh_chuyen_gia{
+.anh_san_pham{
 	max-height: 65px;
 	max-width: auto;
 }

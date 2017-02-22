@@ -13,7 +13,7 @@
 		</div>
 		<table class="dataTable table-hover table-responsive" id="myTable">
 			<thead class="head-dataTable">
-				<th>No.</th>
+				<th></th>
 				<th>Ảnh</th>
 				<th>Họ và tên</th>
 				<th>Cơ quan công tác</th>
@@ -24,7 +24,7 @@
 				@for($i=0;$i<200;$i++)
 					<tr>
 						<td>{{$i+1}}</td>
-						<td><img src="#" alt="ảnh"></td>
+						<td><img src="#" alt="ảnh" class="img-responsive anh_chuyen_gia"></td>
 						<td><a href="#" class="ten_chuyen_gia">Trần Duy Minh</a></td>
 						<td>ntbic</td>
 						<td>cnttah jaejhj najeh jaieuwi hewuy hewyeu hhw hh euyweu hwuewyg whuhwuh hfuwhuh uhfuwhu</td>

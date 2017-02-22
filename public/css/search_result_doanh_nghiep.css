@@ -1,7 +1,7 @@
 .head-dataTable{
 	background-color: lightgrey;
 }
-#chuyen-gia{
+#doanh-nghiep{
 	border-bottom: 3px solid orange;
 	color:orange;
 }
@@ -21,7 +21,7 @@
 #myTable th{
 	border: 0.2px solid lightgrey;
 }
-.ten_chuyen_gia{
+.ten_doanh_nghiep{
 	color: #1a8cff;
 	font-weight: bold;
 }
@@ -29,7 +29,7 @@
 	margin-bottom: 15px;
 	margin-top:30px 
 }
-.anh_chuyen_gia{
+.logo_doanh_nghiep{
 	max-height: 65px;
 	max-width: auto;
 }

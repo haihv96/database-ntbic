@@ -78,7 +78,6 @@
 					</ul>
 				</div>
 			</div>
-			<hr>
 			<div class="row col-md-12">
 				<div class="filter">
 					<ul class="list-search-filter">

@@ -13,7 +13,7 @@
 		</div>
 		<table class="dataTable table-hover table-responsive" id="myTable">
 			<thead class="head-dataTable">
-				<th>No.</th>
+				<th></th>
 				<th>Tên đề tài, dự án</th>
 				<th>Lĩnh vực KH&CN</th>
 				<th>Mã số, ký hiệu</th>
@@ -24,7 +24,7 @@
 				@for($i=0;$i<200;$i++)
 					<tr>
 						<td>{{$i+1}}</td>
-						<td><a href="" class="ten_de_tai">Tên đề tài, dự án</a></td>
+						<td><a href="#" class="ten_de_tai">Tên đề tài, dự án</a></td>
 						<td>Công nghệ thông tin</td>
 						<td>k59clc</td>
 						<td>Dương Lê Minh</td>

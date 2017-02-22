@@ -13,21 +13,21 @@
 		</div>
 		<table class="dataTable table-hover table-responsive" id="myTable">
 			<thead class="head-dataTable">
-				<th>No.</th>
-				<th>Ảnh</th>
-				<th>Họ và tên</th>
-				<th>Cơ quan công tác</th>
-				<th>Lĩnh vực nghiên cứu</th>
-				<th>Tỉnh thành</th>
+				<th></th>
+				<th>Logo</th>
+				<th>Tên doanh nghiệp/ tổ chức</th>
+				<th>Lĩnh vực KH&CN</th>
+				<th>Trụ sở</th>
+				<th>Tỉnh, thành phố</th>
 			</thead>
 			<tbody>
 				@for($i=0;$i<200;$i++)
 					<tr>
 						<td>{{$i+1}}</td>
-						<td><img src="#" alt="ảnh"></td>
-						<td><a href="#" class="ten_chuyen_gia">Trần Duy Minh</a></td>
-						<td>ntbic</td>
-						<td>cnttah jaejhj najeh jaieuwi hewuy hewyeu hhw hh euyweu hwuewyg whuhwuh hfuwhuh uhfuwhu</td>
+						<td><img src="#" alt="logo" class="logo_doanh_nghiep"></td>
+						<td><a href="#" class="ten_doanh_nghiep">Tên doanh nghiệp/ tổ chức</a></td>
+						<td>công nghệ thông tin</td>
+						<td>cnttah jaejhj najeh jaieuwi hewuy hewyeu hhw hh </td>
 						<td>ha noi</td>
 					</tr>
 				@endfor

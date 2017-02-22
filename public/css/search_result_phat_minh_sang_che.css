@@ -1,7 +1,7 @@
 .head-dataTable{
 	background-color: lightgrey;
 }
-#chuyen-gia{
+#bang-phat-minh{
 	border-bottom: 3px solid orange;
 	color:orange;
 }
@@ -21,15 +21,11 @@
 #myTable th{
 	border: 0.2px solid lightgrey;
 }
-.ten_chuyen_gia{
+.ten_bang_phat_minh{
 	color: #1a8cff;
 	font-weight: bold;
 }
 .div-content{
 	margin-bottom: 15px;
 	margin-top:30px 
-}
-.anh_chuyen_gia{
-	max-height: 65px;
-	max-width: auto;
 }
