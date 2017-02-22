@@ -1,0 +1,72 @@
+#myNavbar a:visited{
+	background-color: #3b5998
+}
+#myNavbar a{
+	color: white
+}
+#myNavbar a:hover{
+	text-decoration: none;
+	background-color: #3b5998;
+	font-weight: bold
+}
+.page-navbar{
+	background-color:#3b5998;
+	opacity: 0.8;
+	padding-left:15px;
+}
+.page-footer{
+	background-color: #bfbfbf;
+	width:100%;
+	padding-left:20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.input-group input{
+
+}
+.menu-hidden-btn{
+	color: white;
+}
+.logo{
+	font-weight: bold;
+	font-size: 25px;
+	color: white
+}
+.list-search-filter li{
+	display: inline;
+	margin-right: 20px;
+}
+hr{
+	margin: 0;
+	margin-bottom: 3px
+}
+.list-search-filter li select{
+	border: none;
+	color:#3b5998
+}
+.search-area{
+	margin-top:20px;
+	margin-bottom: 10px; 
+}
+.input-group-btn{
+	background-color:#3b5998;
+	border-radius: 8px
+}
+.input-group-btn a{
+	color: white
+}
+.div-footer a{
+	color:white;
+}
+.div-footer a:hover{
+	color: #3b5998
+}
+.div-footer{
+	background-color:#0a1429;
+	line-height: 1.7;
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+.display-block{
+	color: white
+}
