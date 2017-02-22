@@ -1,0 +1,27 @@
+.head-dataTable{
+	background-color: lightgrey;
+}
+.search-info{
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-bottom: 0
+}
+#myTable{
+	border: 0.2px solid lightgrey;
+	margin-top:15px; 
+}
+#myTable td{
+	border-bottom: 0.2px solid lightgrey;
+	word-wrap: break-word;
+}
+#myTable th{
+	border: 0.2px solid lightgrey;
+}
+.ten_de_tai{
+	color: #1a8cff;
+	font-weight: bold;
+}
+.div-content{
+	margin-bottom: 15px;
+	margin-top:30px 
+}

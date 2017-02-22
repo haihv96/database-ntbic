@@ -5,12 +5,14 @@
 	<meta charset="utf-8">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	@yield('style')
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<!-- style -->
   	<link rel="stylesheet" type="text/css" href="css/master.css">
-	@yield('style')
+	
 	<!-- end style -->
 </head>
 <body>
@@ -52,32 +54,32 @@
 	                </div>
             	</form>
 			</div>
-			<div class="row">
-				<div class="filter col-md-12">
+			<div class="row col-md-12">
+				<div class="filter">
 					<ul class="list-search-filter">
 						<li>
-							<a href="#">Tất cả</a>
+							<a href="#" id="all">Tất cả</a>
 						</li>
 						<li>
-							<a href="">Chuyên gia KH&CN</a>
+							<a href="" id="chuyen-gia">Chuyên gia KH&CN</a>
 						</li>
 						<li>
-							<a href="">Đề tài, dự án các cấp</a>
+							<a href="" id="de-tai">Đề tài, dự án các cấp</a>
 						</li>
 						<li>
-							<a href="">Bằng phát minh, sáng chế</a>
+							<a href="" id="bang-phat-minh">Bằng phát minh, sáng chế</a>
 						</li>
 						<li>
-							<a href="">Sản phẩm, công nghệ mới</a>
+							<a href="" id="san-pham">Sản phẩm, công nghệ mới</a>
 						</li>
 						<li>
-							<a href="">Doanh nghiệp KH&CN</a>
+							<a href="" id="doanh-nghiep">Doanh nghiệp KH&CN</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<hr>
-			<div class="row">
+			<div class="row col-md-12">
 				<div class="filter">
 					<ul class="list-search-filter">
 						<li>
@@ -129,12 +131,13 @@
 				</div>
 			</div>
 			<!-- end search box -->
-			@section('content')
+			@yield('content')
 		</div>
 		<div class="row div-footer">
 			<div class="container">
 				<div class="col-md-3 display-block">
 					<ul>
+						<li><a href="#">Trang chủ</a></li>
 						<li><a href="#">Dữ liệu chuyên gia KH&CN</a></li>
 						<li><a href="#">Dữ liệu đề tài, dự án KH&CN các cấp</a></li>
 						<li><a href="#">Dữ liệu phát minh, sáng chế, giải pháp</a></li>
@@ -150,7 +153,7 @@
 					</ul>
 				</div>
 				<div class="col-md-3 display-block">
-					<p>LIÊN HỆ:</p>
+					<p class="orange-text">LIÊN HỆ:</p>
 					<p>Trung tâm ươm tạo Công nghệ và Doanh nghiệp Khoa học Công nghệ- Viện ứng dụng công nghệ</p>
 					<p>Địa chỉ: 25- Lê Thánh Tông- Hoàn Kiếm- Hà Nội</p>
 					<p>Hotline: 0439336570</p>
@@ -158,7 +161,7 @@
 					<p>Facebook:</p>
 				</div>
 				<div class="col-md-3 display-block">
-					Google map
+					<p class="orange-text">GOOGLE MAP</p>
 				</div>
 			</div>
 		</div>

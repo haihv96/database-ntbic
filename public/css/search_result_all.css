@@ -1,0 +1,30 @@
+#all{
+	border-bottom: 3px solid orange;
+	color:orange;
+}
+.item-title{
+	font-weight: bold;
+	color: #1a8cff
+}
+.item-link{
+	color: green;
+	text-decoration: none;
+}
+.list-topic{
+	list-style: none
+}
+.directory{
+	margin-left: 10px;
+	margin-right: 10px
+}
+.filter-name{
+	font-weight: bold
+}
+.see-more{
+	color: #1a8cff;
+}
+.search-info{
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-bottom: 0
+}
