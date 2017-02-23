@@ -14,6 +14,7 @@ class DetailController extends Controller
        
         echo "<pre>";
         print_r($data);
+        //echo $data[0]->san_pham_khcn;
         echo "</pre>";
     }
 }
