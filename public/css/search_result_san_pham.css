@@ -1,29 +1,29 @@
 .head-dataTable{
 	background-color: #f2f2f2;
 }
-#chuyen-gia{
-	border-bottom: 3px solid green;
-	color:green;
-}
 .search-info{
 	margin-top: 10px;
-	margin-left: 0;
-	margin-bottom: 0;
+	margin-bottom: 0
+}
+#san-pham{
+	border-bottom: 3px solid green;
+	color:green;
 }
 select{
 	max-width: 165px
 }
 #myTable{
+	border: 0.2px solid #f2f2f2;
 	margin-top:15px; 
 }
 #myTable td{
-	border: 0.1px solid #f2f2f2;
+	border: 0.2px solid #f2f2f2;
 	word-wrap: break-word;
 }
 #myTable th{
 	border: 0.2px solid #f2f2f2;
 }
-.ten_chuyen_gia{
+.ten_san_pham{
 	color: #3b5998;
 	font-weight: bold;
 }
@@ -31,11 +31,11 @@ select{
 	margin-bottom: 15px;
 	margin-top:30px 
 }
-.anh_chuyen_gia{
+.anh_san_pham{
 	max-height: 65px;
 	max-width: auto;
 }
-.no{
+..no{
 	width: 5%;
 }
 .anh{
@@ -44,12 +44,12 @@ select{
 .name{
 	width: 20%;
 }
-.co_quan{
-	width: 25%;
+.ung_dung{
+	width: 35%;
 }
 .linh_vuc{
-	width: 25%;
+	width: 20%;
 }
-.tinh_thanh{
-	width: 15%;
+.cap_nhat{
+	width: 10%;
 }

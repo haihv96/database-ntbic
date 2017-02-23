@@ -25,24 +25,48 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-.input-group input{
-
-}
 .menu-hidden-btn{
 	color: white;
+}
+.filter-row{
+	margin: 0;
+	padding: 0;
+}
+.filter-row a{
+	color: black
 }
 .logo{
 	font-weight: bold;
 	font-size: 25px;
 	color: white
 }
+.sidebar-list{
+	list-style: none
+}
+.sidebar-item{
+	margin-bottom: 10px
+}
+.sidebar-item-info{
+	margin:0;
+	padding:0;
+}
+.list-search-filter{
+	margin: 0;
+	padding:0;
+}
 .list-search-filter li{
 	display: inline;
-	margin-right: 20px;
+	margin-right:10px;
+	font-size: 17px
 }
 hr{
 	margin: 0;
-	margin-bottom: 3px
+	margin-bottom: 5px;
+	margin-top: 5px
+}
+.search-form{
+	margin: 0;
+	padding:0;
 }
 .list-search-filter li select{
 	border: none;
@@ -50,11 +74,14 @@ hr{
 }
 .search-area{
 	margin-top:20px;
-	margin-bottom: 10px; 
+	margin-bottom: 10px;
+	margin-left: 0;
+	padding: 0  
 }
 .input-group-btn{
-	background-color:#3b5998;
-	border-radius: 8px
+	background-color:#2eb82e;
+	padding-left: 5px;
+	padding-right: 5px; 
 }
 .input-group-btn a{
 	color: white

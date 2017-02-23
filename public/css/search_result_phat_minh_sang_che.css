@@ -1,14 +1,13 @@
 .head-dataTable{
 	background-color: #f2f2f2;
 }
-#chuyen-gia{
+#bang-phat-minh{
 	border-bottom: 3px solid green;
 	color:green;
 }
 .search-info{
 	margin-top: 10px;
-	margin-left: 0;
-	margin-bottom: 0;
+	margin-bottom: 0
 }
 select{
 	max-width: 165px
@@ -17,13 +16,13 @@ select{
 	margin-top:15px; 
 }
 #myTable td{
-	border: 0.1px solid #f2f2f2;
+	border: 0.2px solid #f2f2f2;
 	word-wrap: break-word;
 }
 #myTable th{
 	border: 0.2px solid #f2f2f2;
 }
-.ten_chuyen_gia{
+.ten_bang_phat_minh{
 	color: #3b5998;
 	font-weight: bold;
 }
@@ -31,25 +30,21 @@ select{
 	margin-bottom: 15px;
 	margin-top:30px 
 }
-.anh_chuyen_gia{
-	max-height: 65px;
-	max-width: auto;
-}
 .no{
 	width: 5%;
 }
-.anh{
+.name{
+	width: 30%;
+}
+.so_hieu{
 	width: 10%;
 }
-.name{
+.linh_vuc{
 	width: 20%;
 }
-.co_quan{
-	width: 25%;
+.tac_gia{
+	width: 20%;
 }
-.linh_vuc{
-	width: 25%;
-}
-.tinh_thanh{
+.date{
 	width: 15%;
 }
