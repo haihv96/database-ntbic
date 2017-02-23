@@ -1,0 +1,65 @@
+.top-banner {
+	height: 350px;
+	background-image: url(http://img.freepik.com//portada/20161006035857.jpg);
+}
+.inner{
+	padding: 10%;
+	padding-top: 5%;	
+}
+strong {
+	display: inline-block;
+    font-size: 25px;
+}
+.inner1 {
+	text-align: center;
+	color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.298039) 0px 2px 0px, rgba(0, 0, 0, 0.34902) 0px 0px 10px;
+}
+.search-form {
+	padding: 15%;
+    padding-top: 3%;
+}
+fieldset {
+	padding: 5px;
+	background-color: rgba(0,0,0,0.3);
+}
+.btn {
+	width: 120px;
+}
+.inner2 {
+	color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.298039) 0px 2px 0px, rgba(0, 0, 0, 0.34902) 0px 0px 10px;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 25px;
+}
+img {
+	width: 100%;
+}
+.carousel {
+	height: 300px;
+}
+.img-circle {
+	padding: 0 60px 0 60px;
+}
+.ul_listloop {
+	padding-top: 40px;
+	font-size: 14px;
+}
+
+.w3-col  p {
+	color:#999;	
+}
+.viewmore {
+	text-decoration: none;
+	color:blue;
+	float: right;
+
+}
+#map_canvas {
+           width: 100%;
+           height: 300px;
+           border:solid 1px #ccc;
+}
+
+
