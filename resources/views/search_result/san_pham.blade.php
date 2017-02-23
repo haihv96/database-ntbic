@@ -7,18 +7,49 @@
 
 <!-- start content -->
 @section('content')
+	<div class="row col-md-12 filter-row">
+				<div class="filter">
+					<ul class="list-search-filter">
+						<li>
+							<select>
+							  <option value="volvo">Tìm theo</option>
+							  <option value="volvo">Tên sản phẩm, ứng dụng</option>
+							  <option value="saab">Khả năng ứng dụng</option>
+							  <option value="opel">Mô tả sản phẩm, ứng dụng</option>
+							  <option value="audi">Giải quyết bài toán</option>
+							  <option value="audi">Thị trường ứng dụng</option>
+							</select>
+						</li>
+						<li>
+							<select>
+							  <option value="volvo">Lĩnh vực KH&CN</option>
+							  <option value="volvo">Công nghệ thông tin và truyền thông</option>
+							  <option value="saab">Công nghệ sinh học</option>
+							  <option value="opel">Công nghệ vật liệu mới</option>
+							  <option value="audi">Công nghệ chế tạo máy, tự động hóa</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				<hr>
+	</div>
+
+
+
+	<!-- main content, display result -->
+	@section('main-content')
 	<div class="row col-md-12 div-content">
 		<div class="search-info">
 		<p>Kết quả tìm kiếm : xxxxxxx trong xxxxxxxxxx giây</p>
 		</div>
 		<table class="dataTable table-hover table-responsive" id="myTable">
 			<thead class="head-dataTable">
-				<th></th>
-				<th>Hình ảnh</th>
-				<th>Tên công nghệ, ứng dụng</th>
-				<th>Lĩnh vực KH&CN</th>
-				<th>Khả năng ứng dụng</th>
-				<th>Cập nhật</th>
+				<th class="no"></th>
+				<th class="anh">Hình ảnh</th>
+				<th class="name">Tên công nghệ, ứng dụng</th>
+				<th class="linh_vuc">Lĩnh vực KH&CN</th>
+				<th class="ung_dung">Khả năng ứng dụng</th>
+				<th class="cap_nhat">Cập nhật</th>
 			</thead>
 			<tbody>
 				@for($i=0;$i<200;$i++)
@@ -34,6 +65,9 @@
 			</tbody>
 		</table>
 	</div>
+	@show
+
+	<!-- end main content -->
 @endsection
 <!-- end content -->
 @section('script')

@@ -2,6 +2,7 @@
 
 @section('style')
 <link rel="stylesheet" type="text/css" href="../../css/search_result_all.css">
+<link rel="stylesheet" type="text/css" href="../../css/detail.css">
 @endsection
 
 <!-- start content -->
@@ -13,7 +14,7 @@
 		<li>
 			<div class="row list-box chuyen-gia">
 				<br>
-				<p><span class="glyphicon glyphicon-search"></span><span class="filter-name">Tìm kiếm trong dữ liệu chuyên gia Khoa học và Công Nghệ&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-hand-right"></span><a href="#"  class="see-more">Xem tất cả kết quả</a></p>
+				<p><span class="glyphicon glyphicon-search"></span><span class="filter-name">Tìm kiếm trong dữ liệu chuyên gia Khoa học và Công Nghệ&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-arrow-right see-more"></span><a href="#"  class="see-more">Xem tất cả kết quả</a></p>
 				<hr>
 				<ul>
 					@for($i=0;$i<6;$i++)
@@ -35,7 +36,7 @@
 		<li>
 			<div class="row list-box chuyen-gia">
 				<br>
-				<p><span class="glyphicon glyphicon-search"></span><span class="filter-name">Tìm kiếm trong dữ liệu Đề tài, dự án các cấp&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-hand-right"></span><a href="#"  class="see-more">Xem tất cả kết quả</a></p>
+				<p><span class="glyphicon glyphicon-search"></span><span class="filter-name">Tìm kiếm trong dữ liệu Đề tài, dự án các cấp&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-arrow-right see-more"></span><a href="#"  class="see-more">Xem tất cả kết quả</a></p>
 				<hr>
 				<ul>
 					@for($i=0;$i<6;$i++)
@@ -57,7 +58,7 @@
 		<li>
 			<div class="row list-box chuyen-gia">
 				<br>
-				<p><span class="glyphicon glyphicon-search"></span><span class="filter-name">Tìm kiếm trong dữ liệu Bằng phát minh, sáng chế&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-hand-right"></span><a href="#"  class="see-more">Xem tất cả kết quả</a></p>
+				<p><span class="glyphicon glyphicon-search"></span><span class="filter-name">Tìm kiếm trong dữ liệu Bằng phát minh, sáng chế&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-arrow-right see-more"></span><a href="#"  class="see-more">Xem tất cả kết quả</a></p>
 				<hr>
 				<ul>
 					@for($i=0;$i<6;$i++)
@@ -79,7 +80,7 @@
 		<li>
 			<div class="row list-box chuyen-gia">
 				<br>
-				<p><span class="glyphicon glyphicon-search"></span><span class="filter-name">Tìm kiếm trong dữ liệu Sản phẩm, công nghệ mới của nước ngoài&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-hand-right"></span><a href="#"  class="see-more">Xem tất cả kết quả</a></p>
+				<p><span class="glyphicon glyphicon-search"></span><span class="filter-name">Tìm kiếm trong dữ liệu Sản phẩm, công nghệ mới của nước ngoài&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-arrow-right see-more"></span><a href="#"  class="see-more">Xem tất cả kết quả</a></p>
 				<hr>
 				<ul>
 					@for($i=0;$i<6;$i++)
@@ -101,7 +102,7 @@
 		<li>
 			<div class="row list-box chuyen-gia">
 				<br>
-				<p><span class="glyphicon glyphicon-search"></span><span class="filter-name">Tìm kiếm trong dữ liệu Doanh nghiệp Khoa học và Công Nghệ&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-hand-right"></span><a href="#" class="see-more">Xem tất cả kết quả</a></p>
+				<p><span class="glyphicon glyphicon-search"></span><span class="filter-name">Tìm kiếm trong dữ liệu Doanh nghiệp Khoa học và Công Nghệ&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-arrow-right see-more"></span><a href="#" class="see-more">Xem tất cả kết quả</a></p>
 				<hr>
 				<ul>
 					@for($i=0;$i<6;$i++)

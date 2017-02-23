@@ -7,18 +7,74 @@
 
 <!-- start content -->
 @section('content')
+	<div class="row col-md-12 filter-row">
+				<div class="filter">
+					<ul class="list-search-filter">
+						<li>
+							<select>
+							  <option value="volvo">Tìm theo</option>
+							  <option value="volvo">Volvo</option>
+							  <option value="saab">Saab</option>
+							  <option value="opel">Opel</option>
+							  <option value="audi">Audi</option>
+							</select>
+						</li>
+						<li>
+							<select>
+							  <option value="volvo">Lĩnh vực KH&CN</option>
+							  <option value="volvo">Volvo</option>
+							  <option value="saab">Saab</option>
+							  <option value="opel">Opel</option>
+							  <option value="audi">Audi</option>
+							</select>
+						</li>
+						<li>
+							<select>
+							  <option value="volvo">Chuyên ngành</option>
+							  <option value="volvo">Volvo</option>
+							  <option value="saab">Saab</option>
+							  <option value="opel">Opel</option>
+							  <option value="audi">Audi</option>
+							</select>
+						</li>
+						<li>
+							<select>
+							  <option value="volvo">Tỉnh, thành phố</option>
+							  <option value="volvo">Volvo</option>
+							  <option value="saab">Saab</option>
+							  <option value="opel">Opel</option>
+							  <option value="audi">Audi</option>
+							</select>
+						</li>
+						<li>
+							<select>
+							  <option value="volvo">Chức danh</option>
+							  <option value="volvo">Volvo</option>
+							  <option value="saab">Saab</option>
+							  <option value="opel">Opel</option>
+							  <option value="audi">Audi</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				<hr>
+	</div>
+
+
+	<!-- main content,display result -->
+	@section('main-content')
 	<div class="row col-md-12 div-content">
 		<div class="search-info">
 		<p>Kết quả tìm kiếm : xxxxxxx trong xxxxxxxxxx giây</p>
 		</div>
 		<table class="dataTable table-hover table-responsive" id="myTable">
 			<thead class="head-dataTable">
-				<th></th>
-				<th>Tên đề tài, dự án</th>
-				<th>Lĩnh vực KH&CN</th>
-				<th>Mã số, ký hiệu</th>
-				<th>CNĐT, tác giả</th>
-				<th>Thời gian kết thúc</th>
+				<th class="no"></th>
+				<th class="name">Tên đề tài, dự án</th>
+				<th class="linh_vuc">Lĩnh vực KH&CN</th>
+				<th class="ma_so">Mã số, ký hiệu</th>
+				<th class="tac_gia">CNĐT, tác giả</th>
+				<th class="thoi_gian">Thời gian kết thúc</th>
 			</thead>
 			<tbody>
 				@for($i=0;$i<200;$i++)
@@ -34,6 +90,9 @@
 			</tbody>
 		</table>
 	</div>
+	@show
+
+	<!-- end main content -->
 @endsection
 <!-- end content -->
 @section('script')

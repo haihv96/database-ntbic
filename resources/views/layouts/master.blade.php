@@ -45,16 +45,17 @@
 			<div class="search-area col-md-9">
 				<form class="search-form" method="GET" action="">
 	                <div class="input-group">
-	                    <input type="text" class="form-control input-lg" placeholder="Tìm kiếm..." name="query">
+	                    <input type="text" class="form-control" placeholder="Tìm kiếm..." name="query">
 	                    <div class="input-group-btn">
 	                        <a href="javascript:;" class="btn submit">
-	                            <span class="glyphicon glyphicon-search">Search</span>
+	                            <span class="glyphicon glyphicon-search">&nbsp;</span>Tìm kiếm dữ liệu
 	                        </a>
 	                    </div>
 	                </div>
             	</form>
 			</div>
-			<div class="row col-md-12">
+			<div class="row col-md-12 filter-row">
+				<hr>
 				<div class="filter">
 					<ul class="list-search-filter">
 						<li>
@@ -77,58 +78,9 @@
 						</li>
 					</ul>
 				</div>
+				<hr>
 			</div>
-			<div class="row col-md-12">
-				<div class="filter">
-					<ul class="list-search-filter">
-						<li>
-							<select>
-							  <option value="volvo">Tìm theo</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
-							</select>
-						</li>
-						<li>
-							<select>
-							  <option value="volvo">Lĩnh vực KH&CN</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
-							</select>
-						</li>
-						<li>
-							<select>
-							  <option value="volvo">Chuyên ngành</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
-							</select>
-						</li>
-						<li>
-							<select>
-							  <option value="volvo">Tỉnh, thành phố</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
-							</select>
-						</li>
-						<li>
-							<select>
-							  <option value="volvo">Chức danh</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
-							</select>
-						</li>
-					</ul>
-				</div>
-			</div>
+			
 			<!-- end search box -->
 			@yield('content')
 		</div>

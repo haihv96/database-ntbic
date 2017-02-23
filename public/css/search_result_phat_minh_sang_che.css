@@ -1,31 +1,50 @@
 .head-dataTable{
-	background-color: lightgrey;
+	background-color: #f2f2f2;
 }
 #bang-phat-minh{
-	border-bottom: 3px solid orange;
-	color:orange;
+	border-bottom: 3px solid green;
+	color:green;
 }
 .search-info{
 	margin-top: 10px;
-	margin-left: 15px;
 	margin-bottom: 0
 }
+select{
+	max-width: 165px
+}
 #myTable{
-	border: 0.2px solid lightgrey;
 	margin-top:15px; 
 }
 #myTable td{
-	border-bottom: 0.2px solid lightgrey;
+	border: 0.2px solid #f2f2f2;
 	word-wrap: break-word;
 }
 #myTable th{
-	border: 0.2px solid lightgrey;
+	border: 0.2px solid #f2f2f2;
 }
 .ten_bang_phat_minh{
-	color: #1a8cff;
+	color: #3b5998;
 	font-weight: bold;
 }
 .div-content{
 	margin-bottom: 15px;
 	margin-top:30px 
+}
+.no{
+	width: 5%;
+}
+.name{
+	width: 30%;
+}
+.so_hieu{
+	width: 10%;
+}
+.linh_vuc{
+	width: 20%;
+}
+.tac_gia{
+	width: 20%;
+}
+.date{
+	width: 15%;
 }

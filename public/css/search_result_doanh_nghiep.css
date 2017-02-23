@@ -1,28 +1,30 @@
 .head-dataTable{
-	background-color: lightgrey;
+	background-color: #f2f2f2;
 }
 #doanh-nghiep{
-	border-bottom: 3px solid orange;
-	color:orange;
+	border-bottom: 3px solid green;
+	color:green;
 }
 .search-info{
 	margin-top: 10px;
-	margin-left: 15px;
+
 	margin-bottom: 0
 }
+select{
+	max-width: 165px
+}
 #myTable{
-	border: 0.2px solid lightgrey;
 	margin-top:15px; 
 }
 #myTable td{
-	border-bottom: 0.2px solid lightgrey;
+	border: 0.2px solid #f2f2f2;
 	word-wrap: break-word;
 }
 #myTable th{
-	border: 0.2px solid lightgrey;
+	border: 0.2px solid #f2f2f2;
 }
 .ten_doanh_nghiep{
-	color: #1a8cff;
+	color: #3b5998;
 	font-weight: bold;
 }
 .div-content{
@@ -32,4 +34,25 @@
 .logo_doanh_nghiep{
 	max-height: 65px;
 	max-width: auto;
+}
+.no{
+	width: 5%;
+}
+.anh_logo{
+	width: 10%;
+}
+.name{
+	width: 20%;
+}
+.tru_so{
+	width: 25%;
+}
+.linh_vuc{
+	width: 20%;
+}
+.tinh_thanh{
+	width: 15%;
+}
+.rank{
+	width: 5%
 }

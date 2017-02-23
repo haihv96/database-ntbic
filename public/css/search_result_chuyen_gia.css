@@ -1,28 +1,30 @@
 .head-dataTable{
-	background-color: lightgrey;
+	background-color: #f2f2f2;
 }
 #chuyen-gia{
-	border-bottom: 3px solid orange;
-	color:orange;
+	border-bottom: 3px solid green;
+	color:green;
 }
 .search-info{
 	margin-top: 10px;
-	margin-left: 15px;
-	margin-bottom: 0
+	margin-left: 0;
+	margin-bottom: 0;
+}
+select{
+	max-width: 165px
 }
 #myTable{
-	border: 0.2px solid lightgrey;
 	margin-top:15px; 
 }
 #myTable td{
-	border-bottom: 0.2px solid lightgrey;
+	border: 0.1px solid #f2f2f2;
 	word-wrap: break-word;
 }
 #myTable th{
-	border: 0.2px solid lightgrey;
+	border: 0.2px solid #f2f2f2;
 }
 .ten_chuyen_gia{
-	color: #1a8cff;
+	color: #3b5998;
 	font-weight: bold;
 }
 .div-content{
@@ -32,4 +34,22 @@
 .anh_chuyen_gia{
 	max-height: 65px;
 	max-width: auto;
+}
+.no{
+	width: 5%;
+}
+.anh{
+	width: 10%;
+}
+.name{
+	width: 20%;
+}
+.co_quan{
+	width: 25%;
+}
+.linh_vuc{
+	width: 25%;
+}
+.tinh_thanh{
+	width: 15%;
 }
