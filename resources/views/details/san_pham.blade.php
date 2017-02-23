@@ -1,10 +1,13 @@
-@extends('layouts.detail')
+@extends('search_result.san_pham')
 @section('style')
       <link rel="stylesheet" type="text/css" href="../../css/details_de_tai_du_an_cac_cap.css">
+      <link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
+      <link rel="stylesheet" type="text/css" href="../../css/search_result_san_pham.css">
 @endsection
 <!-- main-content -->
 @section("main-content")
- <div class="articles_detail">
+<div class="row">
+ <div class="articles_detail col-md-9">
 
     <h2 class="title_pages">Dây chuyền làm sạch protein trong mủ cao su thiên nhiên</h2>
 
@@ -127,7 +130,9 @@
     </tbody>
     </table> 
     
+</div>
 
+@include('details.sidebar')
 </div>
 
     

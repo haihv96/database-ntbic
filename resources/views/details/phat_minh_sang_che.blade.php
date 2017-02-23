@@ -1,232 +1,234 @@
-@extends('layouts.detail')
+@extends('search_result.phat_minh_sang_che')
 @section('style')
       <link rel="stylesheet" type="text/css" href="../../css/details_de_tai_du_an_cac_cap.css">
+      <link rel="stylesheet" type="text/css" href="../../css/search_result_phat_minh_sang_che.css">
+      <link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
 @endsection
 <!-- main-content -->
 @section("main-content")
- <div class="articles_detail">
+<div class="row">  
+    <div class="articles_detail col-md-9">
 
-    <h2 class="title_pages">Thiết bị xử lý nước nhiễm asen bằng vật liệu nano</h2>
+        <h2 class="title_pages">Thiết bị xử lý nước nhiễm asen bằng vật liệu nano</h2>
 
-    <p class="time">Cập nhật Thứ năm - 08/09/2016  16:15 
+        <p class="time">Cập nhật Thứ năm - 08/09/2016  16:15 
 
-    <a class="print" href="#" target="_blank">
+        <a class="print" href="#" target="_blank">
 
-                <i class="glyphicon glyphicon-print"></i>
+                    <i class="glyphicon glyphicon-print"></i>
 
-                In bài viết
+                    In bài viết
 
-    </a>
+        </a>
 
-    </p>
+        </p>
 
-    <table class="archives_list">
+        <table class="archives_list">
 
-        <tbody>
-        <tr>
+            <tbody>
+            <tr>
 
-            <td width="30" align="center">
+                <td width="30" align="center">
 
-                <strong>1.</strong>
+                    <strong>1.</strong>
 
-            </td>
+                </td>
 
-            <td width="150"><strong> Tên sáng chế, phát minh, giải pháp</strong></td>
+                <td width="150"><strong> Tên sáng chế, phát minh, giải pháp</strong></td>
 
-            <td>
+                <td>
 
-            Thiết bị xử lý nước nhiễm asen bằng vật liệu nano 
+                Thiết bị xử lý nước nhiễm asen bằng vật liệu nano 
 
-            </td>
+                </td>
 
-        </tr>
+            </tr>
 
-        <tr>
+            <tr>
 
-            <td align="center">
+                <td align="center">
 
-                <strong>2.</strong>
+                    <strong>2.</strong>
 
-            </td>
+                </td>
 
-            <td><strong>Số bằng,ký hiệu</strong></td>
+                <td><strong>Số bằng,ký hiệu</strong></td>
 
-            <td>
+                <td>
 
-              Unkown 3
+                  Unkown 3
 
-            </td>
+                </td>
 
-          </tr>
+              </tr>
 
-          <tr>
+              <tr>
 
-            <td align="center">
+                <td align="center">
 
-                <strong>3.</strong>
+                    <strong>3.</strong>
 
-            </td>
+                </td>
 
-            <td><strong>Thuộc lĩnh vực KH&CN</strong></td>
+                <td><strong>Thuộc lĩnh vực KH&CN</strong></td>
 
-            <td>
+                <td>
 
-                Công nghệ thông tin và truyền thông (Lựa chọn)
-            </td>
+                    Công nghệ thông tin và truyền thông (Lựa chọn)
+                </td>
 
-          </tr>
+              </tr>
 
-          <tr>
+              <tr>
 
-            <td align="center">
+                <td align="center">
 
-                <strong>4.</strong>
+                    <strong>4.</strong>
 
-            </td>
+                </td>
 
-            <td><strong> Ngày công bố</strong></td>
+                <td><strong> Ngày công bố</strong></td>
 
-            <td>
+                <td>
 
-               11/05/2016
+                   11/05/2016
 
-            </td>
+                </td>
 
-          </tr>
+              </tr>
 
-          <tr>
+              <tr>
 
-            <td align="center">
+                <td align="center">
 
-                <strong>5.</strong>
+                    <strong>5.</strong>
 
-            </td>
+                </td>
 
-            <td><strong> Ngày cấp</strong></td>
+                <td><strong> Ngày cấp</strong></td>
 
-            <td>
+                <td>
 
-               23/02/2017
+                   23/02/2017
 
-            </td>
+                </td>
 
-          </tr>
+              </tr>
 
-          <tr>
+              <tr>
 
-            <td align="center">
+                <td align="center">
 
-                <strong>6.</strong>
+                    <strong>6.</strong>
 
-            </td>
+                </td>
 
-            <td><strong> Chủ sở hữu chính</strong></td>
+                <td><strong> Chủ sở hữu chính</strong></td>
 
-            <td>
+                <td>
 
-               Viện Khoa học thủy lợi Việt Nam
+                   Viện Khoa học thủy lợi Việt Nam
 
-            </td>
+                </td>
 
-          </tr>
+              </tr>
 
-          <tr>
+              <tr>
 
-            <td align="center">
+                <td align="center">
 
-                <strong>7.</strong>
+                    <strong>7.</strong>
 
-            </td>
+                </td>
 
-            <td><strong> Tác giả</strong></td>
-            <td>
-            	Viện Khoa học thủy lợi Việt Nam
+                <td><strong> Tác giả</strong></td>
+                <td>
+                	Viện Khoa học thủy lợi Việt Nam
 
-            </td>
+                </td>
 
-          </tr>
+              </tr>
 
-            
+                
 
-        <tr>
+            <tr>
 
-         
+             
 
-            <td colspan="3"><strong>8. Điểm nổi bật</strong><br>
+                <td colspan="3"><strong>8. Điểm nổi bật</strong><br>
 
-            “Hoàn thiện dây chuyền thiết bị và công nghệ làm sạch protein trong mủ cao su thiên nhiên”, các nhà khoa học thuộc Trường Đại học Bách khoa Hà Nội đã chế tạo, lắp đặt thành công dây chuyền sản xuất mủ cao su thiên nhiên có hàm lượng protein thấp, công suất 300 tấn/năm.
-            </td>
+                “Hoàn thiện dây chuyền thiết bị và công nghệ làm sạch protein trong mủ cao su thiên nhiên”, các nhà khoa học thuộc Trường Đại học Bách khoa Hà Nội đã chế tạo, lắp đặt thành công dây chuyền sản xuất mủ cao su thiên nhiên có hàm lượng protein thấp, công suất 300 tấn/năm.
+                </td>
 
 
-        </tr>
-        <tr>
-         
+            </tr>
+            <tr>
+             
 
-            <td colspan="3"><strong> 9. Mô tả về sáng chế, phát minh, giải pháp</strong><br>
+                <td colspan="3"><strong> 9. Mô tả về sáng chế, phát minh, giải pháp</strong><br>
 
-            “Hoàn thiện dây chuyền thiết bị và công nghệ làm sạch protein trong mủ cao su thiên nhiên”, các nhà khoa học thuộc Trường Đại học Bách khoa Hà Nội đã chế tạo, lắp đặt thành công dây chuyền sản xuất mủ cao su thiên nhiên có hàm lượng protein thấp, công suất 300 tấn/năm.
-            </td>
+                “Hoàn thiện dây chuyền thiết bị và công nghệ làm sạch protein trong mủ cao su thiên nhiên”, các nhà khoa học thuộc Trường Đại học Bách khoa Hà Nội đã chế tạo, lắp đặt thành công dây chuyền sản xuất mủ cao su thiên nhiên có hàm lượng protein thấp, công suất 300 tấn/năm.
+                </td>
 
 
-        </tr>
-        <tr>
-           
+            </tr>
+            <tr>
+               
 
-            <td colspan="3"><strong>10. Nội dung có thể chuyển giao</strong><br>
+                <td colspan="3"><strong>10. Nội dung có thể chuyển giao</strong><br>
 
-            
-            </td>
-        </tr>
-        <tr>
-            
+                
+                </td>
+            </tr>
+            <tr>
+                
 
-            <td colspan="3"><strong>11. Thị trường ứng dụng</strong><br>
+                <td colspan="3"><strong>11. Thị trường ứng dụng</strong><br>
 
-            
-            </td>
-        </tr>
-         <tr>
-          
+                
+                </td>
+            </tr>
+             <tr>
+              
 
-            <td colspan="3"><strong>12. Hình ảnh minh họa </strong><br>
+                <td colspan="3"><strong>12. Hình ảnh minh họa </strong><br>
 
-            
-            </td>
-        </tr>
-        <tr>
-          
-        </tr>
-        <tr>
-            <td colspan=3>
-            <p>chỗ dành biểu tượng share>
-            </p>
-            <p align="right">
-                        <a href="#"><i class="glyphicon glyphicon-print"></i> in bài viết</a>
-            </p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan=3 >
-                <strong>
-                   Các phát minh, sáng chế khác
-                </strong><br>
-                <ul >
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Trang chủ</a></li>
-                <ul>
+                
+                </td>
+            </tr>
+            <tr>
+              
+            </tr>
+            <tr>
+                <td colspan=3>
+                <p>chỗ dành biểu tượng share>
+                </p>
+                <p align="right">
+                            <a href="#"><i class="glyphicon glyphicon-print"></i> in bài viết</a>
+                </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=3 >
+                    <strong>
+                       Các phát minh, sáng chế khác
+                    </strong><br>
+                    <ul >
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Trang chủ</a></li>
+                    <ul>
 
-            </td>
+                </td>
 
-        </tr>
+            </tr>
 
-           
-
-    </tbody>
-    </table> 
-    
-
+        </tbody>
+        </table> 
+        
+    </div>
+    @include('details.sidebar')
 </div>
 
     

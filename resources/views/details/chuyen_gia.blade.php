@@ -1,11 +1,13 @@
-@extends('layouts.detail')
+@extends('search_result.chuyen_gia')
 @section('style')
 	<link rel="stylesheet" type="text/css" href="../../css/details_chuyen_gia.css">
+  <link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="../../css/search_result_chuyen_gia.css">
 @endsection
 <!-- main-content -->
 @section("main-content")
-	
-	<div class="profiles_view">
+<div class="row">	
+	<div class="profiles_view col-md-9">
 
     <table class="archives_list">
       <tbody>
@@ -194,7 +196,8 @@
    <p align="right">
       <a href="#"><i class="glyphicon glyphicon-print"></i> In bài viết</a>
     </p>
-
+  </div>
+  @include('details.sidebar')
 </div>
 
 @endsection

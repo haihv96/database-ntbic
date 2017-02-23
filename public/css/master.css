@@ -35,6 +35,11 @@
 .filter-row a{
 	color: black
 }
+.filter{
+	margin-bottom: 10px;
+	padding-top: 5px;
+	border-bottom: 0.2px solid #f2f2f2
+}
 .logo{
 	font-weight: bold;
 	font-size: 25px;
@@ -57,7 +62,9 @@
 .list-search-filter li{
 	display: inline;
 	margin-right:10px;
-	font-size: 17px
+	font-size: 17px;
+	margin-bottom: 0;
+	padding:0;
 }
 hr{
 	margin: 0;

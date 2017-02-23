@@ -1,11 +1,14 @@
-@extends('layouts.detail')
+@extends('search_result.doanh_nghiep')
+
 @section('style')
     <link rel="stylesheet" type="text/css" href="../../css/details_chuyen_gia.css">
+    <link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../../css/search_result_doanh_nghiep.css">
 @endsection
 <!-- main-content -->
 @section("main-content")
-    
-<div class="content_view">
+<div class="row">
+<div class="content_view col-md-9 div_main_content">
 
 	<table  class="archives_list">
 
@@ -753,5 +756,7 @@
 
 </div>
 
+@include('details.sidebar')
+</div>
 @endsection
 <!-- end main-content -->

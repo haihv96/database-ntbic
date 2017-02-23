@@ -19,7 +19,14 @@ table.archives_list td{
 	padding:7px;
 	overflow:hidden;
 }
-
+.articles_detail{
+    margin: 0;
+    padding: 0;
+}
+.div-main-content{
+    margin: 0;
+    padding: 0;
+}
 table.archives tr td ul.list-ul{
 
     list-style-type: circle

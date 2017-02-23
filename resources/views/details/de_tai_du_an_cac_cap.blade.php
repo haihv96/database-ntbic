@@ -1,10 +1,13 @@
-@extends('layouts.detail')
+@extends('search_result.de_tai_du_an_cac_cap')
 @section('style')
    <link rel="stylesheet" type="text/css" href="../../css/details_de_tai_du_an_cac_cap.css">
+   <link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
+   <link rel="stylesheet" type="text/css" href="../../css/search_result_de_tai.css">
 @endsection
 <!-- main-content -->
 @section("main-content")
-    <div class="articles_detail">
+<div class="row">
+    <div class="articles_detail col-md-9">
 
     <h2 class="title_pages">Sản xuất thử nghiệm một số dược liệu theo hướng dẫn GACP tại huyện Lạc Thủy, tỉnh Hòa Bình.</h2>
 
@@ -214,14 +217,11 @@
 
         </tr>
        
-
-
-           
-
     </tbody>
     </table> 
     
-
+</div>
+    @include('details.sidebar')
 </div>
 
 @endsection

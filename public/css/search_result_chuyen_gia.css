@@ -10,7 +10,7 @@
 	margin-left: 0;
 	margin-bottom: 0;
 }
-select{
+select, option{
 	max-width: 165px
 }
 #myTable{

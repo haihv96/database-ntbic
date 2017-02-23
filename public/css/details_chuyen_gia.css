@@ -9,9 +9,11 @@ table.archives_list {
     margin-bottom:10px;
     line-height:18px;
 }
-
 table.archives_list tbody {
     
+}
+.div_main_content{
+    margin-top:20px 
 }
 table.archives_list td{
 	border-bottom: 1px solid #ECEFF0;
@@ -24,7 +26,9 @@ table.archives_list td{
 table.archives_list a {
     color:#09C
 }
-
+.profiles_view{
+    margin-top:20px;
+}
 a.reply { display:inline-block; padding:5px 8px; background:#6C6; color:#fff;}
 a.print { display:inline-block; padding:5px 8px;}
 

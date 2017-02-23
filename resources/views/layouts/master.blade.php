@@ -78,7 +78,6 @@
 						</li>
 					</ul>
 				</div>
-				<hr>
 			</div>
 			
 			<!-- end search box -->
