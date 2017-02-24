@@ -41,18 +41,18 @@
 			<!-- search box -->
 			<!-- <div class="search-label">
 				NGÂN HÀNG THÔNG TIN KHOA HỌC 
-			</div> -->
+			</div> --><form class="search-form" method="GET" action="">
 			<div class="search-area col-md-9">
-				<form class="search-form" method="GET" action="">
+				
 	                <div class="input-group">
-	                    <input type="text" class="form-control" placeholder="Tìm kiếm..." name="query">
+	                    <input type="text" class="form-control" placeholder="Tìm kiếm..." name="text_search">
 	                    <div class="input-group-btn">
-	                        <a href="javascript:;" class="btn submit">
+	                        <button type="submit" class="btn submit">
 	                            <span class="glyphicon glyphicon-search">&nbsp;</span>Tìm kiếm dữ liệu
-	                        </a>
+	                        </button>
 	                    </div>
 	                </div>
-            	</form>
+            	
 			</div>
 			<div class="row col-md-12 filter-row">
 				<hr>
@@ -62,19 +62,19 @@
 							<a href="#" id="all">Tất cả</a>
 						</li>
 						<li>
-							<a href="" id="chuyen-gia">Chuyên gia KH&CN</a>
+							<a href="chuyen-gia" id="chuyen-gia">Chuyên gia KH&CN</a>
 						</li>
 						<li>
-							<a href="" id="de-tai">Đề tài, dự án các cấp</a>
+							<a href="de-tai-du-an-cac-cap" id="de-tai">Đề tài, dự án các cấp</a>
 						</li>
 						<li>
-							<a href="" id="bang-phat-minh">Bằng phát minh, sáng chế</a>
+							<a href="phat-minh" id="bang-phat-minh">Bằng phát minh, sáng chế</a>
 						</li>
 						<li>
-							<a href="" id="san-pham">Sản phẩm, công nghệ mới</a>
+							<a href="san-pham" id="san-pham">Sản phẩm, công nghệ mới</a>
 						</li>
 						<li>
-							<a href="" id="doanh-nghiep">Doanh nghiệp KH&CN</a>
+							<a href="doanh-nghiep" id="doanh-nghiep">Doanh nghiệp KH&CN</a>
 						</li>
 					</ul>
 				</div>
@@ -82,6 +82,7 @@
 			
 			<!-- end search box -->
 			@yield('content')
+			</form>
 		</div>
 		<div class="row div-footer">
 			<div class="container">

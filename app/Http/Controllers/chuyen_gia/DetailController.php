@@ -5,6 +5,8 @@ namespace App\Http\Controllers\chuyen_gia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use App\tinh_thanh_pho;
+use App\hoc_vi;
 
 class DetailController extends Controller
 {
@@ -12,6 +14,8 @@ class DetailController extends Controller
     
     protected function index($link)
     {
+        $tt = tinh_thanh_pho::all();
+        $hv = hoc_vi::all();
         /*
             $data_chinh dữ liệu trong bảng chuyen_gia_khcn
             $data_phu1 dữ liệu cong_trinh_nghien_cuu của chuyên gia đó 

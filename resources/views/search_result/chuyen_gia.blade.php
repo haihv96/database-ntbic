@@ -11,50 +11,28 @@
 				<div class="filter">
 					<ul class="list-search-filter">
 						<li>
-							<select>
-							  <option value="volvo">Tìm theo</option>
-							  <option value="volvo">Tên nhà KH</option>
-							  <option value="saab">Lĩnh vực</option>
-							  <option value="opel">Hướng nghiên cứu</option>
-							  <option value="audi">Nơi công tác</option>
+							<select name = 'tim_theo'>
+							  <option value="0">Tìm theo</option>
+							  <option value="1">Tên nhà KH</option>
+							  <option value="2">Lĩnh vực nghiên cứu</option>
+							  <option value="3">Hướng nghiên cứu</option>
+							  <option value="4">Cơ quan công tác</option>
 							</select>
 						</li>
 						<li>
-							<select>
-							  <option value="volvo">KH&CN</option>
-							  <option value="volvo">Khoa học tự nhiên</option>
-							  <option value="saab">Khoa học kỹ thuật và công nghệ</option>
-							  <option value="opel">Khoa học y, dược</option>
-							  <option value="audi">Khoa học nông nghiệp</option>
-							  <option value="audi">Khoa học xã hội</option>
-							  <option value="audi">Khoa học nhân văn</option>
+							<select name='tinh_thanh_pho'>
+							  <option value="Tỉnh, thành phố">Tỉnh, thành phố</option>
+							  @foreach($tinh_thanh as $tt)
+							  <option value="{{$tt->tinh_thanh_pho}}">{{$tt->tinh_thanh_pho}}</option>
+							  @endforeach
 							</select>
 						</li>
 						<li>
-							<select>
-							  <option value="volvo">Chuyên ngành</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
-							</select>
-						</li>
-						<li>
-							<select>
-							  <option value="volvo">Tỉnh, thành phố</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
-							</select>
-						</li>
-						<li>
-							<select>
-							  <option value="volvo">Chức danh</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
+							<select name="chuc_danh">
+							  <option value="Chức danh">Chức danh</option>
+							  @foreach($hoc_vi as $hv)
+							  <option value="{{$hv->hoc_vi}}">{{$hv->hoc_vi}}</option>
+							  @endforeach
 							</select>
 						</li>
 					</ul>
@@ -78,14 +56,14 @@
 					<th class="tinh_thanh">Tỉnh thành</th>
 				</thead>
 				<tbody>
-					@for($i=0;$i<200;$i++)
+					@foreach($chuyen_gia as $cg)
 						<tr>
-							<td>{{$i+1}}</td>
+							<td></td>
 							<td><img src="#" alt="ảnh" class="img-responsive anh_chuyen_gia"></td>
-							<td><a href="#" class="ten_chuyen_gia">Trần Duy Minh</a></td>
-							<td>Viện Khoa học và Công nghệ Quân sự</td>
-							<td>cnttah jaejhj najeh jaieuwi hewuy hewyeu hhw hh euyweu hwuewyg whuhwuh hfuwhuh uhfuwhu</td>
-							<td>ha noi</td>
+							<td><a href="chuyen-gia/{{$cg->link}}" class="ten_chuyen_gia">{{$cg->ho_va_ten}}</a></td>
+							<td>{{$cg->co_quan}}/td>
+							<td>{{$cg->chuyen_nganh}}</td>
+							<td>{{$cg->tinh_thanh}}</td>
 						</tr>
 					@endfor
 				</tbody>

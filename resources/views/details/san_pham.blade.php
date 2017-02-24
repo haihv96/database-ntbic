@@ -1,11 +1,35 @@
-@extends('search_result.san_pham')
+@extends('layouts.master')
 @section('style')
       <link rel="stylesheet" type="text/css" href="/public/css/details_de_tai_du_an_cac_cap.css">
       <link rel="stylesheet" type="text/css" href="/public/css/sidebar.css">
       <link rel="stylesheet" type="text/css" href="/public/css/search_result_san_pham.css">
 @endsection
 <!-- main-content -->
-@section("main-content")
+@section("content")
+<div class="row col-md-12 filter-row">
+                <div class="filter">
+                    <ul class="list-search-filter">
+                        <li>
+                            <select name='tim_theo'>
+                              <option value="0">Tìm theo</option>
+                              <option value="1">Tên sản phẩm, ứng dụng</option>
+                              <option value="2">Khả năng ứng dụng</option>
+                              <option value="3">Mô tả sản phẩm, ứng dụng</option>
+                              <option value="4">Giải quyết bài toán</option>
+                              <option value="5">Thị trường ứng dụng</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name='linh_vuc_khcn'>
+                              <option value="0">Lĩnh vực KH&CN</option>
+                              @foreach($linh_vuc as $lv)
+                              <option value="{{$lv->id}}">{{$lv->linh_vuc}}</option>
+                              @endforeach
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+    </div>
 <div class="row">
  <div class="articles_detail col-md-9">
 

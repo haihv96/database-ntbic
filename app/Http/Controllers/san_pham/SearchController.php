@@ -12,6 +12,7 @@ class SearchController extends Controller
 {
 	public function getSearch(Request $request) {
 		/*Truyền vào text và các option*/
+		$lv = linh_vuc_san_pham::all();
 		$text_search = $request->text_search;
 		$tim_theo = $request->tim_theo;
 		$linh_vuc_khcn = $request->linh_vuc_khcn;
@@ -23,13 +24,13 @@ class SearchController extends Controller
 			3: Mô tả sản phẩm
 		*/
 		if($tim_theo == 0) {
-			$result = san_pham::where('ten_san_pham', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat')->get();
+			$result = san_pham::where('ten_san_pham', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat','link')->get();
 		} else if ($tim_theo == 1) {
-			$result = san_pham::where('kha_nang_ung_dung', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat')->get();
+			$result = san_pham::where('kha_nang_ung_dung', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat','link')->get();
 		} else if ($tim_theo == 2) {
-			$result = san_pham::where('mo_ta_chung', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat')->get();
+			$result = san_pham::where('mo_ta_chung', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat','link')->get();
 		} else {
-			$result = san_pham::where('ten_san_pham', 'LIKE', '%'.$text_search.'%')->orWhere('kha_nang_ung_dung', 'LIKE', '%'.$text_search.'%')->orWhere('mo_ta_chung', 'LIKE', '%'.$text_search.'%')->orWhere('dac_diem_noi_bat', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat')->get();
+			$result = san_pham::where('ten_san_pham', 'LIKE', '%'.$text_search.'%')->orWhere('kha_nang_ung_dung', 'LIKE', '%'.$text_search.'%')->orWhere('mo_ta_chung', 'LIKE', '%'.$text_search.'%')->orWhere('dac_diem_noi_bat', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat','link')->get();
 		}
 
 		/*
@@ -40,6 +41,6 @@ class SearchController extends Controller
 			$result = $result->where('linh_vuc',$linh_vuc->linh_vuc);
 		}
 
-		return $result;
+		return view('search_result.san_pham')->with(['linh_vuc'=>$lv,'san_pham'=>$result]);
 	}
 }

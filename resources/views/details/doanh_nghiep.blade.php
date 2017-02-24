@@ -1,4 +1,4 @@
-@extends('search_result.doanh_nghiep')
+@extends('layouts.master')
 
 @section('style')
     <link rel="stylesheet" type="text/css" href="/public/css/details_chuyen_gia.css">
@@ -6,7 +6,46 @@
     <link rel="stylesheet" type="text/css" href="/public/css/search_result_doanh_nghiep.css">
 @endsection
 <!-- main-content -->
-@section("main-content")
+@section("content")
+<div class="row col-md-12 filter-row">
+                <div class="filter">
+                    <ul class="list-search-filter">
+                        <li>
+                            <select name='tim_theo'>
+                              <option value="0">Tìm theo</option>
+                              <option value="1">Tên doanh nghiệp</option>
+                              <option value="2">Sản phẩm KHCN</option>
+                              <option value="3">Công nghệ nổi bật</option>
+                              <option value="4">Hướng nghiên cứu</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name='linh_vuc_khcn'>
+                              <option value="0">Lĩnh vực KH&CN</option>
+                              @foreach($linh_vuc as $lv)
+                              <option value="{{$lv->id}}">{{$lv->linh_vuc}}</option>
+                              @endforeach
+                            </select>
+                        </li>
+                        <li>
+                            <select name='tinh_thanh_pho'>
+                              <option value="0">Tỉnh, thành phố</option>
+                              @foreach($tinh_thanh as $tinh)
+                              <option value="{{$tinh->id}}">{{$tinh->tinh_thanh_pho}}</option>
+                              @endforeach
+                            </select>
+                        </li>
+                        <li>
+                            <select name='xep_hang'>
+                              <option value="0">Xếp hạng</option>
+                              <option value="A">A</option>
+                              <option value="B">B</option>
+                              <option value="C">C</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+    </div>
 <div class="row">
 <div class="content_view col-md-9 div_main_content">
 

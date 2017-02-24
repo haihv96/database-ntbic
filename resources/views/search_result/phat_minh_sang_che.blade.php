@@ -11,30 +11,27 @@
 				<div class="filter">
 					<ul class="list-search-filter">
 						<li>
-							<select>
-							  <option value="volvo">Tìm theo</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
+							<select name="tim_theo">
+							  <option value="0">Tìm theo</option>
+							  <option value="1">Tên phát minh, sáng chế, giải pháp</option>
+							  <option value="2">Điểm nổi bật</option>
+							  <option value="3">Tác giả</option>
 							</select>
 						</li>
 						<li>
-							<select>
-							  <option value="volvo">Lĩnh vực KH&CN</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
+							<select name='linh_vuc_khcn'>
+							  <option value="0">Lĩnh vực KH&CN</option>
+							  @foreach($linh_vuc as $lv)
+							  	<option value="{{$lv->id}}">{{$lv->linh_vuc}}</option>
+							  @endforeach
 							</select>
 						</li>
 						<li>
-							<select>
-							  <option value="volvo">Loại</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
+							<select name="loai">
+							  <option value="0">Loại</option>
+							  @foreach($loai_phat_minh as $loai)
+							  	<option value="{{$loai->id}}">{{$loai->loai_phat_minh_sang_che}}</option>
+							  @endforeach
 							</select>
 						</li>
 					</ul>
@@ -58,16 +55,16 @@
 				<th class="date">Ngày công bố</th>
 			</thead>
 			<tbody>
-				@for($i=0;$i<200;$i++)
+				@foreach($phat_minh as $pm)
 					<tr>
-						<td>{{$i+1}}</td>
-						<td><a href="#" class="ten_bang_phat_minh">Thiết bị xử lý nước nhiễm asen bằng vật liệu nano</a></td>
-						<td>Công nghệ thông tin</td>
-						<td>784792</td>
-						<td>Dương Lê Minh</td>
-						<td>22-2-2017</td>
+						<td></td>
+						<td><a href="phat-minh/{{$pm->link}}" class="ten_bang_phat_minh">{{$pm->ten}}</a></td>
+						<td>{{$pm->linh_vuc}}</td>
+						<td>{{$pm->sobang_kyhieu}}</td>
+						<td>{{$pm->tac_gia}}</td>
+						<td>{{$pm->ngay_cong_bo}}</td>
 					</tr>
-				@endfor
+				@endforeach
 			</tbody>
 		</table>
 	</div>
