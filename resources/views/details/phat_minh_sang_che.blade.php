@@ -1,15 +1,15 @@
 @extends('search_result.phat_minh_sang_che')
 @section('style')
-      <link rel="stylesheet" type="text/css" href="../../css/details_de_tai_du_an_cac_cap.css">
-      <link rel="stylesheet" type="text/css" href="../../css/search_result_phat_minh_sang_che.css">
-      <link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
+      <link rel="stylesheet" type="text/css" href="/public/css/details_de_tai_du_an_cac_cap.css">
+      <link rel="stylesheet" type="text/css" href="/public/css/search_result_phat_minh_sang_che.css">
+      <link rel="stylesheet" type="text/css" href="/public/css/sidebar.css">
 @endsection
 <!-- main-content -->
 @section("main-content")
 <div class="row">  
     <div class="articles_detail col-md-9">
 
-        <h2 class="title_pages">Thiết bị xử lý nước nhiễm asen bằng vật liệu nano</h2>
+        <h2 class="title_pages">{{ $datas->ten }}</h2>
 
         <p class="time">Cập nhật Thứ năm - 08/09/2016  16:15 
 
@@ -38,7 +38,7 @@
 
                 <td>
 
-                Thiết bị xử lý nước nhiễm asen bằng vật liệu nano 
+                {{ $datas->ten }}
 
                 </td>
 
@@ -56,7 +56,7 @@
 
                 <td>
 
-                  Unkown 3
+                  {{ $datas->sobang_kyhieu }}
 
                 </td>
 
@@ -74,7 +74,7 @@
 
                 <td>
 
-                    Công nghệ thông tin và truyền thông (Lựa chọn)
+                    {{ $datas->linh_vuc.' ('.$datas->loai_phat_minh_sang_che.')' }}
                 </td>
 
               </tr>
@@ -91,7 +91,7 @@
 
                 <td>
 
-                   11/05/2016
+                   {{ $datas->ngay_cong_bo }}
 
                 </td>
 
@@ -109,7 +109,7 @@
 
                 <td>
 
-                   23/02/2017
+                   {{ $datas->ngay_cap }}
 
                 </td>
 
@@ -127,7 +127,7 @@
 
                 <td>
 
-                   Viện Khoa học thủy lợi Việt Nam
+                   {{ $datas->chu_so_huu_chinh }}
 
                 </td>
 
@@ -143,7 +143,7 @@
 
                 <td><strong> Tác giả</strong></td>
                 <td>
-                	Viện Khoa học thủy lợi Việt Nam
+                	{{ $datas->tac_gia }}
 
                 </td>
 
@@ -157,7 +157,7 @@
 
                 <td colspan="3"><strong>8. Điểm nổi bật</strong><br>
 
-                “Hoàn thiện dây chuyền thiết bị và công nghệ làm sạch protein trong mủ cao su thiên nhiên”, các nhà khoa học thuộc Trường Đại học Bách khoa Hà Nội đã chế tạo, lắp đặt thành công dây chuyền sản xuất mủ cao su thiên nhiên có hàm lượng protein thấp, công suất 300 tấn/năm.
+                {!! $datas->diem_noi_bat !!}
                 </td>
 
 
@@ -167,7 +167,7 @@
 
                 <td colspan="3"><strong> 9. Mô tả về sáng chế, phát minh, giải pháp</strong><br>
 
-                “Hoàn thiện dây chuyền thiết bị và công nghệ làm sạch protein trong mủ cao su thiên nhiên”, các nhà khoa học thuộc Trường Đại học Bách khoa Hà Nội đã chế tạo, lắp đặt thành công dây chuyền sản xuất mủ cao su thiên nhiên có hàm lượng protein thấp, công suất 300 tấn/năm.
+                {!! $datas->mota_sangche_phatminh_giaiphap !!}
                 </td>
 
 
@@ -177,7 +177,7 @@
 
                 <td colspan="3"><strong>10. Nội dung có thể chuyển giao</strong><br>
 
-                
+                {!! $datas->noidung_cothe_chuyengiao !!}
                 </td>
             </tr>
             <tr>
@@ -185,7 +185,7 @@
 
                 <td colspan="3"><strong>11. Thị trường ứng dụng</strong><br>
 
-                
+                {!! $datas->thitruong_ungdung !!}
                 </td>
             </tr>
              <tr>
@@ -193,7 +193,7 @@
 
                 <td colspan="3"><strong>12. Hình ảnh minh họa </strong><br>
 
-                
+                {!! $datas->hinh_anh_minh_hoa !!}
                 </td>
             </tr>
             <tr>

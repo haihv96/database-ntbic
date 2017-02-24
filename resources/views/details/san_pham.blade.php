@@ -1,15 +1,15 @@
 @extends('search_result.san_pham')
 @section('style')
-      <link rel="stylesheet" type="text/css" href="../../css/details_de_tai_du_an_cac_cap.css">
-      <link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
-      <link rel="stylesheet" type="text/css" href="../../css/search_result_san_pham.css">
+      <link rel="stylesheet" type="text/css" href="/public/css/details_de_tai_du_an_cac_cap.css">
+      <link rel="stylesheet" type="text/css" href="/public/css/sidebar.css">
+      <link rel="stylesheet" type="text/css" href="/public/css/search_result_san_pham.css">
 @endsection
 <!-- main-content -->
 @section("main-content")
 <div class="row">
  <div class="articles_detail col-md-9">
 
-    <h2 class="title_pages">Dây chuyền làm sạch protein trong mủ cao su thiên nhiên</h2>
+    <h2 class="title_pages">{{ $datas->ten_san_pham }}</h2>
 
     <p class="time">Cập nhật Thứ năm - 08/09/2016  16:15 
 
@@ -31,7 +31,7 @@
            
             <td>
                 <strong>1. Tên sản phẩm KH&CN</strong><br>
-                 Thiết bị xử lý nước nhiễm asen bằng vật liệu nano 
+                 {{ $datas->ten_san_pham }}
 
 
             </td>
@@ -45,7 +45,7 @@
 
             <td>
                 <strong>2.Thuộc lĩnh vực KH&CN</strong><br>
-                   Unkown 3
+                   {{ $datas->linh_vuc }}
 
             </td>
 
@@ -60,7 +60,7 @@
 
             <td colspan="3"><strong>3. Điểm nổi bật</strong><br>
 
-            
+            {!! $datas->dac_diem_noi_bat !!}
             </td>
 
 
@@ -70,7 +70,7 @@
 
             <td colspan="3"><strong>4. Mô tả chung về sản phẩm KH&CN</strong><br>
 
-            
+            {!! $datas->mo_ta_chung !!}
             </td>
 
 
@@ -80,7 +80,7 @@
 
             <td colspan="3"><strong>5. Mô tả về quy trình chuyển giao</strong><br>
 
-            
+            {!! $datas->quy_trinh_chuyen_giao !!}
             </td>
         </tr>
         <tr>
@@ -89,7 +89,7 @@
 
             <td colspan="3"><strong>6. Khả năng ứng dụng</strong><br>
 
-            
+            {!! $datas->kha_nang_ung_dung !!}
             </td>
         </tr>
          

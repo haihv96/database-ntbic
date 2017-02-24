@@ -1,9 +1,6 @@
 <?php
-Route::get('/de-tai-du-an-cac-cap', function() {
-	return view('search_result.test_de_tai');
-});
 
-Route::post('/de-tai-du-an-cac-cap','de_tai_du_an_cac_cap\SearchController@getSearch');
+Route::get('/de-tai-du-an-cac-cap','de_tai_du_an_cac_cap\SearchController@getSearch');
 ?>
 
 <?php

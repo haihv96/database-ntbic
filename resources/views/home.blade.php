@@ -10,8 +10,8 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<!-- style -->
   	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-  	<link rel="stylesheet" type="text/css" href="css/master.css">
-  	<link rel="stylesheet" type="text/css" href="css/home.css">
+  	<link rel="stylesheet" type="text/css" href="public/css/master.css">
+  	<link rel="stylesheet" type="text/css" href="public/css/home.css">
   	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script>
         function initialize() {
@@ -42,9 +42,6 @@
  
     </script>
 
-
-Read more: http://thuyk.com/article/tich-hop-google-maps-vao-website-211#ixzz4ZVnpVdbz
-
 	@yield('style')
 	<!-- end style -->
 </head>
@@ -56,7 +53,7 @@ Read more: http://thuyk.com/article/tich-hop-google-maps-vao-website-211#ixzz4ZV
 		      <button type="button" class="navbar-toggle menu-hidden-btn" data-toggle="collapse" data-target="#myNavbar">
 		        <span class="glyphicon glyphicon-align-justify"></span>                      
 		      </button>
-		      <a class="navbar-brand" href="#"><span class="logo">NTBIC</span></a>
+		      <a class="navbar-brand" href="/"><span class="logo">NTBIC</span></a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">

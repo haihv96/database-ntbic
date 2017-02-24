@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('style')
-<script type="text/javascript" src="../../js/phan_trang.js"></script>
-<link rel="stylesheet" type="text/css" href="../../css/search_result_de_tai.css">
-<link rel="stylesheet" type="text/css" href="../../css/phan_trang.css">
+<script type="text/javascript" src="/public/js/phan_trang.js"></script>
+<link rel="stylesheet" type="text/css" href="/public/css/search_result_de_tai.css">
+<link rel="stylesheet" type="text/css" href="/public/css/phan_trang.css">
 @endsection
 
 <!-- start content -->
@@ -76,29 +76,30 @@
 				<th class="thoi_gian">Thời gian kết thúc</th>
 			</thead>
 			<tbody>
-				@for($i=0;$i<200;$i++)
+				@foreach($datas as $item)
 					<tr>
-						<td>{{$i+1}}</td>
-						<td><a href="#" class="ten_de_tai">Tên đề tài, dự án</a></td>
+						<td>{{ $page*10++ }}</td>
+						<td><a href="#" class="ten_de_tai">{{$item->ten_de_tai}}</a></td>
 						<td>Công nghệ thông tin</td>
 						<td>k59clc</td>
 						<td>Dương Lê Minh</td>
 						<td>2017-2018</td>
 					</tr>
-				@endfor
+				@endforeach
 			</tbody>
 		</table>
 	</div>
+	{!! $datas->render() !!}
 	@show
 
 	<!-- end main content -->
 @endsection
 <!-- end content -->
-@section('script')
+{{-- @section('script')
 <script type="text/javascript">
 	$(document).ready(function(){
     	$('#myTable').DataTable();
 	});
 </script>
 	
-@endsection
+@endsection --}}

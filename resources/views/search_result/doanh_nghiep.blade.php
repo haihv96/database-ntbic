@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('style')
-<script type="text/javascript" src="../../js/phan_trang.js"></script>
-<link rel="stylesheet" type="text/css" href="../../css/search_result_doanh_nghiep.css">
-<link rel="stylesheet" type="text/css" href="../../css/phan_trang.css">
+<script type="text/javascript" src="public/js/phan_trang.js"></script>
+<link rel="stylesheet" type="text/css" href="public/css/search_result_doanh_nghiep.css">
+<link rel="stylesheet" type="text/css" href="public/css/phan_trang.css">
 @endsection
 
 <!-- start content -->

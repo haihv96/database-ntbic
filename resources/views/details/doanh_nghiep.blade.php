@@ -1,9 +1,9 @@
 @extends('search_result.doanh_nghiep')
 
 @section('style')
-    <link rel="stylesheet" type="text/css" href="../../css/details_chuyen_gia.css">
-    <link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
-    <link rel="stylesheet" type="text/css" href="../../css/search_result_doanh_nghiep.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/details_chuyen_gia.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/search_result_doanh_nghiep.css">
 @endsection
 <!-- main-content -->
 @section("main-content")
@@ -24,25 +24,25 @@
 
                 <td>
 
-                	<h3 style="">Công ty TNHH Tư vấn - đầu tư N.T.K</h1>
+                	<h3 style="">{{ $datas->ten_doanh_nghiep }}</h1>
 
                     <p style="line-height:20px;">
 
                         <span >
 
-                            Loại, lĩnh vực: <a href=""><span>Công nghệ khác</span></a><br>
+                            Loại, lĩnh vực: <a href="#"><span>{{ $datas->linh_vuc }}</span></a><br>
 
                         </span>
 
                         <span >
 
-                        	Tỉnh thành: <a href="/"><span ">Hà Nội</span></a><br>
+                        	Tỉnh thành: <a href="#"><span ">{{ $datas->tinh_thanh_pho }}</span></a><br>
 
                         </span>
 
                         <span>
 
-                        	Cập nhât: 31/05/2016
+                        	Cập nhât: {{ $datas->ngay_cap_nhat }}
 
                         </span>
 
@@ -72,7 +72,7 @@
 
                 <td>
 
-                	Công ty TNHH Tư vấn - đầu tư N.T.K
+                	{{ $datas->ten_doanh_nghiep }}
 
                 </td>
 
@@ -84,11 +84,11 @@
 
             <tr>
 
-                <td>Cập nhât thông tn</td>
+                <td>Cập nhât thông tin</td>
 
                 <td>
 
-                	31/05/2016
+                	{{ $datas->ngay_cap_nhat }}
 
                 </td>
 
@@ -104,7 +104,7 @@
 
                 <td>
 
-                	<a href="">Công nghệ khác</span></a>
+                	<a href="">{{ $datas->linh_vuc }}</span></a>
 
                 </td>
 
@@ -120,7 +120,7 @@
 
                 <td>
 
-					<a href="">Hà Nội</span></a>     
+					<a href="">{{ $datas->tinh_thanh_pho }}</span></a>     
 
                 	
 
@@ -138,7 +138,7 @@
 
                 <td>
 
-                Tầng 22, tòa nhà Icon4, số 243A Đê La Thành, Phường Láng Thượng, Quận Đống đa, Hà Nội,
+                {!! $datas->dia_chi !!}
 
                 </td>
 
@@ -154,7 +154,7 @@
 
                 <td>
 
-                    <a href="">info@ntk-group.com.vn</a>
+                    <a href="">{{ $datas->email }}</a>
 
                </td>
 
@@ -170,7 +170,7 @@
 
                 <td>
 
-                    0435626216
+                    {{ $datas->phone }}
 
                </td>
 
@@ -186,7 +186,7 @@
 
                 <td>
 
-                    0435626226
+                    {{ $datas->fax }}
 
                </td>
 
@@ -202,7 +202,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->website }}
 
                </td>
 
@@ -223,11 +223,8 @@
                     <strong>Mã số doanh nghiệp:</strong>
 
                 </td>
-
+                {{ $datas->ma_so_doanh_nghiep }}
                 <td>
-
-                    
-
                     <em>(Số Giấy chứng nhận đăng ký kinh doanh/ Số quyết định thành lập)</em>
 
                 </td>
@@ -248,7 +245,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->ma_so_thue }}
 
                 </td>
 
@@ -268,7 +265,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->loai_hinh }}
 
                 </td>
 
@@ -288,7 +285,7 @@
 
                 <td>
 
-                    1173326280
+                   {{ $datas->ngay_dang_ky }}
 
                 </td>
 
@@ -308,7 +305,7 @@
 
                 <td>
 
-                    TRẦN SỸ NGUYÊN
+                    {{ $datas->ten_dai_dien }}
 
                 </td>
 
@@ -322,7 +319,7 @@
 
                 <td >
 
-                    Số điện thoại
+                    {{ $datas->phone_dai_dien }}
 
                 </td>
 
@@ -342,7 +339,7 @@
 
                 <td >
 
-                    E-mail
+                    {{ $datas->email_dai_dien }}
 
                 </td>
 
@@ -368,7 +365,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->dia_chi_dai_dien }}
 
                 </td>
 
@@ -394,7 +391,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->nganh_nghe_kinh_doanh }}
 
                 </td>
 
@@ -414,7 +411,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->thong_tin_thue }}
 
                 </td>
 
@@ -434,7 +431,7 @@
 
                 <td>
 
-                    
+                    {!! $datas->chi_nhanh !!}
 
                 </td>
 
@@ -454,7 +451,7 @@
 
                 <td>
 
-                   
+                   {!! $datas->van_phong_dai_dien !!}
 
                 </td>
 
@@ -494,7 +491,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->so_quyet_dinh_khcn }}
 
                 </td>
 
@@ -514,7 +511,7 @@
 
                 <td>
 
-                    0
+                    {{ $datas->thoi_gian_dang_ky_khcn }}
 
                 </td>
 
@@ -534,7 +531,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->noi_cap_chung_nhan_khcn }}
 
                 </td>
 
@@ -554,7 +551,7 @@
 
                 <td>
 
-                    
+                        {{ $datas->xep_hang_trinh_do_khcn }}
 
                 </td>
 
@@ -574,7 +571,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->huong_nghien_cuu_khcn }}
 
                 </td>
 
@@ -594,7 +591,7 @@
 
                 <td>
 
-                    0
+                    {{ $datas->so_luong_can_bo_khcn }}
 
                 </td>
 
@@ -614,7 +611,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->cong_nghe_noi_bat }}
 
                 </td>
 
@@ -634,7 +631,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->su_dung_cong_nghe }}
 
                 </td>
 
@@ -678,7 +675,7 @@
 
                 <td>
 
-                    
+                    {{ $datas->so_huu_hop_phap }}
 
                 </td>
 
@@ -698,7 +695,7 @@
 
                 <td>
 
-                    
+                    {!! $datas->san_pham_khcn !!}
 
                 </td>
 

@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('style')
-<link rel="stylesheet" type="text/css" href="../../css/search_result_all.css">
-<link rel="stylesheet" type="text/css" href="../../css/detail.css">
+<link rel="stylesheet" type="text/css" href="public/css/search_result_all.css">
+<link rel="stylesheet" type="text/css" href="public/css/detail.css">
 @endsection
 
 <!-- start content -->

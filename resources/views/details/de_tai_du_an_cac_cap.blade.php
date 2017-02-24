@@ -1,15 +1,15 @@
 @extends('search_result.de_tai_du_an_cac_cap')
 @section('style')
-   <link rel="stylesheet" type="text/css" href="../../css/details_de_tai_du_an_cac_cap.css">
-   <link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
-   <link rel="stylesheet" type="text/css" href="../../css/search_result_de_tai.css">
+   <link rel="stylesheet" type="text/css" href="/public/css/details_de_tai_du_an_cac_cap.css">
+   <link rel="stylesheet" type="text/css" href="/public/css/sidebar.css">
+   <link rel="stylesheet" type="text/css" href="/public/css/search_result_de_tai.css">
 @endsection
 <!-- main-content -->
 @section("main-content")
 <div class="row">
     <div class="articles_detail col-md-9">
 
-    <h2 class="title_pages">Sản xuất thử nghiệm một số dược liệu theo hướng dẫn GACP tại huyện Lạc Thủy, tỉnh Hòa Bình.</h2>
+    <h2 class="title_pages">{{ $datas->ten_de_tai }}</h2>
 
     <p class="time">Cập nhật Thứ năm - 08/09/2016  16:15 
 
@@ -38,7 +38,7 @@
 
             <td>
 
-             Sản xuất thử nghiệm một số dược liệu theo hướng dẫn GACP tại huyện Lạc Thủy, tỉnh Hòa Bình. 
+             {{ $datas->ten_de_tai }} 
 
             </td>
 
@@ -52,7 +52,7 @@
 
             </td>
 
-            <td><strong>Mã số, ký hiệu:</strong></td>
+            <td><strong>{{ $datas->maso_kyhieu }}</strong></td>
 
             <td>
 
@@ -74,7 +74,7 @@
 
             <td>
 
-                11/04/1982
+                {{ $datas->linh_vuc }}
 
             </td>
 
@@ -92,7 +92,7 @@
 
             <td>
 
-                - Hoá học<br><br>
+                {{ $datas->nam_bat_dau }}<br><br>
 
             </td>
 
@@ -110,7 +110,7 @@
 
             <td>
 
-                Khoa Hóa học, Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Hà Nội
+                {{ $datas->nam_ket_thuc }}
 
             </td>
 
@@ -128,8 +128,7 @@
 
             <td>
 
-                Hướng nghiên cứu:<br>
-        [1]  Phát triển các vật liệu tổ hợp, đa chức năng cấu trúc nano ứng dụng trong phát triển xanh, xúc tác
+                {{ $datas->co_quan }}
 
             </td>
 
@@ -144,7 +143,11 @@
             </td>
 
             <td><strong>Chủ nhiệm đề tài</strong></td>
-            <td></td>
+            <td>
+                
+            {{ $datas->chu_nhiem_detai }}
+
+            </td>
 
           </tr>
 
@@ -153,7 +156,7 @@
 
             <td colspan="3"><strong>8. Điểm nổi bật</strong><br>
 
-            
+            {!! $datas->diem_noi_bat !!}
             </td>
 
 
@@ -163,7 +166,7 @@
 
             <td colspan="3."><strong>9. Mô tả chung về đề tài dự án KH&CN</strong><br>
 
-            
+            {!! $datas->mota_chung !!}
             </td>
 
 
@@ -172,9 +175,7 @@
            
 
             <td colspan="3"><strong>10. Mô tả về quy trình chuyển giao</strong><br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia d
-
-            
+            {!! $datas->mota_quytrinh_chuyengiao !!}            
             </td>
         </tr>
         <tr>
@@ -182,7 +183,7 @@
 
             <td colspan="3"><strong>11. Kết quả thự hiện và khả năng ứng dụng</strong><br>
 
-            
+            {!! $datas->ket_qua_thuc_hien_ung_dung !!}
             </td>
         </tr>
         <tr>

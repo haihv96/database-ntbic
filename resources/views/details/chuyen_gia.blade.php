@@ -1,8 +1,8 @@
 @extends('search_result.chuyen_gia')
 @section('style')
-	<link rel="stylesheet" type="text/css" href="../../css/details_chuyen_gia.css">
-  <link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
-  <link rel="stylesheet" type="text/css" href="../../css/search_result_chuyen_gia.css">
+	<link rel="stylesheet" type="text/css" href="public/css/details_chuyen_gia.css">
+  <link rel="stylesheet" type="text/css" href="public/css/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="public/css/search_result_chuyen_gia.css">
 @endsection
 <!-- main-content -->
 @section("main-content")
