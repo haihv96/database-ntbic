@@ -24,15 +24,15 @@ class SearchController extends Controller
 			4: Cơ quan công tác
 		*/
 		if ($tim_theo == 1) {
-			$result = chuyen_gia_khcn::where('ho_va_ten','LIKE','%'.$text_search.'%')->get();
+			$result = chuyen_gia_khcn::where('ho_va_ten','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh')->get();
 		} else if ($tim_theo == 2) {
-			$result = chuyen_gia_khcn::where('chuyen_nganh','LIKE','%'.$text_search.'%')->get();
+			$result = chuyen_gia_khcn::where('chuyen_nganh','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh')->get();
 		} else if ($tim_theo == 3) {
-			$result = chuyen_gia_khcn::where('huong_nghien_cuu','LIKE','%'.$text_search.'%')->get();
+			$result = chuyen_gia_khcn::where('huong_nghien_cuu','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh')->get();
 		} else if ($tim_theo == 4) {
-			$result = chuyen_gia_khcn::where('co_quan','LIKE','%'.$text_search.'%')->get();
+			$result = chuyen_gia_khcn::where('co_quan','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh')->get();
 		} else {
-			$result = chuyen_gia_khcn::where('ho_va_ten','LIKE','%'.$text_search.'%')->orWhere('chuyen_nganh','LIKE','%'.$text_search.'%')->orWhere('huong_nghien_cuu','LIKE','%'.$text_search.'%')->orWhere('co_quan','LIKE','%'.$text_search.'%')->orWhere('nam_sinh','LIKE','%'.$text_search.'%')->get();
+			$result = chuyen_gia_khcn::where('ho_va_ten','LIKE','%'.$text_search.'%')->orWhere('chuyen_nganh','LIKE','%'.$text_search.'%')->orWhere('huong_nghien_cuu','LIKE','%'.$text_search.'%')->orWhere('co_quan','LIKE','%'.$text_search.'%')->orWhere('nam_sinh','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh')->get();
 		}
 
 		/*

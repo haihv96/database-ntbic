@@ -23,20 +23,21 @@ class SearchController extends Controller
 			3: Mô tả sản phẩm
 		*/
 		if($tim_theo == 0) {
-			$result = san_pham::where('ten_san_pham', 'LIKE', '%'.$text_search.'%')->get();
+			$result = san_pham::where('ten_san_pham', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat')->get();
 		} else if ($tim_theo == 1) {
-			$result = san_pham::where('kha_nang_ung_dung', 'LIKE', '%'.$text_search.'%')->get();
+			$result = san_pham::where('kha_nang_ung_dung', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat')->get();
 		} else if ($tim_theo == 2) {
-			$result = san_pham::where('mo_ta_chung', 'LIKE', '%'.$text_search.'%')->get();
+			$result = san_pham::where('mo_ta_chung', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat')->get();
 		} else {
-			$result = san_pham::where('ten_san_pham', 'LIKE', '%'.$text_search.'%')->orWhere('kha_nang_ung_dung', 'LIKE', '%'.$text_search.'%')->orWhere('mo_ta_chung', 'LIKE', '%'.$text_search.'%')->orWhere('dac_diem_noi_bat', 'LIKE', '%'.$text_search.'%')->get();
+			$result = san_pham::where('ten_san_pham', 'LIKE', '%'.$text_search.'%')->orWhere('kha_nang_ung_dung', 'LIKE', '%'.$text_search.'%')->orWhere('mo_ta_chung', 'LIKE', '%'.$text_search.'%')->orWhere('dac_diem_noi_bat', 'LIKE', '%'.$text_search.'%')->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat')->get();
 		}
 
 		/*
 			Tìm theo lĩnh vực KHCN: Truyền vào 1 số nguyên ứng với id lĩnh vực trong bảng linh_vuc_san_pham
 		*/
 		if ($linh_vuc_khcn != 0) {
-			$result = $result->where('linh_vuc',$linh_vuc_khcn);
+			$linh_vuc = DB::table('linh_vuc_san_pham')->find($linh_vuc_khcn);
+			$result = $result->where('linh_vuc',$linh_vuc->linh_vuc);
 		}
 
 		return $result;
