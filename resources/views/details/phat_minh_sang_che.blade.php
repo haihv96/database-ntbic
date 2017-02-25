@@ -266,3 +266,10 @@
 
 @endsection
 <!-- end main-content -->
+@section('script')
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('search_form').setAttribute('action','/phat-minh');
+    }
+</script>
+@endsection

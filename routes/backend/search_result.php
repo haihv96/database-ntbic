@@ -4,11 +4,11 @@ Route::get('/de-tai-du-an-cac-cap','de_tai_du_an_cac_cap\SearchController@getSea
 ?>
 
 <?php
-Route::get('/chuyen-gia','chuyen_gia\SearchController@getSearch');
+Route::get('/chuyen-gia','chuyen_gia\SearchController@getSearch')->name('search_result_chuyen_gia');
 
-Route::get('/san-pham','san_pham\SearchController@getSearch');
+Route::get('/san-pham','san_pham\SearchController@getSearch')->name('search_result_san_pham');
 
-Route::get('/phat-minh','phat_minh\SearchController@getSearch');
+Route::get('/phat-minh','phat_minh\SearchController@getSearch')->name('search_result_phat_minh');
 
-Route::get('/doanh-nghiep','doanh_nghiep\SearchController@getSearch');
+Route::get('/doanh-nghiep','doanh_nghiep\SearchController@getSearch')->name('search_result_doanh_nghiep');
 ?>

@@ -41,7 +41,7 @@
 			<!-- search box -->
 			<!-- <div class="search-label">
 				NGÂN HÀNG THÔNG TIN KHOA HỌC 
-			</div> --><form class="search-form" method="GET" action="">
+			</div> --><form class="search-form" id="search_form" method="GET" action="">
 			<div class="search-area col-md-9">
 				
 	                <div class="input-group">
@@ -62,19 +62,19 @@
 							<a href="#" id="all">Tất cả</a>
 						</li>
 						<li>
-							<a href="chuyen-gia" id="chuyen-gia">Chuyên gia KH&CN</a>
+							<a href="{!! url('chuyen-gia') !!}" id="chuyen-gia">Chuyên gia KH&CN</a>
 						</li>
 						<li>
-							<a href="de-tai-du-an-cac-cap" id="de-tai">Đề tài, dự án các cấp</a>
+							<a href="{!! url('de-tai-du-an-cac-cap') !!}" id="de-tai">Đề tài, dự án các cấp</a>
 						</li>
 						<li>
-							<a href="phat-minh" id="bang-phat-minh">Bằng phát minh, sáng chế</a>
+							<a href="{!! url('phat-minh') !!}" id="bang-phat-minh">Bằng phát minh, sáng chế</a>
 						</li>
 						<li>
-							<a href="san-pham" id="san-pham">Sản phẩm, công nghệ mới</a>
+							<a href="{!! url('san-pham') !!}" id="san-pham">Sản phẩm, công nghệ mới</a>
 						</li>
 						<li>
-							<a href="doanh-nghiep" id="doanh-nghiep">Doanh nghiệp KH&CN</a>
+							<a href="{!! url('doanh-nghiep') !!}" id="doanh-nghiep">Doanh nghiệp KH&CN</a>
 						</li>
 					</ul>
 				</div>

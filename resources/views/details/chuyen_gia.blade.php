@@ -201,4 +201,11 @@
 </div>
 
 @endsection
+@section('script')
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('search_form').setAttribute('action','/chuyen-gia');
+    }
+</script>
+@endsection
 <!-- end main-content -->
