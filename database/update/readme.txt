@@ -1,1 +1,0 @@
-chay file chuyen gia -> cong trinh -> ket qua dung thu tu nhe
