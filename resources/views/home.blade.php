@@ -10,8 +10,8 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<!-- style -->
   	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-  	<link rel="stylesheet" type="text/css" href="public/css/master.css">
-  	<link rel="stylesheet" type="text/css" href="public/css/home.css">
+  	<link rel="stylesheet" type="text/css" href="/public/css/master.css">
+  	<link rel="stylesheet" type="text/css" href="/public/css/home.css">
   	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script>
         function initialize() {
