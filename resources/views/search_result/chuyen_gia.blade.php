@@ -59,13 +59,13 @@
 					@foreach($chuyen_gia as $cg)
 						<tr>
 							<td></td>
-							<td><img src="#" alt="ảnh" class="img-responsive anh_chuyen_gia"></td>
-							<td><a href="chuyen-gia/{{$cg->link}}" class="ten_chuyen_gia">{{$cg->ho_va_ten}}</a></td>
-							<td>{{$cg->co_quan}}/td>
+							<td><img src="{{$cg->link_anh}}" alt="ảnh" class="img-responsive anh_chuyen_gia"></td>
+							<td><a href="chuyen-gia/{{$cg->linkid}}" class="ten_chuyen_gia">{{$cg->hoc_vi}} {{$cg->ho_va_ten}}</a></td>
+							<td>{{$cg->co_quan}}</td>
 							<td>{{$cg->chuyen_nganh}}</td>
 							<td>{{$cg->tinh_thanh}}</td>
 						</tr>
-					@endfor
+					@endforeach
 				</tbody>
 			</table>
 		</div>

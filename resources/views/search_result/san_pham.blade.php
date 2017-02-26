@@ -53,7 +53,7 @@
 				@foreach($san_pham as $sp)
 					<tr>
 						<td></td>
-						<td><img src="#" alt="ảnh" class="anh_san_pham"></td>
+						<td><img src="" alt="ảnh" class="anh_san_pham"></td>
 						<td><a href="san-pham/{{$sp->link}}" class="ten_san_pham">{{$sp->ten_san_pham}}</a></td>
 						<td>{{$sp->linh_vuc}}</td>
 						<td>{{$sp->dac_diem_noi_bat}}</td>

@@ -68,7 +68,7 @@
 				@foreach($doanh_nghiep as $dn)
 					<tr>
 						<td></td>
-						<td><img src="#" alt="logo" class="logo_doanh_nghiep"></td>
+						<td><img src="{{$dn->logo}}" alt="logo" class="logo_doanh_nghiep"></td>
 						<td><a href="doanh-nghiep/{{$dn->link}}" class="ten_doanh_nghiep">{{$dn->ten_doanh_nghiep}}</a></td>
 						<td>{{$dn->linh_vuc}}</td>
 						<td>{{$dn->dia_chi}}</td>

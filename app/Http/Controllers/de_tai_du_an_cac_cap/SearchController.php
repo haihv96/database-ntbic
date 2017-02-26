@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\de_tai_du_an_cac_cap;
+use App\chuyen_nganh_khcn;
 
 class SearchController extends Controller
 {
 	public function getSearch(Request $request) {
 		$per_page = 10;
+		$cn_khcn = chuyen_nganh_khcn::all();
 		/*Truyền vào text và các option*/
 		$text_search = $request->text_search;
 		$tim_theo = $request->tim_theo;
@@ -28,26 +30,24 @@ class SearchController extends Controller
 			5: Tóm tắt nội dung 
 		*/
 		if($tim_theo == 1) {
-			$result = de_tai_du_an_cac_cap::where('ten_de_tai','LIKE','%'.$text_search.'%')->paginate($per_page);
+			$result = de_tai_du_an_cac_cap::where('ten_de_tai','LIKE','%'.$text_search.'%')->select('ten_de_tai','maso_kyhieu','linh_vuc','chu_nhiem_detai','nam_ket_thuc','link','nam_bat_dau','chuyen_nganh_khcn')->get();
 		} else if ($tim_theo == 2) {
-			$result = de_tai_du_an_cac_cap::where('chu_nhiem_detai','LIKE','%'.$text_search.'%')->paginate($per_page);
+			$result = de_tai_du_an_cac_cap::where('chu_nhiem_detai','LIKE','%'.$text_search.'%')->select('ten_de_tai','maso_kyhieu','linh_vuc','chu_nhiem_detai','nam_ket_thuc','link','nam_bat_dau','chuyen_nganh_khcn')->get();
 		} else if ($tim_theo == 3) {
-			$result = de_tai_du_an_cac_cap::where('maso_kyhieu','LIKE','%'.$text_search.'%')->paginate($per_page);
+			$result = de_tai_du_an_cac_cap::where('maso_kyhieu','LIKE','%'.$text_search.'%')->select('ten_de_tai','maso_kyhieu','linh_vuc','chu_nhiem_detai','nam_ket_thuc','link','nam_bat_dau','chuyen_nganh_khcn')->get();
 		} else if ($tim_theo == 4) {
-			$result = de_tai_du_an_cac_cap::where('co_quan','LIKE','%'.$text_search.'%')->paginate($per_page);
+			$result = de_tai_du_an_cac_cap::where('co_quan','LIKE','%'.$text_search.'%')->select('ten_de_tai','maso_kyhieu','linh_vuc','chu_nhiem_detai','nam_ket_thuc','link','nam_bat_dau','chuyen_nganh_khcn')->get();
 		} else if ($tim_theo == 5) {
-			$result = de_tai_du_an_cac_cap::where('mota_chung','LIKE','%'.$text_search.'%')->paginate($per_page);
+			$result = de_tai_du_an_cac_cap::where('mota_chung','LIKE','%'.$text_search.'%')->select('ten_de_tai','maso_kyhieu','linh_vuc','chu_nhiem_detai','nam_ket_thuc','link','nam_bat_dau','chuyen_nganh_khcn')->get();
 		} else {
-			$result = de_tai_du_an_cac_cap::where('ten_de_tai','LIKE','%'.$text_search.'%')->orWhere('chu_nhiem_detai','LIKE','%'.$text_search.'%')->orWhere('maso_kyhieu','LIKE','%'.$text_search.'%')->orWhere('co_quan','LIKE','%'.$text_search.'%')->orWhere('mota_chung','LIKE','%'.$text_search.'%')->orWhere('diem_noi_bat','LIKE','%'.$text_search.'%')->orWhere('mota_quytrinh_chuyengiao','LIKE','%'.$text_search.'%')->paginate($per_page);
+			$result = de_tai_du_an_cac_cap::where('ten_de_tai','LIKE','%'.$text_search.'%')->orWhere('chu_nhiem_detai','LIKE','%'.$text_search.'%')->orWhere('maso_kyhieu','LIKE','%'.$text_search.'%')->orWhere('co_quan','LIKE','%'.$text_search.'%')->orWhere('mota_chung','LIKE','%'.$text_search.'%')->orWhere('diem_noi_bat','LIKE','%'.$text_search.'%')->orWhere('mota_quytrinh_chuyengiao','LIKE','%'.$text_search.'%')->select('ten_de_tai','maso_kyhieu','linh_vuc','chu_nhiem_detai','nam_ket_thuc','link','nam_bat_dau','chuyen_nganh_khcn')->get();
 		}
-
 		/*
 			Tìm theo chuyên ngành: Truyền vào 1 số nguyên ứng với id trong bảng chuyen_nganh_khcn
 		*/
-		if($chuyen_nganh != 0) {
+		if ($chuyen_nganh != 0) {
 			$result = $result->where('chuyen_nganh_khcn',$chuyen_nganh);
 		}
-		$page = $request->page;
-		return view('search_result.de_tai_du_an_cac_cap')->with(['datas' => $result, 'page' => $page]);
+		return view('search_result.de_tai_du_an_cac_cap')->with(['datas' => $result,'chuyen_nganh_khcn'=>$cn_khcn]);
 	}
 }

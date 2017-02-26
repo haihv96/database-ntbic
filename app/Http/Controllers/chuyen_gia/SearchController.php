@@ -29,28 +29,28 @@ class SearchController extends Controller
 			4: Cơ quan công tác
 		*/
 		if ($tim_theo == 1) {
-			$result = chuyen_gia_khcn::where('ho_va_ten','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh')->get();
+			$result = chuyen_gia_khcn::where('ho_va_ten','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh','linkid','link_anh')->get();
 		} else if ($tim_theo == 2) {
-			$result = chuyen_gia_khcn::where('chuyen_nganh','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh')->get();
+			$result = chuyen_gia_khcn::where('chuyen_nganh','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh','linkid','link_anh')->get();
 		} else if ($tim_theo == 3) {
-			$result = chuyen_gia_khcn::where('huong_nghien_cuu','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh')->get();
+			$result = chuyen_gia_khcn::where('huong_nghien_cuu','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh','linkid','link_anh')->get();
 		} else if ($tim_theo == 4) {
-			$result = chuyen_gia_khcn::where('co_quan','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh')->get();
+			$result = chuyen_gia_khcn::where('co_quan','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh','linkid','link_anh')->get();
 		} else {
-			$result = chuyen_gia_khcn::where('ho_va_ten','LIKE','%'.$text_search.'%')->orWhere('chuyen_nganh','LIKE','%'.$text_search.'%')->orWhere('huong_nghien_cuu','LIKE','%'.$text_search.'%')->orWhere('co_quan','LIKE','%'.$text_search.'%')->orWhere('nam_sinh','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh')->get();
+			$result = chuyen_gia_khcn::where('ho_va_ten','LIKE','%'.$text_search.'%')->orWhere('chuyen_nganh','LIKE','%'.$text_search.'%')->orWhere('huong_nghien_cuu','LIKE','%'.$text_search.'%')->orWhere('co_quan','LIKE','%'.$text_search.'%')->orWhere('nam_sinh','LIKE','%'.$text_search.'%')->select('link_anh','ho_va_ten','hoc_vi','co_quan','chuyen_nganh','tinh_thanh','linkid','link_anh')->get();
 		}
 
 		/*
 			Tìm theo chức danh: truyền vào chuỗi ứng với cột hoc_vi trong bảng chuyen_gia_khcn
 		*/
-		if($chuc_danh != 'Chức danh') {
+		if($chuc_danh != 'Chức danh' and $chuc_danh != '') {
 			$result = $result->where('hoc_vi',$chuc_danh);
 		}
 
 		/*
 			Tìm theo tỉnh, thành phố: truyền vào chuỗi ứng với cột tinh_thanh trong bảng chuyen_gia_khcn
 		*/
-		if($tinh_thanh != 'Tỉnh, thành phố') {
+		if($tinh_thanh != 'Tỉnh, thành phố' and $tinh_thanh != '') {
 			$result = $result->where('tinh_thanh',$tinh_thanh);
 		}
 

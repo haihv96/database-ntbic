@@ -11,48 +11,21 @@
 				<div class="filter">
 					<ul class="list-search-filter">
 						<li>
-							<select>
-							  <option value="volvo">Tìm theo</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
+							<select name="tim_theo">
+							  <option value="0">Tìm theo</option>
+							  <option value="1">Tên đề tài, đề án</option>
+							  <option value="2">CNĐT tác giả</option>
+							  <option value="3">Mã số, ký hiệu</option>
+							  <option value="4">Cơ quan chủ trì</option>
+							  <option value="5">Tóm tắt nội dung</option>
 							</select>
 						</li>
 						<li>
-							<select>
-							  <option value="volvo">Lĩnh vực KH&CN</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
-							</select>
-						</li>
-						<li>
-							<select>
-							  <option value="volvo">Chuyên ngành</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
-							</select>
-						</li>
-						<li>
-							<select>
-							  <option value="volvo">Tỉnh, thành phố</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
-							</select>
-						</li>
-						<li>
-							<select>
-							  <option value="volvo">Chức danh</option>
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="opel">Opel</option>
-							  <option value="audi">Audi</option>
+							<select name="chuyen_nganh">
+							  <option value="0">Chuyên ngành</option>
+							  @foreach($chuyen_nganh_khcn as $item)
+							  <option value="{{$item->id}}">{{$item->ten}}</option>
+							  @endforeach
 							</select>
 						</li>
 					</ul>
@@ -63,33 +36,32 @@
 	<!-- main content,display result -->
 	@section('main-content')
 	<div class="row col-md-12 div-content">
-		<div class="search-info">
-		<p>Kết quả tìm kiếm : xxxxxxx trong xxxxxxxxxx giây</p>
+			<div class="search-info">
+			<p>Kết quả tìm kiếm : xxxxxxx trong xxxxxxxxxx giây</p>
+			</div>
+			<table class="dataTable table-hover table-responsive" id="myTable">
+				<thead class="head-dataTable">
+					<th class="no"></th>
+					<th class="name">Tên đề tài, dự án</th>
+					<th class="linh_vuc">Lĩnh vực KH&CN</th>
+					<th class="ma_so">Mã số, ký hiệu</th>
+					<th class="tac_gia">CNĐT, tác giả</th>
+					<th class="thoi_gian">Thời gian kết thúc</th>
+				</thead>
+				<tbody>
+					@foreach($datas as $item)
+						<tr>
+							<td></td>
+							<td><a href="de-tai-du-an-cac-cap/{{$item->link}}" class="ten_de_tai">{{$item->ten_de_tai}}</a></td>
+							<td>{{$item->linh_vuc}}</td>
+							<td>{{$item->maso_kyhieu}}</td>
+							<td>{{$item->chu_nhiem_detai}}</td>
+							<td>{{$item->nam_bat_dau}}-{{$item->nam_ket_thuc}}</td>
+						</tr>
+					@endforeach
+				</tbody>
+			</table>
 		</div>
-		<table class="dataTable table-hover table-responsive" id="myTable">
-			<thead class="head-dataTable">
-				<th class="no"></th>
-				<th class="name">Tên đề tài, dự án</th>
-				<th class="linh_vuc">Lĩnh vực KH&CN</th>
-				<th class="ma_so">Mã số, ký hiệu</th>
-				<th class="tac_gia">CNĐT, tác giả</th>
-				<th class="thoi_gian">Thời gian kết thúc</th>
-			</thead>
-			<tbody>
-				@foreach($datas as $item)
-					<tr>
-						<td>{{ $page*10++ }}</td>
-						<td><a href="#" class="ten_de_tai">{{$item->ten_de_tai}}</a></td>
-						<td>Công nghệ thông tin</td>
-						<td>k59clc</td>
-						<td>Dương Lê Minh</td>
-						<td>2017-2018</td>
-					</tr>
-				@endforeach
-			</tbody>
-		</table>
-	</div>
-	{!! $datas->render() !!}
 	@show
 
 	<!-- end main content -->
