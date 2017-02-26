@@ -67,11 +67,11 @@
 	<!-- end main content -->
 @endsection
 <!-- end content -->
-{{-- @section('script')
+@section('script')
 <script type="text/javascript">
 	$(document).ready(function(){
     	$('#myTable').DataTable();
 	});
 </script>
 	
-@endsection --}}
+@endsection
