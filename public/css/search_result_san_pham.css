@@ -18,8 +18,17 @@ select{
 }
 #myTable td{
 	border: 0.2px solid #f2f2f2;
-	word-wrap: break-word;
 }
+.collapse-div{
+	display: inline-block;
+	overflow-y: hidden;
+	word-wrap: auto;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3; 
+	-webkit-box-orient: vertical;
+}
+
 #myTable th{
 	border: 0.2px solid #f2f2f2;
 }
@@ -42,14 +51,11 @@ select{
 	width: 10%;
 }
 .name{
-	width: 20%;
+	width: 25%;
 }
 .ung_dung{
 	width: 35%;
 }
 .linh_vuc{
-	width: 20%;
-}
-.cap_nhat{
-	width: 10%;
+	width: 25%;
 }
