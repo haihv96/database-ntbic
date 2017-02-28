@@ -82,7 +82,6 @@
 				<th class="name">Tên công nghệ, ứng dụng</th>
 				<th class="linh_vuc">Lĩnh vực KH&CN</th>
 				<th class="ung_dung">Khả năng ứng dụng</th>
-				
 			</thead>
 			<tbody>
 				@foreach($datas as $sp)
@@ -91,8 +90,7 @@
 						<td><img src="{{ $sp->anh_san_pham }}" alt="ảnh" class="anh_san_pham"></td>
 						<td><a href="san-pham/{{$sp->link}}" class="ten_san_pham">{{$sp->ten_san_pham}}</a></td>
 						<td>{{$sp->linh_vuc}}</td>
-						<td>{{$sp->dac_diem_noi_bat}}</td>
-						
+						<td><div class="collapse-div">{{$sp->dac_diem_noi_bat}}</div>
 					</tr>
 				@endforeach
 
@@ -109,5 +107,17 @@
 <!-- end content -->
 @section('script')
 
-	
+<script type="text/javascript">
+	$(document).ready(function(){
+    	$('#myTable').DataTable();
+
+    	$('.collapse-div').mouseover(function(){
+    		$(this).removeClass("collapse-div");
+    	});
+    	$(".collapse-div").mouseout(function(){
+    		$(this).addClass('collapse-div');
+    	});
+	});
+</script>
+
 @endsection

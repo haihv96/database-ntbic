@@ -33,7 +33,12 @@
 	padding: 0;
 }
 .filter-row a{
-	color: black
+	color: black;
+	text-decoration: none;
+}
+.filter-row a:hover{
+	text-decoration: none;
+	color:green;
 }
 .filter{
 	margin-bottom: 10px;
@@ -89,6 +94,9 @@ hr{
 	background-color:#2eb82e;
 	padding-left: 5px;
 	padding-right: 5px; 
+}
+.submit-button{
+	background-color: #2eb82e;
 }
 .input-group-btn a{
 	color: white
