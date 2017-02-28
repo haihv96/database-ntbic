@@ -106,7 +106,7 @@
 @endsection
 <!-- end content -->
 @section('script')
-
+{{-- 
 <script type="text/javascript">
 	$(document).ready(function(){
     	$('#myTable').DataTable();
@@ -118,6 +118,6 @@
     		$(this).addClass('collapse-div');
     	});
 	});
-</script>
+</script> --}}
 
 @endsection
