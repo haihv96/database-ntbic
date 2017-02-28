@@ -75,11 +75,20 @@
 				<form class="search-form " method="GET" action="">
 					<fieldset>
 		                <div class="input-group">
-		                    <input type="text" class="form-control input-lg" placeholder="Tìm kiếm..." name="query">
-		                    <div class="input-group-btn">
+		                    <input id="text_search" type="text" class="form-control input-lg" placeholder="Tìm kiếm..." name="query">
+		                    <select name="type-search">
+		                    	<option value="tat-ca">Tất cả dữ liệu KH&CN</option>
+		                    	<option value="chuyen-gia">dữ liệu chuyên gia KH&CN</option>
+		                    	<option value="de-tai-du-an-cac-cap">dữ liệu đề tài, dự án KH&CN</option>
+		                    	<option value="phat-minh">dữ liệu phát minh, sáng chế</option>
+		                    	<option value="san-pham">dữ liệu sản phẩm, ứng dụng KH&CN</option>
+		                    	<option value="doanh-nghiep">dữ liệu doanh nghiệp KH&CN</option>
+		                    	option
+		                    </select>
+		                    <div id="search_home" class="input-group-btn">
 		                        <a href="javascript:;" class="btn submit">
 		                            <span class="glyphicon glyphicon-search search1"></span>
-		                            Search
+		                            Tìm kiếm
 		                        </a>
 		                    </div>
 	               		</div>
@@ -594,7 +603,8 @@
 	</div>
 
 	<!-- script -->
-	@yield('script')
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/public/js/my_script.js"></script>
 </body>
 </html>

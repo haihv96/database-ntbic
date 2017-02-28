@@ -12,26 +12,58 @@
 					<ul class="list-search-filter">
 						<li>
 							<select name = 'tim_theo'>
-							  <option value="0">Tìm theo</option>
-							  <option value="1">Tên nhà KH</option>
-							  <option value="2">Lĩnh vực nghiên cứu</option>
-							  <option value="3">Hướng nghiên cứu</option>
-							  <option value="4">Cơ quan công tác</option>
+								@if($tim_theo == '0')
+							  		<option value="0" selected="">Tìm theo</option>
+							  	@else
+							  		<option value="0">Tìm theo</option>
+							  	@endif
+
+							  	@if($tim_theo == '1')
+							  		<option value="1" selected="">Tên nhà KH</option>
+							  	@else
+							  		<option value="1">Tên nhà KH</option>
+							  	@endif
+
+							  	@if($tim_theo == '2')
+							  		<option value="2" selected="">Lĩnh vực nghiên cứu</option>
+							  	@else
+							  		<option value="2">Lĩnh vực nghiên cứu</option>
+							  	@endif
+
+							  	@if($tim_theo == '3')
+							  		<option value="3" selected="">Hướng nghiên cứu</option>
+							  	@else
+							  		<option value="3">Hướng nghiên cứu</option>
+							  	@endif
+
+							  	@if($tim_theo == '4')
+							  		<option value="4" selected="">Cơ quan công tác</option>
+							  	@else
+							  		<option value="4">Cơ quan công tác</option>
+							  	@endif
 							</select>
 						</li>
 						<li>
 							<select name='tinh_thanh_pho'>
-							  <option value="Tỉnh, thành phố">Tỉnh, thành phố</option>
+							  <option value="">Tỉnh, thành phố</option>
 							  @foreach($tinh_thanh as $tt)
-							  <option value="{{$tt->tinh_thanh_pho}}">{{$tt->tinh_thanh_pho}}</option>
+							  	@if($tinh_thanh_current == $tt->tinh_thanh_pho)
+							  		<option value="{{$tt->tinh_thanh_pho}}" selected="">{{$tt->tinh_thanh_pho}}</option>
+							  	@else 
+							  		<option value="{{$tt->tinh_thanh_pho}}">{{$tt->tinh_thanh_pho}}</option>
+							  	@endif
 							  @endforeach
 							</select>
 						</li>
 						<li>
 							<select name="chuc_danh">
-							  <option value="Chức danh">Chức danh</option>
+							  <option value="">Chức danh</option>
 							  @foreach($hoc_vi as $hv)
-							  <option value="{{$hv->hoc_vi}}">{{$hv->hoc_vi}}</option>
+							  	@if($hoc_vi_current == $hv->hoc_vi)
+							  		<option value="{{$hv->hoc_vi}}" selected="">{{$hv->hoc_vi}}</option>
+							  	@else
+							  		<option value="{{$hv->hoc_vi}}">{{$hv->hoc_vi}}</option>
+							  	@endif
 							  @endforeach
 							</select>
 						</li>
@@ -44,7 +76,7 @@
 		@section('main-content')
 		<div class="row col-md-12 div-content">
 			<div class="search-info">
-			<p>Kết quả tìm kiếm : xxxxxxx trong xxxxxxxxxx giây</p>
+			<p>Kết quả tìm kiếm : {!! $datas->total() !!} trong {{ $time_search }} giây</p>
 			</div>
 			<table class="dataTable table-hover table-responsive" id="myTable">
 				<thead class="head-dataTable">
@@ -56,7 +88,7 @@
 					<th class="tinh_thanh">Tỉnh thành</th>
 				</thead>
 				<tbody>
-					@foreach($chuyen_gia as $cg)
+					@foreach($datas as $cg)
 						<tr>
 							<td></td>
 							<td><img src="{{$cg->link_anh}}" alt="ảnh" class="img-responsive anh_chuyen_gia"></td>
@@ -68,6 +100,9 @@
 					@endforeach
 				</tbody>
 			</table>
+			<div>
+				{!! $datas->appends(request()->input())->links() !!}
+			</div>
 		</div>
 	@show
 
@@ -75,10 +110,5 @@
 @endsection
 <!-- end content -->
 @section('script')
-<script type="text/javascript">
-	$(document).ready(function(){
-    	$('#myTable').DataTable();
-	});
-</script>
 	
 @endsection

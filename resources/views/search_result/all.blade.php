@@ -1,4 +1,4 @@
-@extends('layouts.master')
+ @extends('layouts.master')
 
 @section('style')
 <link rel="stylesheet" type="text/css" href="public/css/search_result_all.css">

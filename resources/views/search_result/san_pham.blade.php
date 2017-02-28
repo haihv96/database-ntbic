@@ -12,19 +12,54 @@
 					<ul class="list-search-filter">
 						<li>
 							<select name='tim_theo'>
-							  <option value="0">Tìm theo</option>
-							  <option value="1">Tên sản phẩm, ứng dụng</option>
-							  <option value="2">Khả năng ứng dụng</option>
-							  <option value="3">Mô tả sản phẩm, ứng dụng</option>
-							  <option value="4">Giải quyết bài toán</option>
-							  <option value="5">Thị trường ứng dụng</option>
+								@if($tim_theo == '0')
+							  		<option value="0" selected="">Tìm theo</option>
+							  	@else
+							  		<option value="0">Tìm theo</option>
+							  	@endif
+
+							  	@if($tim_theo == '1')
+							  		<option value="1" selected="">Tên sản phẩm, ứng dụng</option>
+							  	@else
+							  		<option value="1">Tên sản phẩm, ứng dụng</option>
+							  	@endif
+
+							  	@if($tim_theo == '2')
+							  		<option value="2" selected="">Khả năng ứng dụng</option>
+							  	@else
+							  		<option value="2">Khả năng ứng dụng</option>
+							  	@endif
+
+							  	@if($tim_theo == '3')
+							  		<option value="3" selected="">Mô tả sản phẩm, ứng dụng</option>
+							  	@else
+							  		<option value="3">Hướng nghiên cứu</option>
+							  	@endif
+
+							  	@if($tim_theo == '4')
+							  		<option value="4" selected="">Giải quyết bài toán</option>
+							  	@else
+							  		<option value="4">Giải quyết bài toán</option>
+							  	@endif
+
+							  	@if($tim_theo == '5')
+							  		<option value="5" selected="">Thị trường ứng dụng</option>
+							  	@else
+							  		<option value="5">Thị trường ứng dụng</option>
+							  	@endif
+
 							</select>
 						</li>
 						<li>
 							<select name='linh_vuc_khcn'>
 							  <option value="0">Lĩnh vực KH&CN</option>
 							  @foreach($linh_vuc as $lv)
-							  <option value="{{$lv->id}}">{{$lv->linh_vuc}}</option>
+							  	@if($linh_vuc_current == $lv->id)
+							  		<option value="{{$lv->id}}" selected="">{{$lv->linh_vuc}}</option>
+							  	@else
+							  		<option value="{{$lv->id}}">{{$lv->linh_vuc}}</option>
+							  	@endif
+
 							  @endforeach
 							</select>
 						</li>
@@ -38,7 +73,7 @@
 	@section('main-content')
 	<div class="row col-md-12 div-content">
 		<div class="search-info">
-		<p>Kết quả tìm kiếm : xxxxxxx trong xxxxxxxxxx giây</p>
+		<p>Kết quả tìm kiếm : {!! $datas->total() !!} trong {{ $time_search }} giây</p>
 		</div>
 		<table class="dataTable table-hover table-responsive" id="myTable">
 			<thead class="head-dataTable">
@@ -50,10 +85,10 @@
 				
 			</thead>
 			<tbody>
-				@foreach($san_pham as $sp)
+				@foreach($datas as $sp)
 					<tr>
 						<td></td>
-						<td><img src="" alt="ảnh" class="anh_san_pham"></td>
+						<td><img src="{{ $sp->anh_san_pham }}" alt="ảnh" class="anh_san_pham"></td>
 						<td><a href="san-pham/{{$sp->link}}" class="ten_san_pham">{{$sp->ten_san_pham}}</a></td>
 						<td>{{$sp->linh_vuc}}</td>
 						<td>{{$sp->dac_diem_noi_bat}}</td>
@@ -63,6 +98,9 @@
 
 			</tbody>
 		</table>
+		<div>
+			{!! $datas->appends(request()->input())->links() !!}
+		</div>
 	</div>
 	@show
 
@@ -70,10 +108,6 @@
 @endsection
 <!-- end content -->
 @section('script')
-<script type="text/javascript">
-	$(document).ready(function(){
-    	$('#myTable').DataTable();
-	});
-</script>
+
 	
 @endsection

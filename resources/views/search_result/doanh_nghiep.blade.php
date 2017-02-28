@@ -12,18 +12,46 @@
 					<ul class="list-search-filter">
 						<li>
 							<select name='tim_theo'>
-							  <option value="0">Tìm theo</option>
-							  <option value="1">Tên doanh nghiệp</option>
-							  <option value="2">Sản phẩm KHCN</option>
-							  <option value="3">Công nghệ nổi bật</option>
-							  <option value="4">Hướng nghiên cứu</option>
+								@if($tim_theo == '0')
+							  		<option value="0" selected="">Tìm theo</option>
+							  	@else
+							  		<option value="0">Tìm theo</option>
+							  	@endif
+
+							  	@if($tim_theo == '1')
+							  		<option value="1" selected="">Tên doanh nghiệp</option>
+							  	@else
+							  		<option value="1">Tên doanh nghiệp</option>
+							  	@endif
+
+							  	@if($tim_theo == '2')
+							  		<option value="2" selected="">Sản phẩm KHCN</option>
+							  	@else
+							  		<option value="2">Sản phẩm KHCN</option>
+							  	@endif
+
+							  	@if($tim_theo == '3')
+							  		<option value="3" selected="">Công nghệ nổi bật</option>
+							  	@else
+							  		<option value="3">Công nghệ nổi bật</option>
+							  	@endif
+
+							  	@if($tim_theo == '4')
+							  		<option value="4" selected="">Hướng nghiên cứu</option>
+							  	@else
+							  		<option value="4">Hướng nghiên cứu</option>
+							  	@endif
 							</select>
 						</li>
 						<li>
 							<select name='linh_vuc_khcn'>
 							  <option value="0">Lĩnh vực KH&CN</option>
 							  @foreach($linh_vuc as $lv)
-							  <option value="{{$lv->id}}">{{$lv->linh_vuc}}</option>
+							  	@if($linh_vuc_current == $lv->id)
+							  		<option value="{{$lv->id}}" selected="">{{$lv->linh_vuc}}</option>
+							  	@else
+							  		<option value="{{$lv->id}}">{{$lv->linh_vuc}}</option>
+							  	@endif
 							  @endforeach
 							</select>
 						</li>
@@ -31,16 +59,34 @@
 							<select name='tinh_thanh_pho'>
 							  <option value="0">Tỉnh, thành phố</option>
 							  @foreach($tinh_thanh as $tinh)
-							  <option value="{{$tinh->id}}">{{$tinh->tinh_thanh_pho}}</option>
+							  	@if($tinh_thanh_current == $tinh->id)
+							  		<option value="{{$tinh->id}}" selected="">{{$tinh->tinh_thanh_pho}}</option>
+							  	@else
+							  		<option value="{{$tinh->id}}">{{$tinh->tinh_thanh_pho}}</option>
+							  	@endif
 							  @endforeach
 							</select>
 						</li>
 						<li>
 							<select name='xep_hang'>
 							  <option value="Xếp hạng">Xếp hạng</option>
-							  <option value="A">A</option>
-							  <option value="B">B</option>
-							  <option value="C">C</option>
+							  		@if($xep_hang == 'A')
+							  			<option value="A" selected="">A</option>
+							  		@else
+							  			<option value="A">A</option>
+							  		@endif
+
+							  		@if($xep_hang == 'B')
+							  			<option value="B" selected="">B</option>
+							  		@else
+							  			<option value="B">B</option>
+							  		@endif
+
+							  		@if($xep_hang == 'C')
+							  			<option value="C" selected="">C</option>
+							  		@else
+							  			<option value="C">C</option>
+							  		@endif
 							</select>
 						</li>
 					</ul>
@@ -52,7 +98,7 @@
 	@section('main-content')
 	<div class="row col-md-12 div-content">
 		<div class="search-info">
-		<p>Kết quả tìm kiếm : xxxxxxx trong xxxxxxxxxx giây</p>
+		<p>Kết quả tìm kiếm : {!! $datas->total() !!} trong {{ $time_search }} giây</p>
 		</div>
 		<table class="dataTable table-hover table-responsive" id="myTable">
 			<thead class="head-dataTable">
@@ -65,7 +111,7 @@
 				<th class="rank">Xếp hạng</th>
 			</thead>
 			<tbody>
-				@foreach($doanh_nghiep as $dn)
+				@foreach($datas as $dn)
 					<tr>
 						<td></td>
 						<td><img src="{{$dn->logo}}" alt="logo" class="logo_doanh_nghiep"></td>
@@ -78,6 +124,9 @@
 				@endforeach
 			</tbody>
 		</table>
+		<div>
+			{!! $datas->appends(request()->input())->links() !!}
+		</div>
 	</div>
 	@show
 
@@ -85,10 +134,5 @@
 @endsection
 <!-- end content -->
 @section('script')
-<script type="text/javascript">
-	$(document).ready(function(){
-    	$('#myTable').DataTable();
-	});
-</script>
 	
 @endsection
