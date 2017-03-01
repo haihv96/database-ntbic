@@ -57,7 +57,7 @@
 
                 <td width="120px">
 
-                	<img src="#" style="width:120px;">
+                	<img src="{{ $datas->logo }}" style="width:120px;">
 
                 </td>
 

@@ -52,6 +52,7 @@ class SearchController extends Controller
 
 		$result = $result->select('ten_de_tai','maso_kyhieu','linh_vuc','chu_nhiem_detai','nam_ket_thuc','link','nam_bat_dau','chuyen_nganh_khcn')->paginate($per_page);
 		$time_search += microtime(true);
+
 		return view('search_result.de_tai_du_an_cac_cap')
 		->with([
 			'datas' => $result,

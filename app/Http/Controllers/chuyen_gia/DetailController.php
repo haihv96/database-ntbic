@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\tinh_thanh_pho;
 use App\hoc_vi;
+use App\ket_qua_nghien_cuu;
+use App\cong_trinh_nghien_cuu;
+use App\chuyen_gia_khcn;
 
 class DetailController extends Controller
 {
@@ -21,21 +24,20 @@ class DetailController extends Controller
             $data_phu1 dữ liệu cong_trinh_nghien_cuu của chuyên gia đó 
             $data_phu2 dữ liệu ket_qua_nghien_cuu của chuyên gia đó 
         */
-        $data_chinh = DB::table('chuyen_gia_khcn')->select('ho_va_ten','hoc_vi','nam_sinh','chuyen_nganh','co_quan','huong_nghien_cuu','link_anh','Sl_congTrinh_baiBao','tinh_thanh')->where('linkid',$link)->get();
+        $datas = chuyen_gia_khcn::select('id','ho_va_ten','hoc_vi','nam_sinh','chuyen_nganh','co_quan','huong_nghien_cuu','link_anh','Sl_congTrinh_baiBao','tinh_thanh','dia_chi_co_quan')->where('linkid',$link)->first();
         
-        $data_phu1 = DB::table('chuyen_gia_khcn')->join('cong_trinh_nghien_cuu','cong_trinh_nghien_cuu.id_profile','=','chuyen_gia_khcn.id')->select('cong_trinh_nghien_cuu.content')->where('linkid',$link)->get();
+        $ket_qua_nghien_cuu = ket_qua_nghien_cuu::select('content')->where('id_profile',$datas->id)->get()->toArray();
         
-        $data_phu2 = DB::table('chuyen_gia_khcn')->join('ket_qua_nghien_cuu','ket_qua_nghien_cuu.id_profile','=','chuyen_gia_khcn.id')->select('ket_qua_nghien_cuu.content')->where('linkid',$link)->get();
+        $cong_trinh_nghien_cuu = cong_trinh_nghien_cuu::select('content')->where('id_profile',$datas->id)->get()->toArray();
         
-        
-        
-        
-        echo "<pre>";
-        print_r($data_chinh);
-        print_r($data_phu1);
-        print_r($data_phu2);
-        //echo $data[0]->huong_nghien_cuu;// mảng gồm các đối tượng có thể gắn biến sau nếu cần 
-        echo "</pre>";
+        return view('details.chuyen_gia')
+        ->with([
+            'datas'=>$datas,
+            'ket_qua_nghien_cuu' => $ket_qua_nghien_cuu,
+            'cong_trinh_nghien_cuu' => $cong_trinh_nghien_cuu,
+            'stt_kqnc' => 0,
+            'stt_ctnc' => 0
+            ]);
         
     }
     

@@ -1,11 +1,11 @@
-@extends('search_result.de_tai_du_an_cac_cap')
+@extends('layouts.master')
 @section('style')
    <link rel="stylesheet" type="text/css" href="/public/css/details_de_tai_du_an_cac_cap.css">
    <link rel="stylesheet" type="text/css" href="/public/css/sidebar.css">
    <link rel="stylesheet" type="text/css" href="/public/css/search_result_de_tai.css">
 @endsection
 <!-- main-content -->
-@section("main-content")
+@section("content")
 <div class="row">
     <div class="articles_detail col-md-9">
 

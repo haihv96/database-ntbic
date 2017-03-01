@@ -222,8 +222,7 @@
               
 
                 <td colspan="3"><strong>12. Hình ảnh minh họa </strong><br>
-
-                {!! $datas->hinh_anh_minh_hoa !!}
+                <img src="{{ $datas->hinh_anh_minh_hoa }}" />
                 </td>
             </tr>
             <tr>

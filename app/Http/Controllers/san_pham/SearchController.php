@@ -40,7 +40,7 @@ class SearchController extends Controller
 			$result = $result->where('san_pham.linh_vuc',$linh_vuc_khcn);
 		}
 
-		$result = $result->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat','link')->paginate($per_page);
+		$result = $result->join('linh_vuc_san_pham','san_pham.linh_vuc','=','linh_vuc_san_pham.id')->select('ten_san_pham','linh_vuc_san_pham.linh_vuc as linh_vuc','dac_diem_noi_bat','link','anh_san_pham')->paginate($per_page);
 		/*
 			Tìm theo lĩnh vực KHCN: Truyền vào 1 số nguyên ứng với id lĩnh vực trong bảng linh_vuc_san_pham
 		*/

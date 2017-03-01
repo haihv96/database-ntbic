@@ -1,11 +1,11 @@
-@extends('search_result.chuyen_gia')
+@extends('layouts.master')
 @section('style')
-	<link rel="stylesheet" type="text/css" href="public/css/details_chuyen_gia.css">
-  <link rel="stylesheet" type="text/css" href="public/css/sidebar.css">
-  <link rel="stylesheet" type="text/css" href="public/css/search_result_chuyen_gia.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/details_chuyen_gia.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/search_result_chuyen_gia.css">
 @endsection
 <!-- main-content -->
-@section("main-content")
+@section("content")
 <div class="row">	
 	<div class="profiles_view col-md-9">
 
@@ -14,13 +14,13 @@
          <tr>
             <td width="120" align="center">
 
-              <img src="#" title="" class="bor">
+              <img src="{{ $datas->link_anh }}" title="" class="bor">
 
             </td>
             <td>
 
-              <strong>TS. Hà Minh Ngọc</strong>&nbsp;&nbsp;&nbsp;Sinh ngày: 11/04/1982<br>
-              Số công trình, bài báo, sách đã công bố: <br>
+              <strong>{{ $datas->ho_va_ten }}</strong>&nbsp;&nbsp;&nbsp;Sinh ngày: {{ $datas->nam_sinh }}<br>
+              Số công trình, bài báo, sách đã công bố: {{ $datas->Sl_congTrinh_baiBao }}<br>
               <a href="#"><i class="glyphicon glyphicon-print"></i> In lý lịch KH</a>&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="#"><i class="glyphicon glyphicon-envelope"></i> Liên hệ với NKH</a>
 
@@ -48,7 +48,7 @@
 
             <td>
 
-            	<strong>Hà Minh Ngọc</strong>		
+            	<strong>{{ $datas->ho_va_ten }}</strong>		
 
             </td>
 
@@ -66,7 +66,7 @@
 
             <td>
 
-            	TS
+            	{{ $datas->hoc_vi }}
 
             </td>
 
@@ -84,7 +84,7 @@
 
             <td>
 
-            	11/04/1982
+            	{{ $datas->nam_sinh }}
 
             </td>
 
@@ -102,7 +102,7 @@
 
             <td>
 
-            	- Hoá học<br><br>
+            	{{ $datas->chuyen_nganh }}<br><br>
 
             </td>
 
@@ -120,7 +120,7 @@
 
             <td>
 
-            	Khoa Hóa học, Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Hà Nội
+            	{{ $datas->co_quan }}
 
             </td>
 
@@ -137,7 +137,7 @@
 
             <td>
 
-            	Số 19 Lê Thánh Tông, Hoàn Kiếm, Hà Nội
+            	{{ $datas->dia_chi_co_quan }}
 
             </td>
 
@@ -156,7 +156,7 @@
             <td>
 
             	Hướng nghiên cứu:<br>
-		[1]  Phát triển các vật liệu tổ hợp, đa chức năng cấu trúc nano ứng dụng trong phát triển xanh, xúc tác
+		          {{ $datas->huong_nghien_cuu }}
 
             </td>
 
@@ -173,10 +173,20 @@
             <td colspan="2"><strong>Danh sách công trình nghiên cứu tham gia</strong></td>
 
           </tr>
-          
 
-          	
+          @foreach($cong_trinh_nghien_cuu as $item)
+              <tr>
 
+              <td align="center">
+
+                7.{{ $stt_ctnc++ }}
+
+              </td>
+
+              <td colspan="2">{!! $item['content'] !!}</td>
+
+            </tr>
+          @endforeach
           <tr>
 
             <td align="center">
@@ -189,7 +199,19 @@
 
           </tr>
 
-           
+           @foreach($ket_qua_nghien_cuu as $item)
+              <tr>
+
+              <td align="center">
+
+                8.{{ $stt_kqnc++ }}
+
+              </td>
+
+              <td colspan="2">{!! $item['content'] !!}</td>
+
+            </tr>
+          @endforeach
 
     </tbody>
     </table> 
