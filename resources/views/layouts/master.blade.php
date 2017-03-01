@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	@yield('style')
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
   	<!-- style -->
   	<link rel="stylesheet" type="text/css" href="/public/css/master.css">
 	
@@ -16,7 +15,7 @@
 <body>
 	<div class="app">
 		<nav class="navbar page-navbar">
-		  <div class="container-fluid">
+		  <div class="container">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle menu-hidden-btn" data-toggle="collapse" data-target="#myNavbar">
 		        <span class="glyphicon glyphicon-align-justify"></span>                      
@@ -117,10 +116,9 @@
 	</div>
 
 	<!-- script -->
-	@yield('script')
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="/public/js/jquery-3.1.1.min.js"></script>
-	<script src="/bootstrap/bootstrap.min.js"></script>
+	@yield('script')
 </body>
 </html>

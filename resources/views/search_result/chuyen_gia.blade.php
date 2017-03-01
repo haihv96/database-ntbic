@@ -91,7 +91,7 @@
 					@foreach($datas as $cg)
 						<tr>
 							<td></td>
-							<td><img src="{{$cg->link_anh}}" alt="ảnh" class="img-responsive anh_chuyen_gia"></td>
+							<td><img src="{{$cg->link_anh}}" alt="ảnh" class="img-circle anh_chuyen_gia"></td>
 							<td><a href="chuyen-gia/{{$cg->linkid}}" class="ten_chuyen_gia">{{$cg->hoc_vi}} {{$cg->ho_va_ten}}</a></td>
 							<td>{{$cg->co_quan}}</td>
 							<td>{!! $cg->chuyen_nganh !!}</td>

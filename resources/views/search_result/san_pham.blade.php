@@ -105,12 +105,9 @@
 	<!-- end main content -->
 @endsection
 <!-- end content -->
-@section('script')
-{{-- 
+@section('script') 
 <script type="text/javascript">
 	$(document).ready(function(){
-    	$('#myTable').DataTable();
-
     	$('.collapse-div').mouseover(function(){
     		$(this).removeClass("collapse-div");
     	});
@@ -118,6 +115,6 @@
     		$(this).addClass('collapse-div');
     	});
 	});
-</script> --}}
+</script>
 
 @endsection
