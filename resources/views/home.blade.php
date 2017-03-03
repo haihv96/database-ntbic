@@ -10,9 +10,9 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<!-- style -->
   	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-  	<link rel="stylesheet" type="text/css" href="/public/css/master.css">
-  	<link rel="stylesheet" type="text/css" href="/public/css/home.css">
-  	<link rel="stylesheet" type="text/css" href="/public/css/responsive.css">
+  	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/master.css') }}">
+  	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/home.css') }}">
+  	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/responsive.css') }}">
   	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script>
         function initialize() {
@@ -681,6 +681,6 @@ $(document).ready(function(){
 	<!-- script -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="/public/js/my_script.js"></script>
+	<script src="{{ URL::asset('public/js/my_script.js') }}"></script>
 </body>
 </html>
