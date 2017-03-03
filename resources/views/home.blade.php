@@ -47,6 +47,10 @@
 	    $(".dropdown-toggle").dropdown();
 	});
 </script>
+		$(document).ready(function(){
+		    $(".dropdown-toggle").dropdown();
+		});
+	</script>
 
 	@yield('style')
 	<!-- end style -->
@@ -89,11 +93,14 @@
                                     <a href="#" class="btn-dropdown btn-inverse nangcao">Nâng cao</a>
                                     <a href="#" class="btn-dropdown btn-inverse dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
+                                        <li><a href="#">Tất cả các dữ liệu KH&CN</a></li>
+                                        <li><a href="#">Dữ liệu chuyên gia KH&CN</a></li>
+                                        <li><a href="#">Dữ liệu đề tài, dự án KH&CN</a></li>
+                                        <li><a href="#">	Dữ liệu bằng phát minh, sáng chế</a></li>
+                                        <li><a href="#">Dữ liệu sản phẩm, ứng dụng KH&CN</a></li>
+                                        <li><a href="#">Dữ liệu doanh nghiệp KH&CN</a></li>
                                         <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
+                                        <li><a>Tips: Để tìm kiếm thông tin trong ngân hàng<br> dữ liệu KH&CN bạn cần lựa chọn một trong<br> các thành phần bên trên</a></li>
                                     </ul>
                                 </div>
                           
