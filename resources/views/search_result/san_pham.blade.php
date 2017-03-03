@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('style')
-<script type="text/javascript" src="public/js/phan_trang.js"></script>
-<link rel="stylesheet" type="text/css" href="public/css/search_result_san_pham.css">
-<link rel="stylesheet" type="text/css" href="public/css/phan_trang.css">
+<script type="text/javascript" src="{{ URL::asset('public/js/phan_trang.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/search_result_san_pham.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/phan_trang.css') }}">
 @endsection
 
 <!-- start content -->
@@ -87,8 +87,8 @@
 				@foreach($datas as $sp)
 					<tr>
 						<td></td>
-						<td><img src="{{ $sp->anh_san_pham }}" alt="ảnh" class="anh_san_pham"></td>
-						<td><a href="san-pham/{{$sp->link}}" class="ten_san_pham">{{$sp->ten_san_pham}}</a></td>
+						<td><img src="{{ URL::asset($sp->anh_san_pham) }}" alt="ảnh" class="anh_san_pham"></td>
+						<td><a href="{{ URL::asset('san-pham/'.$sp->link) }}" class="ten_san_pham">{{$sp->ten_san_pham}}</a></td>
 						<td>{{$sp->linh_vuc}}</td>
 						<td><div class="collapse-div">{{$sp->dac_diem_noi_bat}}</div>
 					</tr>

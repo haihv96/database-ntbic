@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('style')
-<script type="text/javascript" src="public/js/phan_trang.js"></script>
-<link rel="stylesheet" type="text/css" href="public/css/search_result_doanh_nghiep.css">
-<link rel="stylesheet" type="text/css" href="public/css/phan_trang.css">
+<script type="text/javascript" src="{{ URL::asset('public/js/phan_trang.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/search_result_doanh_nghiep.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/phan_trang.css') }}">
 @endsection
 
 <!-- start content -->
@@ -114,8 +114,8 @@
 				@foreach($datas as $dn)
 					<tr>
 						<td></td>
-						<td><img src="{{$dn->logo}}" alt="logo" class="logo_doanh_nghiep"></td>
-						<td><a href="doanh-nghiep/{{$dn->link}}" class="ten_doanh_nghiep">{{$dn->ten_doanh_nghiep}}</a></td>
+						<td><img src="{{ URL::asset($dn->logo) }}" alt="logo" class="logo_doanh_nghiep"></td>
+						<td><a href="{{ URL::asset('doanh-nghiep/'.$dn->link) }}" class="ten_doanh_nghiep">{{$dn->ten_doanh_nghiep}}</a></td>
 						<td>{{$dn->linh_vuc}}</td>
 						<td>{{$dn->dia_chi}}</td>
 						<td>{{$dn->tinh_thanh_pho}}</td>

@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('style')
-<script type="text/javascript" src="/public/js/phan_trang.js"></script>
-<link rel="stylesheet" type="text/css" href="/public/css/search_result_de_tai.css">
-<link rel="stylesheet" type="text/css" href="/public/css/phan_trang.css">
+<script type="text/javascript" src="{{ URL::asset('public/js/phan_trang.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/search_result_de_tai.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/phan_trang.css') }}">
 @endsection
 
 <!-- start content -->
@@ -85,7 +85,7 @@
 					@foreach($datas as $item)
 						<tr>
 							<td></td>
-							<td><a href="de-tai-du-an-cac-cap/{{$item->link}}" class="ten_de_tai">{{$item->ten_de_tai}}</a></td>
+							<td><a href="{{ URL::asset('de-tai-du-an-cac-cap/'.$item->link) }}" class="ten_de_tai">{{$item->ten_de_tai}}</a></td>
 							<td>{{$item->linh_vuc}}</td>
 							<td>{{$item->maso_kyhieu}}</td>
 							<td>{{$item->chu_nhiem_detai}}</td>

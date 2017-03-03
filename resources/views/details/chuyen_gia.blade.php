@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('style')
-	<link rel="stylesheet" type="text/css" href="/public/css/details_chuyen_gia.css">
-  <link rel="stylesheet" type="text/css" href="/public/css/sidebar.css">
-  <link rel="stylesheet" type="text/css" href="/public/css/search_result_chuyen_gia.css">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/details_chuyen_gia.css') }} ">
+  <link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/sidebar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/search_result_chuyen_gia.css') }}">
 @endsection
 <!-- main-content -->
 @section("content")
@@ -14,7 +14,7 @@
          <tr>
             <td width="120" align="center">
 
-              <img src="{{ $datas->link_anh }}" title="" class="bor">
+              <img src="{{ URL::asset($datas->link_anh) }}" title="" class="bor">
 
             </td>
             <td>

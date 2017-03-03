@@ -8,7 +8,7 @@
 	@yield('style')
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<!-- style -->
-  	<link rel="stylesheet" type="text/css" href="/public/css/master.css">
+  	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/master.css') }}">
 	
 	<!-- end style -->
 </head>

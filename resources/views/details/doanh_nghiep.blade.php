@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('style')
-    <link rel="stylesheet" type="text/css" href="/public/css/details_chuyen_gia.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/sidebar.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/search_result_doanh_nghiep.css">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/details_chuyen_gia.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/sidebar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/search_result_doanh_nghiep.css') }}">
 @endsection
 <!-- main-content -->
 @section("content")
@@ -57,7 +57,7 @@
 
                 <td width="120px">
 
-                	<img src="{{ $datas->logo }}" style="width:120px;">
+                	<img src="{{ URL::asset($datas->logo) }}" style="width:120px;">
 
                 </td>
 

@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('style')
-<script type="text/javascript" src="/public/js/phan_trang.js"></script>
-<link rel="stylesheet" type="text/css" href="/public/css/search_result_phat_minh_sang_che.css">
-<link rel="stylesheet" type="text/css" href="/public/css/phan_trang.css">
+<script type="text/javascript" src="{{ URL::asset('public/js/phan_trang.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/search_result_phat_minh_sang_che.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/phan_trang.css') }}">
 @endsection
 
 <!-- start content -->
@@ -85,7 +85,7 @@
 				@foreach($datas as $pm)
 					<tr>
 						<td></td>
-						<td><a href="phat-minh/{{$pm->link}}" class="ten_bang_phat_minh">{{$pm->ten}}</a></td>
+						<td><a href="{{ URL::asset('phat-minh/'.$pm->link) }}" class="ten_bang_phat_minh">{{$pm->ten}}</a></td>
 						<td>{{$pm->linh_vuc}}</td>
 						<td>{{$pm->sobang_kyhieu}}</td>
 						<td>{{$pm->tac_gia}}</td>
