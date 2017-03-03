@@ -12,6 +12,7 @@
   	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
   	<link rel="stylesheet" type="text/css" href="/public/css/master.css">
   	<link rel="stylesheet" type="text/css" href="/public/css/home.css">
+  	<link rel="stylesheet" type="text/css" href="/public/css/responsive.css">
   	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script>
         function initialize() {
@@ -41,6 +42,11 @@
  
  
     </script>
+    <script>
+$(document).ready(function(){
+    $(".dropdown-toggle").dropdown();
+});
+</script>
 
 	@yield('style')
 	<!-- end style -->
@@ -75,23 +81,33 @@
 				<form class="search-form " method="GET" action="">
 					<fieldset>
 		                <div class="input-group">
-		                    <input id="text_search" type="text" class="form-control input-lg" placeholder="Tìm kiếm..." name="query">
-		                    <select name="type-search">
-		                    	<option value="tat-ca">Tất cả dữ liệu KH&CN</option>
-		                    	<option value="chuyen-gia">dữ liệu chuyên gia KH&CN</option>
-		                    	<option value="de-tai-du-an-cac-cap">dữ liệu đề tài, dự án KH&CN</option>
-		                    	<option value="phat-minh">dữ liệu phát minh, sáng chế</option>
-		                    	<option value="san-pham">dữ liệu sản phẩm, ứng dụng KH&CN</option>
-		                    	<option value="doanh-nghiep">dữ liệu doanh nghiệp KH&CN</option>
-		                    	option
-		                    </select>
-		                    <div id="search_home" class="input-group-btn">
+						
+							<div>
+
+		                		<div class="btn-group1"><input id="text_search" type="text" class="form-control input-lg" placeholder="Tìm kiếm..." name="query"></div>
+		                		<div class="btn-group2">
+                                    <a href="#" class="btn-dropdown btn-inverse nangcao">Nâng cao</a>
+                                    <a href="#" class="btn-dropdown btn-inverse dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                          
+		                   
+		               		</div>
+	               		
+	               		<div id="search_home" class="input-group-btn">
 		                        <a href="javascript:;" class="btn submit">
 		                            <span class="glyphicon glyphicon-search search1"></span>
-		                            Tìm kiếm
+		                            <span id="timkiem"> Tìm kiếm </span>
 		                        </a>
-		                    </div>
-	               		</div>
+		                    	
+                        </div>
+                            	</div>
 	               	</fieldset>
 	               <div>
 						<h3 class="inner2">
@@ -113,7 +129,7 @@
         		</form>
 			</div>
 		</div>
-		{{-- container --}}
+		<!-- container -->
 		<div class="container">
 			<div class="w3-content w3-padding" style="max-width:1564px">
 
@@ -123,25 +139,37 @@
 			  </div>
 
 			  <div class="w3-row-padding">
-			    <div class="w3-col l3 m6 w3-margin-bottom">
+			    <div class="w3-col l2 m4 w3-margin-bottom">
 			      	<div class="w3-display-container">
 			        	<div class="w3-display-topleft w3-padding">Dữ liệu chuyên gia</div>
 			        	<a href="#"><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" class="anh"></a>
 			      	</div>
 			    </div>
-			    <div class="w3-col l3 m6 w3-margin-bottom">
+			    <div class="w3-col l2 m4 w3-margin-bottom">
 			      	<div class="w3-display-container">
 			        	<div class="w3-display-topleft w3-padding">Dữ liệu đề tài, dự án</div>
 			        	<a href="#"><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" ></a>
 			      	</div>
 			    </div>
-			    <div class="w3-col l3 m6 w3-margin-bottom">
+			    <div class="w3-col l2 m4 w3-margin-bottom">
 			      	<div class="w3-display-container">
 			        	<div class="w3-display-topleft w3-padding">Bằng phát minh và sáng chế</div>
 			        	<a href="#"><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" ></a>
 			     	</div>
 			    </div>
-			    <div class="w3-col l3 m6 w3-margin-bottom">
+			    <div class="w3-col l2 m4 w3-margin-bottom">
+			      	<div class="w3-display-container">
+			        	<div class="w3-display-topleft w3-padding">Sản phẩm và ứng dụng</div>
+			        	<a href=""><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" ></a>
+			      	</div>
+			    </div>
+			    <div class="w3-col l2 m4 w3-margin-bottom">
+			      	<div class="w3-display-container">
+			        	<div class="w3-display-topleft w3-padding">Sản phẩm và ứng dụng</div>
+			        	<a href=""><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" ></a>
+			      	</div>
+			    </div>
+			    <div class="w3-col l2 m4 w3-margin-bottom">
 			      	<div class="w3-display-container">
 			        	<div class="w3-display-topleft w3-padding">Sản phẩm và ứng dụng</div>
 			        	<a href=""><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" ></a>
@@ -151,7 +179,7 @@
 			</div>
 
 
-			{{-- chuyên gia --}}
+			<!--chuyengia -->
 
 			<div class="w3-content w3-padding" style="max-width:1564px">
 
@@ -169,7 +197,7 @@
 							    <span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
 
@@ -186,7 +214,7 @@
 							    <span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
 
@@ -199,11 +227,11 @@
 
 								</span>
 							</div>
-						    <div class="w3-col l3 m6 w3-margin-bottom">
+						    <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin1">
 						      	<span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
 
@@ -216,11 +244,11 @@
 
 								</span>
 						    </div>
-						    <div class="w3-col l3 m6 w3-margin-bottom">
+						    <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin2">
 						      	<span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
 
@@ -241,7 +269,7 @@
 							    <span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
 
@@ -254,11 +282,11 @@
 
 								</span>
 							</div>
-						    <div class="w3-col l3 m6 w3-margin-bottom">
+						    <div class="w3-col l3 m6 w3-margin-bottom" >
 						      	<span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
 
@@ -271,11 +299,11 @@
 
 								</span>
 						    </div>
-						    <div class="w3-col l3 m6 w3-margin-bottom">
+						    <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin3">
 						      	<span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
 
@@ -288,11 +316,11 @@
 
 								</span>
 						    </div>
-						     <div class="w3-col l3 m6 w3-margin-bottom">
+						     <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin4">
 						      	<span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
 
@@ -390,49 +418,73 @@
 				    <!-- Wrapper for slides -->
 				    <div class="carousel-inner" role="listbox">
 				      	<div class="item active">
-				            <div class="w3-col l3 m6 w3-margin-bottom">
+				            <div class="w3-col l2 m4  w3-margin-bottom">
 							    <span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">Đại học thái nguyên</strong>
+									<span>Đại học thái nguyên</span>
 
 									</a>
 
 								</span>
 							</div>
-							<div class="w3-col l3 m6 w3-margin-bottom">
+							<div class="w3-col l2 m4  w3-margin-bottom">
 							    <span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">Đại học thái nguyên</strong>
+									<span>Đại học thái nguyên</span>
 
 									</a>
 
 								</span>
 							</div>
-						    <div class="w3-col l3 m6 w3-margin-bottom">
+						    <div class="w3-col l2 m4  w3-margin-bottom">
 						      	<span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">Đại học thái nguyên</strong>
+									<span>Đại học thái nguyên</span>
 
 									</a>
 
 								</span>
 						    </div>
-						    <div class="w3-col l3 m6 w3-margin-bottom">
+						    <div class="w3-col l2 m4  w3-margin-bottom">
 						      	<span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">Đại học thái nguyên</strong>
+									<span>Đại học thái nguyên</span>
+
+									</a>
+
+								</span>
+						    </div>
+						    <div class="w3-col l2 m4  w3-margin-bottom">
+						      	<span class="span_v">
+							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
+
+									<span>Đại học thái nguyên</span>
+
+									</a>
+
+								</span>
+						    </div>
+						    <div class="w3-col l2 m4  w3-margin-bottom">
+						      	<span class="span_v">
+							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
+
+									<span>Đại học thái nguyên</span>
 
 									</a>
 
@@ -442,49 +494,73 @@
 
 
 						<div class="item">
-				            <div class="w3-col l3 m6 w3-margin-bottom">
+				            <div class="w3-col l2 m4  w3-margin-bottom">
 							    <span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">Đại học thái nguyên</strong>
+									<span>Đại học thái nguyên</span>
 
 									</a>
 
 								</span>
 							</div>
-						    <div class="w3-col l3 m6 w3-margin-bottom">
+							 <div class="w3-col l2 m4  w3-margin-bottom">
+							    <span class="span_v">
+							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
+
+									<span>Đại học thái nguyên</span>
+
+									</a>
+
+								</span>
+							</div>
+							 <div class="w3-col l2 m4  w3-margin-bottom">
+							    <span class="span_v">
+							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
+
+									<span>Đại học thái nguyên</span>
+
+									</a>
+
+								</span>
+							</div>
+						    <div class="w3-col l2 m4  w3-margin-bottom">
 						      	<span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">Đại học thái nguyên</strong>
+									<span>Đại học thái nguyên</span>
 
 									</a>
 
 								</span>
 						    </div>
-						    <div class="w3-col l3 m6 w3-margin-bottom">
+						    <div class="w3-col l2 m4  w3-margin-bottom">
 						      	<span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">Đại học thái nguyên</strong>
+									<span>Đại học thái nguyên</span>
 
 									</a>
 
 								</span>
 						    </div>
-						     <div class="w3-col l3 m6 w3-margin-bottom">
+						     <div class="w3-col l2 m4 w3-margin-bottom">
 						      	<span class="span_v">
 							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img-circle"><br>
+									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img2"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">Đại học thái nguyên</strong>
+									<p>Đại học thái nguyên</p>
 
 									</a>
 
@@ -508,11 +584,11 @@
 			</div>	
 
 
-			<div class="row" style="height: 500px;">
+			<div class="w3-content w3-padding" style="max-width:1564px" >
 				<div class="w3-container w3-padding-32" id="projects">
 				    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Tin tức </h3>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-lg-6">
 					<div class="fl">
 
 						<div class="clearfix newstop">
@@ -561,7 +637,7 @@
 
 					</div>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-lg-6">
 					<!-- Add Google Maps -->
 					<div id="map_canvas"></div>
 

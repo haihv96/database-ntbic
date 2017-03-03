@@ -1,0 +1,15 @@
+@media only screen and (max-width: 992px){
+  #thongtin1{
+      display: none;
+  }
+   #thongtin2{
+      display: none;
+  }
+   #thongtin3{
+      display: none;
+  }
+   #thongtin4{
+      display: none;
+  }
+
+}
