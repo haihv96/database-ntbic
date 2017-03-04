@@ -102,7 +102,7 @@
 
             <td>
 
-            	{{ $datas->chuyen_nganh }}<br><br>
+            	{!! $datas->chuyen_nganh !!}<br><br>
 
             </td>
 
