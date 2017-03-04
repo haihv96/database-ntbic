@@ -47,10 +47,6 @@
 	    $(".dropdown-toggle").dropdown();
 	});
 </script>
-		$(document).ready(function(){
-		    $(".dropdown-toggle").dropdown();
-		});
-	</script>
 
 	@yield('style')
 	<!-- end style -->
@@ -90,15 +86,15 @@
 
 		                		<div class="btn-group1"><input id="text_search" type="text" class="form-control input-lg" placeholder="Tìm kiếm..." name="query"></div>
 		                		<div class="btn-group2">
-                                    <a href="#" class="btn-dropdown btn-inverse nangcao">Nâng cao</a>
-                                    <a href="#" class="btn-dropdown btn-inverse dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Tất cả các dữ liệu KH&CN</a></li>
-                                        <li><a href="#">Dữ liệu chuyên gia KH&CN</a></li>
-                                        <li><a href="#">Dữ liệu đề tài, dự án KH&CN</a></li>
-                                        <li><a href="#">	Dữ liệu bằng phát minh, sáng chế</a></li>
-                                        <li><a href="#">Dữ liệu sản phẩm, ứng dụng KH&CN</a></li>
-                                        <li><a href="#">Dữ liệu doanh nghiệp KH&CN</a></li>
+                                    
+                                    <a href="#" class="btn-dropdown btn-inverse dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Nâng cao <span class="caret"></span></a>
+                                    <ul id="select_search" class="dropdown-menu" role="menu">
+                                        <li><input type="radio" name="type-search" value="tat-ca"> Tất cả các dữ liệu KH&CN</li>
+                                        <li><input type="radio" name="type-search" value="chuyen-gia"> Dữ liệu chuyên gia KH&CN </li>
+                                        <li><input type="radio" name="type-search" value="de-tai-du-an-cac-cap"> Dữ liệu đề tài, dự án KH&CN</li>
+                                        <li><input type="radio" name="type-search" value="phat-minh"> Dữ liệu bằng phát minh, sáng chế</li>
+                                        <li><input type="radio" name="type-search" value="san-pham"> Dữ liệu sản phẩm, ứng dụng KH&CN</li>
+                                        <li><input type="radio" name="type-search" value="doanh-nghiep"> Dữ liệu doanh nghiệp KH&CN</li>
                                         <li class="divider"></li>
                                         <li><a>Tips: Để tìm kiếm thông tin trong ngân hàng<br> dữ liệu KH&CN bạn cần lựa chọn một trong<br> các thành phần bên trên</a></li>
                                     </ul>

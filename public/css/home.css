@@ -123,3 +123,7 @@ img {
 	text-align: center;
 }
 
+ul li{
+    padding: 5px;
+    cursor: pointer;
+}
