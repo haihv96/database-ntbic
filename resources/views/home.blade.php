@@ -82,35 +82,35 @@
 					<fieldset>
 		                <div class="input-group">
 						
-							<div>
 
-		                		<div class="btn-group1"><input id="text_search" type="text" class="form-control input-lg" placeholder="Tìm kiếm..." name="query"></div>
-		                		<div class="btn-group2">
-                                    
-                                    <a href="#" class="btn-dropdown btn-inverse dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Nâng cao <span class="caret"></span></a>
-                                    <ul id="select_search" class="dropdown-menu" role="menu">
+		                	<input id="text_search" type="text" class="form-control input-lg" placeholder="Tìm kiếm..." name="query">
+		                		
+			                <div class="input-group-btn" style="background: none;">
+	                                    
+	                                    <a href="#" class="btn-dropdown btn-inverse dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="background-color: #fff; color: black; padding: 6px 12px; text-decoration: none;">
+	                                    <span id="nangcao">Nâng cao </span>
+	                                    <span class="glyphicon glyphicon-chevron-down" style="top: 3px;color: #777777; padding: 5px;"></span></a>
+	                                    <ul id="select_search" class="dropdown-menu" role="menu">
                                         <li><input type="radio" name="type-search" value="tat-ca"> Tất cả các dữ liệu KH&CN</li>
                                         <li><input type="radio" name="type-search" value="chuyen-gia"> Dữ liệu chuyên gia KH&CN </li>
                                         <li><input type="radio" name="type-search" value="de-tai-du-an-cac-cap"> Dữ liệu đề tài, dự án KH&CN</li>
                                         <li><input type="radio" name="type-search" value="phat-minh"> Dữ liệu bằng phát minh, sáng chế</li>
-                                        <li><input type="radio" name="type-search" value="san-pham"> Dữ liệu sản phẩm, ứng dụng KH&CN</li>
+                                        <li><input type="radio" name="type-search" value="san-pham"> Dữ liệu sản phẩm, ứng dụng<br> KH&CN</li>
                                         <li><input type="radio" name="type-search" value="doanh-nghiep"> Dữ liệu doanh nghiệp KH&CN</li>
-                                        <li class="divider"></li>
-                                        <li><a>Tips: Để tìm kiếm thông tin trong ngân hàng<br> dữ liệu KH&CN bạn cần lựa chọn một trong<br> các thành phần bên trên</a></li>
+                                        <li class="divider" style="padding: 1px;"></li>
+                                        <li><p>Tips: Để tìm kiếm thông tin trong <br>ngân hàng dữ liệu KH&CN bạn cần<br> lựa chọn một trong các thành phần<br> bên trên</p></li>
                                     </ul>
-                                </div>
-                          
-		                   
-		               		</div>
-	               		
-	               		<div id="search_home" class="input-group-btn">
-		                        <a href="javascript:;" class="btn submit">
-		                            <span class="glyphicon glyphicon-search search1"></span>
-		                            <span id="timkiem"> Tìm kiếm </span>
-		                        </a>
-		                    	
+	                        </div>   
+			               		
+		               		
+		               		<div id="search_home" class="input-group-btn">
+			                        <a href="javascript:;" class="btn submit">
+			                            <span class="glyphicon glyphicon-search search1"></span>
+			                            <span id="timkiem"> Tìm kiếm </span>
+			                        </a>
+			                    	
+	                        </div>
                         </div>
-                            	</div>
 	               	</fieldset>
 	               <div>
 						<h3 class="inner2">
