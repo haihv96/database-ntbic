@@ -20,7 +20,7 @@
 		      <button type="button" class="navbar-toggle menu-hidden-btn" data-toggle="collapse" data-target="#myNavbar">
 		        <span class="glyphicon glyphicon-align-justify"></span>                      
 		      </button>
-		      <a class="navbar-brand" href="/"><span class="logo">NTBIC</span></a>
+		      <a class="navbar-brand" href="{{ URL::asset('/') }}"><span class="logo">NTBIC</span></a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
