@@ -3,9 +3,9 @@
 	background-image: url(http://img.freepik.com//portada/20161006035857.jpg);
 	background-repeat: no-repeat; 
 	-webkit-background-size:cover;
--moz-background-size:cover;
--o-background-size:cover;
-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
 }
 .inner{
 	padding: 10%;
@@ -24,18 +24,15 @@ strong {
 	padding: 7%;
 }
 fieldset {
-	padding: 0.5%;
+	padding: 0.7%;
 	background-color: rgba(0,0,0,0.3);
-}
-.btn {
-	width: 120px;
 }
 .inner2 {
 	color: black;
     /*text-shadow: rgba(0, 0, 0, 0.298039) 0px 2px 0px, rgba(0, 0, 0, 0.34902) 0px 0px 10px;*/
     font-size: 18px;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 3%;
 }
 img {
 	width: 100%;
@@ -53,9 +50,8 @@ img {
 .img2 {
     padding: 7px;
     border-radius:50%;
-
-   width: 100px;
-   height: 100px;
+    width: 100px;
+    height: 100px;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
 }
@@ -78,22 +74,9 @@ img {
    height: 300px;
    border:solid 1px #ccc;
 }
-.btn-group2 {
-	float: right;
-    position: absolute;
-    display: inline-block;
-    vertical-align: middle;
-    background-color: white;
-}
-.btn-group1 {
-	float: left;
-	width: 84%;
-	margin-right: 5px;
-	position: relative;
-}
 .btn-dropdown {
 	display: inline-block;
-    padding: 6px 7px;
+    padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 400;
@@ -110,7 +93,6 @@ img {
     user-select: none;
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 4px;
 }
 .btn-dropdown0 {
 	width: 100%;
@@ -123,7 +105,13 @@ img {
 	text-align: center;
 }
 
-ul li{
-    padding: 5px;
-    cursor: pointer;
+
+.dropdown-menu {
+    left: auto;
+    right: 0;
+    margin:5%;
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.32);
+    background-color: #ffffff;
+    padding: 7%;
 }
