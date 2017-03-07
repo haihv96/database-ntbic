@@ -24,8 +24,13 @@
     font-size: 12px;
   }
 }
-@media only screen and (max-width: 340px) {
+@media only screen and (max-width: 420px) {
   .dropdown-menu{
     font-size: 10px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .dropdown-menu{
+    font-size: 8px;
   }
 }
