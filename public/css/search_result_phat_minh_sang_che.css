@@ -1,50 +1,43 @@
-.head-dataTable{
+.search_result_phat_minh .head-dataTable{
 	background-color: #f2f2f2;
 }
 #bang-phat-minh{
 	border-bottom: 3px solid green;
 	color:green;
 }
-.search-info{
-	margin-top: 10px;
-	margin-bottom: 0
-}
-select{
+.search_result_phat_minh select{
 	max-width: 165px
 }
-#myTable{
-	margin-top:15px; 
-}
-#myTable td{
+.search_result_phat_minh #myTable td{
 	border: 0.2px solid #f2f2f2;
 	word-wrap: break-word;
 }
-#myTable th{
+.search_result_phat_minh #myTable th{
 	border: 0.2px solid #f2f2f2;
 }
-.ten_bang_phat_minh{
+.search_result_phat_minh .ten_bang_phat_minh{
 	color: #3b5998;
 	font-weight: bold;
 }
-.div-content{
+.search_result_phat_minh .div-content{
 	margin-bottom: 15px;
 	margin-top:30px 
 }
-.no{
+.search_result_phat_minh .no{
 	width: 5%;
 }
-.name{
+.search_result_phat_minh .name{
 	width: 30%;
 }
-.so_hieu{
+.search_result_phat_minh .so_hieu{
 	width: 10%;
 }
-.linh_vuc{
+.search_result_phat_minh .linh_vuc{
 	width: 20%;
 }
-.tac_gia{
+.search_result_phat_minh .tac_gia{
 	width: 20%;
 }
-.date{
+.search_result_phat_minh .date{
 	width: 15%;
 }

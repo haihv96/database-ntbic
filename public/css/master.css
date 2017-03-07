@@ -1,3 +1,6 @@
+* {
+	font-family: "helvetica";
+}
 #myNavbar a:visited{
 	background-color: #3b5998
 }
@@ -115,4 +118,20 @@ hr{
 }
 .display-block{
 	color: white
+}
+
+.search-info {
+	background-color: #7D7D7D;
+	color: white;
+	padding: 15px 0 15px 15px;
+	font-size: 1.2em;
+}
+
+.search-info a {
+	color: white;
+	font-weight: bold;
+}
+#myTable {
+	margin-bottom: 20px;
+	border: 1px solid #CFCFCF;
 }

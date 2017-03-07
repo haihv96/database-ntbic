@@ -1,25 +1,19 @@
-.head-dataTable{
+.search_result_san_pham .head-dataTable{
 	background-color: #f2f2f2;
 }
-.search-info{
-	margin-top: 10px;
-	margin-bottom: 0
-}
+
 #san-pham{
 	border-bottom: 3px solid green;
 	color:green;
 }
-select{
+.search_result_san_pham select{
 	max-width: 165px
 }
-#myTable{
-	border: 0.2px solid #f2f2f2;
-	margin-top:15px; 
-}
-#myTable td{
+
+.search_result_san_pham #myTable td{
 	border: 0.2px solid #f2f2f2;
 }
-.collapse-div{
+.search_result_san_pham .collapse-div{
 	display: inline-block;
 	overflow-y: hidden;
 	word-wrap: auto;
@@ -29,33 +23,33 @@ select{
 	-webkit-box-orient: vertical;
 }
 
-#myTable th{
+.search_result_san_pham #myTable th{
 	border: 0.2px solid #f2f2f2;
 }
-.ten_san_pham{
+.search_result_san_pham .ten_san_pham{
 	color: #3b5998;
 	font-weight: bold;
 }
-.div-content{
+.search_result_san_pham .div-content{
 	margin-bottom: 15px;
 	margin-top:30px 
 }
-.anh_san_pham{
+.search_result_san_pham .anh_san_pham{
 	max-height: 65px;
 	max-width: auto;
 }
-..no{
+.search_result_san_pham .no{
 	width: 5%;
 }
-.anh{
+.search_result_san_pham .anh{
 	width: 10%;
 }
-.name{
+.search_result_san_pham .name{
 	width: 25%;
 }
-.ung_dung{
+.search_result_san_pham .ung_dung{
 	width: 35%;
 }
-.linh_vuc{
+.search_result_san_pham .linh_vuc{
 	width: 25%;
 }

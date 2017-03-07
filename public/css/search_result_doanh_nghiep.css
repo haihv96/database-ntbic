@@ -1,58 +1,51 @@
-.head-dataTable{
+.search_result_doanh_nghiep .head-dataTable{
 	background-color: #f2f2f2;
 }
 #doanh-nghiep{
 	border-bottom: 3px solid green;
 	color:green;
 }
-.search-info{
-	margin-top: 10px;
 
-	margin-bottom: 0
-}
-select{
+.search_result_doanh_nghiep select{
 	max-width: 165px
 }
-#myTable{
-	margin-top:15px; 
-}
-#myTable td{
+.search_result_doanh_nghiep #myTable td{
 	border: 0.2px solid #f2f2f2;
 	word-wrap: break-word;
 }
-#myTable th{
+.search_result_doanh_nghiep #myTable th{
 	border: 0.2px solid #f2f2f2;
 }
-.ten_doanh_nghiep{
+.search_result_doanh_nghiep .ten_doanh_nghiep{
 	color: #3b5998;
 	font-weight: bold;
 }
-.div-content{
+.search_result_doanh_nghiep .div-content{
 	margin-bottom: 15px;
 	margin-top:30px 
 }
-.logo_doanh_nghiep{
+.search_result_doanh_nghiep .logo_doanh_nghiep{
 	max-height: 65px;
 	max-width: auto;
 }
-.no{
+.search_result_doanh_nghiep .no{
 	width: 5%;
 }
-.anh_logo{
+.search_result_doanh_nghiep .anh_logo{
 	width: 10%;
 }
-.name{
+.search_result_doanh_nghiep .name{
 	width: 20%;
 }
-.tru_so{
+.search_result_doanh_nghiep .tru_so{
 	width: 25%;
 }
-.linh_vuc{
+.search_result_doanh_nghiep .linh_vuc{
 	width: 20%;
 }
-.tinh_thanh{
+.search_result_doanh_nghiep .tinh_thanh{
 	width: 15%;
 }
-.rank{
+.search_result_doanh_nghiep .rank{
 	width: 5%
 }

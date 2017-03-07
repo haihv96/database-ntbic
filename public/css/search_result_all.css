@@ -1,4 +1,4 @@
-#all{
+/* #all{
 	border-bottom: 3px solid green;
 	color: green;
 }
@@ -28,4 +28,13 @@
 .search-info{
 	margin-top: 15px;
 	margin-bottom: 0
+} */
+#chuyen-gia, #de-tai, #doanh-nghiep, #san-pham, #bang-phat-minh {
+	border: none;
+	color: black;
+}
+
+#tat-ca {
+	border-bottom: 3px solid green;
+	color:green;
 }

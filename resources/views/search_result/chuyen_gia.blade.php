@@ -7,7 +7,7 @@
 
 <!-- start content -->
 @section('content')
-	<div class="row col-md-12 filter-row">
+	<div class="row col-md-12 filter-row ">
 				<div class="filter">
 					<ul class="list-search-filter">
 						<li>
@@ -74,9 +74,10 @@
 
 	<!-- main content, display result -->
 		@section('main-content')
-		<div class="row col-md-12 div-content">
+		<div class="row col-md-12 div-content search_result_chuyen_gia">
 			<div class="search-info">
-			<p>Kết quả tìm kiếm : {!! $datas->total() !!} trong {{ $time_search }} giây</p>
+				<span class="glyphicon glyphicon-search
+				"></span> Kết quả tìm kiếm chuyên gia KH&CN : {!! $datas->total() !!} trong {{ $time_search }} giây
 			</div>
 			<table class="dataTable table-hover table-responsive" id="myTable">
 				<thead class="head-dataTable">

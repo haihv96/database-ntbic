@@ -56,7 +56,7 @@
 				<div class="filter">
 					<ul class="list-search-filter">
 						<li>
-							<a href="#" id="all">Tất cả</a>
+							<a href="{!! url('tat-ca') !!}" id="tat-ca">Tất cả</a>
 						</li>
 						<li>
 							<a href="{!! url('chuyen-gia') !!}" id="chuyen-gia">Chuyên gia KH&CN</a>

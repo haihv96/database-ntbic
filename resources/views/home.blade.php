@@ -91,7 +91,7 @@
 	                                    <span id="nangcao">Nâng cao </span>
 	                                    <span class="glyphicon glyphicon-chevron-down" style="top: 3px;color: #777777; padding: 5px;"></span></a>
 	                                    <ul id="select_search" class="dropdown-menu" role="menu">
-                                        <li><input type="radio" name="type-search" value="tat-ca"> Tất cả các dữ liệu KH&CN</li>
+                                        <li><input type="radio" name="type-search" value="tat-ca" checked="checked"> Tất cả các dữ liệu KH&CN</li>
                                         <li><input type="radio" name="type-search" value="chuyen-gia"> Dữ liệu chuyên gia KH&CN </li>
                                         <li><input type="radio" name="type-search" value="de-tai-du-an-cac-cap"> Dữ liệu đề tài, dự án KH&CN</li>
                                         <li><input type="radio" name="type-search" value="phat-minh"> Dữ liệu bằng phát minh, sáng chế</li>
