@@ -94,7 +94,7 @@
 
             <td colspan="3"><strong>4. Mô tả chung về sản phẩm KH&CN</strong><br>
 
-            {!! str_replace( URL::asset('/storage/app/public/'), '/storage/app/public/', $datas->mo_ta_chung) !!}
+            {!! str_replace('/storage/app/public/',URL::asset('/storage/app/public/'), $datas->mo_ta_chung) !!}
             </td>
 
 
