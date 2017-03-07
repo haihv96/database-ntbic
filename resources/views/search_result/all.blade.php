@@ -42,7 +42,7 @@
 						<tr>
 							<td></td>
 							<td><img src="{{ URL::asset($chuyen_gia->link_anh) }}" alt="ảnh" class="img-circle anh_chuyen_gia"></td>
-							<td><a href="{{ URL::asset('doanh-nghiep/'.$chuyen_gia->linkid) }}" class="ten_chuyen_gia">{{$chuyen_gia->hoc_vi}} {{$chuyen_gia->ho_va_ten}}</a></td>
+							<td><a href="{{ URL::asset('chuyen-gia/'.$chuyen_gia->linkid) }}" class="ten_chuyen_gia">{{$chuyen_gia->hoc_vi}} {{$chuyen_gia->ho_va_ten}}</a></td>
 							<td>{{ $chuyen_gia->co_quan }}</td>
 							<td>{!! $chuyen_gia->chuyen_nganh !!}</td>
 							<td>{{ $chuyen_gia->tinh_thanh }}</td>
