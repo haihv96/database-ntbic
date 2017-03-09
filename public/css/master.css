@@ -93,16 +93,24 @@ hr{
 	margin-left: 0;
 	padding: 0  
 }
-.input-group-btn{
-	background-color:#2eb82e;
+.input-group-btn {
+	background-color: #3b5998;
+	padding-left: 5px;
+	padding-right: 5px; 
+}
+.btn-search-home a{
+	background-color: #3b5998;
+	color: white !important;
 	padding-left: 5px;
 	padding-right: 5px; 
 }
 .submit-button{
-	background-color: #2eb82e;
+	background-color: #3b5998;
+	color: white;
 }
-.input-group-btn a{
-	color: white
+.submit-button:hover {
+	background-color: #3b5998;
+	color: white;
 }
 .div-footer a{
 	color:white;

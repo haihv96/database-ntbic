@@ -65,6 +65,7 @@ class SearchController extends Controller
 			'loai_phat_minh_current' => $loai_phat_minh_sang_che,
 			'linh_vuc_current' => $linh_vuc_khcn,
 			'time_search' => $time_search,
+			'text_search' => $text_search,
 			]);
 	}
 }

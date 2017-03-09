@@ -81,7 +81,7 @@
 			</div>
 			<table class="dataTable table-hover table-responsive" id="myTable">
 				<thead class="head-dataTable">
-					<th class="no"></th>
+					<th class="no">Stt</th>
 					<th class="anh">Ảnh</th>
 					<th class="name">Họ và tên</th>
 					<th class="co_quan">Cơ quan công tác</th>
@@ -89,9 +89,9 @@
 					<th class="tinh_thanh">Tỉnh thành</th>
 				</thead>
 				<tbody>
-					@foreach($datas as $cg)
+					@foreach($datas as $key => $cg)
 						<tr>
-							<td></td>
+							<td>{!! ($datas->currentPage() - 1)*10 + $key +1 !!}</td>
 							<td><img src="{{ URL::asset($cg->link_anh) }}" alt="ảnh" class="img-circle anh_chuyen_gia"></td>
 							<td><a href="{{ URL::asset('chuyen-gia/'.$cg->linkid) }}" class="ten_chuyen_gia">{{$cg->hoc_vi}} {{$cg->ho_va_ten}}</a></td>
 							<td>{{$cg->co_quan}}</td>

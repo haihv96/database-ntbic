@@ -6,7 +6,7 @@
 					<li>
 						<div class="row sidebar-item">
 							<div class="col-md-4">
-								<img src="#" alt="img-default" class="img-responsive">
+								<img src="{!! URL::asset('/storage/app/public/media/logo.png') !!}" alt="img-default" class="img-responsive">
 							</div>
 							<div class="col-md-8 sidebar-item-info">
 								<p>Dây chuyền làm sạch protein trong mủ cao su thiên nhiên</p>

@@ -2,4 +2,11 @@ $(document).ready(function() {
 	$("#search_home").click(function(){
 		window.location.replace('/database-ntbic/' + $('input[name=type-search]:checked').val() + '?text_search='+ $("#text_search").val());
 	});
+	$("#text_search").focus(function(){
+		$(document).keypress(function(event) {
+			if(event.which == '13'){
+				window.location.replace('/database-ntbic/' + $('input[name=type-search]:checked').val() + '?text_search='+ $("#text_search").val());
+			}
+		});
+	});
 });

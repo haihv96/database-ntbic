@@ -30,7 +30,7 @@
 			</div>
 			<table class="dataTable table-hover table-responsive" id="myTable">
 				<thead class="head-dataTable">
-					<th class="no"></th>
+					<th class="no">Stt</th>
 					<th class="anh">Ảnh</th>
 					<th class="name">Họ và tên</th>
 					<th class="co_quan">Cơ quan công tác</th>
@@ -38,9 +38,9 @@
 					<th class="tinh_thanh">Tỉnh thành</th>
 				</thead>
 				<tbody>
-					@foreach($chuyen_gias as $chuyen_gia)
+					@foreach($chuyen_gias as $key=>$chuyen_gia)
 						<tr>
-							<td></td>
+							<td>{{ $key+1 }}</td>
 							<td><img src="{{ URL::asset($chuyen_gia->link_anh) }}" alt="ảnh" class="img-circle anh_chuyen_gia"></td>
 							<td><a href="{{ URL::asset('chuyen-gia/'.$chuyen_gia->linkid) }}" class="ten_chuyen_gia">{{$chuyen_gia->hoc_vi}} {{$chuyen_gia->ho_va_ten}}</a></td>
 							<td>{{ $chuyen_gia->co_quan }}</td>
@@ -60,7 +60,7 @@
 			</div>
 			<table class="dataTable table-hover table-responsive" id="myTable">
 				<thead class="head-dataTable">
-					<th class="no"></th>
+					<th class="no">Stt</th>
 					<th class="anh">Tên đề tài, dự án</th>
 					<th class="name">Lĩnh vực KH&CN</th>
 					<th class="co_quan">Mã số, ký hiệu</th>
@@ -68,9 +68,9 @@
 					<th class="tinh_thanh">Thời gian kết thúc</th>
 				</thead>
 				<tbody>
-					@foreach($de_tai_du_an_cac_caps as $de_tai_du_an_cac_cap)
+					@foreach($de_tai_du_an_cac_caps as  $key=>$de_tai_du_an_cac_cap)
 						<tr>
-							<td></td>
+							<td>{{ $key+1 }}</td>
 							<td><a href="{{ URL::asset('de-tai-du-an-cac-cap/'.$de_tai_du_an_cac_cap->link) }}" class="ten_de_tai">{{$de_tai_du_an_cac_cap->ten_de_tai}}</a></td>
 							<td>{{$de_tai_du_an_cac_cap->linh_vuc}}</td>
 							<td>{{$de_tai_du_an_cac_cap->maso_kyhieu}}</td>
@@ -90,7 +90,7 @@
 			</div>
 			<table class="dataTable table-hover table-responsive" id="myTable">
 				<thead class="head-dataTable">
-					<th class="no"></th>
+					<th class="no">Stt</th>
 					<th class="anh">Tên bằng phát minh, sáng chế, giải pháp hữu ích</th>
 					<th class="name">Lĩnh vực KH&CN</th>
 					<th class="co_quan">Số, ký hiệu, bằng</th>
@@ -98,9 +98,9 @@
 					<th class="tinh_thanh">Ngày công bố</th>
 				</thead>
 				<tbody>
-					@foreach($bang_phat_minh_sang_ches as $bang_phat_minh_sang_che)
+					@foreach($bang_phat_minh_sang_ches as  $key=>$bang_phat_minh_sang_che)
 					<tr>
-						<td></td>
+						<td>{{ $key+1 }}</td>
 						<td><a href="{{ URL::asset('phat-minh/'.$bang_phat_minh_sang_che->link) }}" class="ten_bang_phat_minh">{{$bang_phat_minh_sang_che->ten}}</a></td>
 						<td>{{$bang_phat_minh_sang_che->linh_vuc}}</td>
 						<td>{{$bang_phat_minh_sang_che->sobang_kyhieu}}</td>
@@ -120,16 +120,16 @@
 			</div>
 			<table class="dataTable table-hover table-responsive" id="myTable">
 				<thead class="head-dataTable">
-					<th class="no"></th>
+					<th class="no">Stt</th>
 					<th class="anh">Hình ảnh</th>
 					<th class="name">Tên công nghệ, ứng dụng</th>
 					<th class="co_quan">Lĩnh vực KH&CN</th>
 					<th class="linh_vuc">Khả năng ứng dụng</th>
 				</thead>
 				<tbody>
-					@foreach($san_phams as $san_pham)
+					@foreach($san_phams as  $key=>$san_pham)
 					<tr>
-						<td></td>
+						<td>{{ $key+1 }}</td>
 						<td><img src="{{ URL::asset($san_pham->anh_san_pham) }}" alt="ảnh" class="anh_san_pham"></td>
 						<td><a href="{{ URL::asset('san-pham/'.$san_pham->link) }}" class="ten_san_pham">{{$san_pham->ten_san_pham}}</a></td>
 						<td>{{$san_pham->linh_vuc}}</td>
@@ -148,7 +148,7 @@
 			</div>
 			<table class="dataTable table-hover table-responsive" id="myTable">
 				<thead class="head-dataTable">
-					<th class="no"></th>
+					<th class="no">Stt</th>
 					<th class="anh">Logo</th>
 					<th class="name">Tên doanh nghiệp/ tổ chức</th>
 					<th class="co_quan">Lĩnh vực KH&CN</th>
@@ -157,9 +157,9 @@
 					<th class="linh_vuc">Xếp hạng</th>
 				</thead>
 				<tbody>
-					@foreach($doanh_nghieps as $dn)
+					@foreach($doanh_nghieps as  $key=>$dn)
 						<tr>
-							<td></td>
+							<td>{{ $key+1 }}</td>
 							<td><img src="{{ URL::asset($dn->logo) }}" alt="logo" class="logo_doanh_nghiep"></td>
 							<td><a href="{{ URL::asset('doanh-nghiep/'.$dn->link) }}" class="ten_doanh_nghiep">{{$dn->ten_doanh_nghiep}}</a></td>
 							<td>{{$dn->linh_vuc}}</td>

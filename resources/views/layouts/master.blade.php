@@ -9,7 +9,7 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<!-- style -->
   	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/master.css') }}">
-	
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/font-awesome-4.7.0/css/font-awesome.min.css') }}">
 	<!-- end style -->
 </head>
 <body>
@@ -42,7 +42,7 @@
 			<div class="search-area col-md-9">
 				
 	                <div class="input-group">
-	                    <input type="text" class="form-control" placeholder="Tìm kiếm..." name="text_search">
+	                    <input type="text" class="form-control" placeholder="Tìm kiếm..." name="text_search" value="@if(isset($text_search)) {{$text_search}} @endif">
 	                    <div class="input-group-btn">
 	                        <button type="submit" class="btn submit-button">
 	                            <span class="glyphicon glyphicon-search">&nbsp;</span>Tìm kiếm dữ liệu

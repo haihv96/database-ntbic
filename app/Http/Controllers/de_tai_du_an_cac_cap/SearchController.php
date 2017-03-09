@@ -60,6 +60,7 @@ class SearchController extends Controller
 			'tim_theo' => $tim_theo,
 			'chuyen_nganh_current' => $chuyen_nganh,
 			'time_search' => $time_search,
+			'text_search' => $text_search,
 			]);
 	}
 }

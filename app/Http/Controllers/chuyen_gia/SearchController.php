@@ -56,6 +56,7 @@ class SearchController extends Controller
 			'tinh_thanh_current' => $tinh_thanh,
 			'hoc_vi_current' => $chuc_danh,
 			'time_search' => $time_search,
+			'text_search' => $text_search,
 			]);
 	}
 }

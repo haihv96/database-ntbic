@@ -6,36 +6,6 @@
 @endsection
 <!-- main-content -->
 @section("content")
-<div class="row col-md-12 filter-row">
-                <div class="filter">
-                    <ul class="list-search-filter">
-                        <li>
-                            <select name="tim_theo">
-                              <option value="0">Tìm theo</option>
-                              <option value="1">Tên phát minh, sáng chế, giải pháp</option>
-                              <option value="2">Điểm nổi bật</option>
-                              <option value="3">Tác giả</option>
-                            </select>
-                        </li>
-                        <li>
-                            <select name='linh_vuc_khcn'>
-                              <option value="0">Lĩnh vực KH&CN</option>
-                              @foreach($linh_vuc as $lv)
-                                <option value="{{$lv->id}}">{{$lv->linh_vuc}}</option>
-                              @endforeach
-                            </select>
-                        </li>
-                        <li>
-                            <select name="loai">
-                              <option value="0">Loại</option>
-                              @foreach($loai_phat_minh as $loai)
-                                <option value="{{$loai->id}}">{{$loai->loai_phat_minh_sang_che}}</option>
-                              @endforeach
-                            </select>
-                        </li>
-                    </ul>
-                </div>
-    </div>
 <div class="row">  
     <div class="articles_detail col-md-9">
 

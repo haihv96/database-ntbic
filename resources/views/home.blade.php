@@ -78,7 +78,8 @@
 		<div class="top-banner" >
 			<div class="inner" >
 				<div class="inner1"> <strong>Ngân hàng thông tin Khoa học và Công nghệ</strong> </div>
-				<form class="search-form " method="GET" action="">
+				{{-- start form --}}	
+				<div class="search-form " method="GET" action="">
 					<fieldset>
 		                <div class="input-group">
 						
@@ -103,8 +104,8 @@
 	                        </div>   
 			               		
 		               		
-		               		<div id="search_home" class="input-group-btn">
-			                        <a href="javascript:;" class="btn submit">
+		               		<div id="search_home" class="input-group-btn btn-search-home">
+			                        <a class="btn submit">
 			                            <span class="glyphicon glyphicon-search search1"></span>
 			                            <span id="timkiem"> Tìm kiếm </span>
 			                        </a>
@@ -129,7 +130,8 @@
 
 						</h3>
 					</div>
-        		</form>
+        		</div> 
+        		{{-- end form --}}
 			</div>
 		</div>
 		<!-- container -->

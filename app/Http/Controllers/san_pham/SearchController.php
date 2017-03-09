@@ -53,6 +53,7 @@ class SearchController extends Controller
 			'tim_theo' => $tim_theo,
 			'linh_vuc_current' => $linh_vuc_khcn,
 			'time_search' => $time_search,
+			'text_search' => $text_search,
 			]);
 	}
 }

@@ -75,7 +75,7 @@
 		</div>
 		<table class="dataTable table-hover table-responsive" id="myTable">
 			<thead class="head-dataTable">
-				<th class="no"></th>
+				<th class="no">Stt</th>
 				<th class="name">Tên bằng phát minh, sáng chế, giải pháp hữu ích</th>
 				<th class="linh_vuc">Lĩnh vực KH&CN</th>
 				<th class="so_hieu">Số, ký hiệu, bằng</th>
@@ -83,9 +83,9 @@
 				<th class="date">Ngày công bố</th>
 			</thead>
 			<tbody>
-				@foreach($datas as $pm)
+				@foreach($datas as $key=>$pm)
 					<tr>
-						<td></td>
+						<td>{!! ($datas->currentPage() - 1)*10 + $key +1 !!}</td>
 						<td><a href="{{ URL::asset('phat-minh/'.$pm->link) }}" class="ten_bang_phat_minh">{{$pm->ten}}</a></td>
 						<td>{{$pm->linh_vuc}}</td>
 						<td>{{$pm->sobang_kyhieu}}</td>

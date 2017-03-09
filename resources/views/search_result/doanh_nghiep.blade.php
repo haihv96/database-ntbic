@@ -103,7 +103,7 @@
 		</div>
 		<table class="dataTable table-hover table-responsive" id="myTable">
 			<thead class="head-dataTable">
-				<th class="no"></th>
+				<th class="no">Stt</th>
 				<th class="anh_logo">Logo</th>
 				<th class="name">Tên doanh nghiệp/ tổ chức</th>
 				<th class="linh_vuc">Lĩnh vực KH&CN</th>
@@ -112,9 +112,9 @@
 				<th class="rank">Xếp hạng</th>
 			</thead>
 			<tbody>
-				@foreach($datas as $dn)
+				@foreach($datas as $key=>$dn)
 					<tr>
-						<td></td>
+						<td>{!! ($datas->currentPage() - 1)*10 + $key +1 !!}</td>
 						<td><img src="{{ URL::asset($dn->logo) }}" alt="logo" class="logo_doanh_nghiep"></td>
 						<td><a href="{{ URL::asset('doanh-nghiep/'.$dn->link) }}" class="ten_doanh_nghiep">{{$dn->ten_doanh_nghiep}}</a></td>
 						<td>{{$dn->linh_vuc}}</td>

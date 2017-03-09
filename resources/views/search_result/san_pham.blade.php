@@ -78,16 +78,16 @@
 		</div>
 		<table class="dataTable table-hover table-responsive" id="myTable">
 			<thead class="head-dataTable">
-				<th class="no"></th>
+				<th class="no">Stt</th>
 				<th class="anh">Hình ảnh</th>
 				<th class="name">Tên công nghệ, ứng dụng</th>
 				<th class="linh_vuc">Lĩnh vực KH&CN</th>
 				<th class="ung_dung">Khả năng ứng dụng</th>
 			</thead>
 			<tbody>
-				@foreach($datas as $sp)
+				@foreach($datas as $key=>$sp)
 					<tr>
-						<td></td>
+						<td>{!! ($datas->currentPage() - 1)*10 + $key +1 !!}</td>
 						<td><img src="{{ URL::asset($sp->anh_san_pham) }}" alt="ảnh" class="anh_san_pham"></td>
 						<td><a href="{{ URL::asset('san-pham/'.$sp->link) }}" class="ten_san_pham">{{$sp->ten_san_pham}}</a></td>
 						<td>{{$sp->linh_vuc}}</td>

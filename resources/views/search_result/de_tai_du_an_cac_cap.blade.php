@@ -75,7 +75,7 @@
 			</div>
 			<table class="dataTable table-hover table-responsive" id="myTable">
 				<thead class="head-dataTable">
-					<th class="no"></th>
+					<th class="no">Stt</th>
 					<th class="name">Tên đề tài, dự án</th>
 					<th class="linh_vuc">Lĩnh vực KH&CN</th>
 					<th class="ma_so">Mã số, ký hiệu</th>
@@ -83,9 +83,9 @@
 					<th class="thoi_gian">Thời gian kết thúc</th>
 				</thead>
 				<tbody>
-					@foreach($datas as $item)
+					@foreach($datas as $key=>$item)
 						<tr>
-							<td></td>
+							<td>{!! ($datas->currentPage() - 1)*10 + $key +1 !!}</td>
 							<td><a href="{{ URL::asset('de-tai-du-an-cac-cap/'.$item->link) }}" class="ten_de_tai">{{$item->ten_de_tai}}</a></td>
 							<td>{{$item->linh_vuc}}</td>
 							<td>{{$item->maso_kyhieu}}</td>

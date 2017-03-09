@@ -119,14 +119,16 @@
          
         <tr>
             <td colspan=3>
-           <strong>Từ khóa:</strong><a href="#">Trang chủ</a> &nbsp;&nbsp; <a href="#">Trang chủ</a>&nbsp;&nbsp;<a href="#">Trang chủ</a>&nbsp;&nbsp;<a href="#">Trang chủ</a>
+           <strong>Từ khóa: </strong><a href="#">Ntbic</a>
                     <p align="right">
             </td>
           
         </tr>
         <tr>
             <td colspan=3>
-            <p>chỗ dành biểu tượng share>
+                <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-pinterest-square fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
             </p>
             <p align="right">
                         <a href="#"><i class="glyphicon glyphicon-print"></i> In bài viết</a>
@@ -139,10 +141,10 @@
                    Các đề tài dự án khác
                 </strong><br>
                 <ul >
+       {{--              <li><a href="#">Trang chủ</a></li>
                     <li><a href="#">Trang chủ</a></li>
                     <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Trang chủ</a></li> --}}
                 <ul>
 
             </td>
