@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('admin.layouts.layout')
 @section('sidebar')
     <li class="active"><a href="/"> <i class="icon-custom-home"></i> <span
                     class="title">Tổng quan</span></span> </a>
