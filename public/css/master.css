@@ -13,9 +13,10 @@
 	font-weight: bold
 }
 .page-navbar{
-	background-color:#3b5998;
+	background-color: #032875;
 	opacity: 0.8;
 	padding-left:15px;
+	border-bottom: 5px solid white;
 }
 .orange-text{
 	color: orange;
@@ -96,8 +97,8 @@ hr {
 }
 .input-group-btn {
 	background-color: #3b5998;
-	padding-left: 5px;
-	padding-right: 5px; 
+	padding-left: 1px;
+	padding-right: 1px; 
 }
 .btn-search-home a{
 	background-color: #3b5998;
@@ -160,4 +161,9 @@ h2 {
 
 h3 {
 	font-family: 'Roboto Condensed';
+}
+
+#search_home a{
+	font-weight: bold;
+	font-size: 16px;
 }

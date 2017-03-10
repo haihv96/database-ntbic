@@ -1,11 +1,16 @@
 .top-banner {
 	height: auto;
-	background-image: url(http://img.freepik.com//portada/20161006035857.jpg);
+	background-image: url('/storage/app/public/media/banner/banner.jpg');
 	background-repeat: no-repeat; 
 	-webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size:cover;
+    height: 300px;
+}
+.num_c {
+    font-weight: bold;
+    color: #F6FF00
 }
 .inner{
 	padding: 10%;
@@ -21,14 +26,17 @@ strong {
     text-shadow: rgba(0, 0, 0, 0.298039) 0px 2px 0px, rgba(0, 0, 0, 0.34902) 0px 0px 10px;
 }
 .search-form {
-	padding: 7%;
+	padding: 20px 150px 20px 150px;
 }
 fieldset {
 	padding: 0.7%;
-	background-color: rgba(0,0,0,0.3);
+    border: none;
+}
+#text_search {
+    border-radius: none !important;
 }
 .inner2 {
-	color: black;
+	color: white;
     /*text-shadow: rgba(0, 0, 0, 0.298039) 0px 2px 0px, rgba(0, 0, 0, 0.34902) 0px 0px 10px;*/
     font-size: 18px;
     text-align: center;

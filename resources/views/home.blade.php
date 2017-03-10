@@ -82,8 +82,6 @@
 				<div class="search-form " method="GET" action="">
 					<fieldset>
 		                <div class="input-group">
-						
-
 		                	<input id="text_search" type="text" class="form-control input-lg" placeholder="Tìm kiếm..." name="query">
 		                		
 			                <div class="input-group-btn" style="background: none;">
