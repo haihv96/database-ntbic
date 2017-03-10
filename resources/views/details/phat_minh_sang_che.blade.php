@@ -257,33 +257,24 @@
                 <img src="{{ $datas->hinh_anh_minh_hoa }}" />
                 </td>
             </tr>
-            <tr>
-              
-            </tr>
-            <tr>
-                <td colspan=3>
-                <p>chỗ dành biểu tượng share>
-                </p>
-                <p align="right">
-                            <a href="#"><i class="glyphicon glyphicon-print"></i> in bài viết</a>
-                </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan=3 >
-                    <strong>
-                       Các phát minh, sáng chế khác
-                    </strong><br>
-                    <ul >
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Trang chủ</a></li>
-                    <ul>
-
-                </td>
-
-            </tr>
+                      <tr>
+            <td colspan=3>
+           <strong>Từ khóa: </strong><a href="#">Ntbic</a>
+                    <p align="right">
+            </td>
+          
+        </tr>
+        <tr>
+            <td colspan=3>
+                <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-pinterest-square fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+            </p>
+            <p align="right">
+                        <a href="#"><i class="glyphicon glyphicon-print"></i> In bài viết</a>
+            </p>
+            </td>
+        </tr>
 
         </tbody>
         </table> 

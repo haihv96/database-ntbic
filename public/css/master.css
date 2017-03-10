@@ -149,3 +149,15 @@ select, option {
 	width: auto;
 	font-family: 'Roboto Condensed';
 }
+
+h2 {
+	font-family: 'Roboto Condensed';
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 10px 30px 10px 30px;
+}
+
+h3 {
+	font-family: 'Roboto Condensed';
+}
