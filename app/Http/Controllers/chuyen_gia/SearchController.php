@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\chuyen_gia;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Cookie;
 use App\chuyen_gia_khcn;
 use App\tinh_thanh_pho;
 use App\hoc_vi;

@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 include_once 'backend/search_result.php';
 include_once 'backend/detail.php';
+include_once 'backend/admin.php';
 Route::get('detailschuyengia', function () {
     return view('details.chuyen_gia');
 });

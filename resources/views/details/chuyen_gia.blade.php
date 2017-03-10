@@ -6,7 +6,11 @@
 @endsection
 <!-- main-content -->
 @section("content")
-<div class="row">	
+<div class="row">
+  <div class="col-md-12">
+    <button id="back_page" type="button" class="btn btn-primary"><b><span class="glyphicon glyphicon-arrow-left
+"></span> Quay lại</b></button>
+  </div>
 	<div class="profiles_view col-md-9">
 
     <table class="archives_list">

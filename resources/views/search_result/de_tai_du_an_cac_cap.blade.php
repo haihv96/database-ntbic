@@ -105,6 +105,5 @@
 @endsection
 <!-- end content -->
 @section('script')
-
-	
+	<script type="text/javascript" src="{{ URL::asset('public/js/cookie.js') }}"></script>
 @endsection

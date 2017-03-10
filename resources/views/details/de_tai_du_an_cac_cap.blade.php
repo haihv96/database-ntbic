@@ -7,6 +7,10 @@
 <!-- main-content -->
 @section("content")
 <div class="row">
+    <div class="col-md-12">
+        <button id="back_page" type="button" class="btn btn-primary"><b><span class="glyphicon glyphicon-arrow-left
+    "></span> Quay lại</b></button>
+  </div>
     <div class="articles_detail col-md-9">
 
     <h2 class="title_pages">{{ $datas->ten_de_tai }}</h2>

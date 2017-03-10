@@ -1,6 +1,5 @@
 @extends('layouts.master')
 @section('style')
-<script type="text/javascript" src="{{ URL::asset('public/js/phan_trang.js') }}"></script>
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/search_result_chuyen_gia.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/phan_trang.css') }}">
 @endsection
@@ -111,5 +110,5 @@
 @endsection
 <!-- end content -->
 @section('script')
-	
+	<script type="text/javascript" src="{{ URL::asset('public/js/cookie.js') }}"></script>
 @endsection
