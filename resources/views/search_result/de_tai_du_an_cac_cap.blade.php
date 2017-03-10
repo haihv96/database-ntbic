@@ -64,8 +64,6 @@
 					</ul>
 				</div>
 	</div>
-
-
 	<!-- main content,display result -->
 	@section('main-content')
 	<div class="row col-md-12 div-content search_result_de_tai_du_an_cac_cap">

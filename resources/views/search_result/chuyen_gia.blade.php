@@ -10,7 +10,7 @@
 				<div class="filter">
 					<ul class="list-search-filter">
 						<li>
-							<select name = 'tim_theo'>
+							<select class="select-style" name = 'tim_theo'>
 								@if($tim_theo == '0')
 							  		<option value="0" selected="">Tìm theo</option>
 							  	@else
@@ -43,7 +43,7 @@
 							</select>
 						</li>
 						<li>
-							<select name='tinh_thanh_pho'>
+							<select class="select-style" name='tinh_thanh_pho'>
 							  <option value="">Tỉnh, thành phố</option>
 							  @foreach($tinh_thanh as $tt)
 							  	@if($tinh_thanh_current == $tt->tinh_thanh_pho)
@@ -55,7 +55,7 @@
 							</select>
 						</li>
 						<li>
-							<select name="chuc_danh">
+							<select class="select-style" name="chuc_danh">
 							  <option value="">Chức danh</option>
 							  @foreach($hoc_vi as $hv)
 							  	@if($hoc_vi_current == $hv->hoc_vi)

@@ -5,7 +5,71 @@
   <link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/search_result_chuyen_gia.css') }}">
 @endsection
 <!-- main-content -->
+
 @section("content")
+<div class="row col-md-12 filter-row ">
+        <div class="filter">
+          <ul class="list-search-filter">
+            <li>
+              <select class="select-style" name = 'tim_theo'>
+                @if($tim_theo == '0')
+                    <option value="0" selected="">Tìm theo</option>
+                  @else
+                    <option value="0">Tìm theo</option>
+                  @endif
+
+                  @if($tim_theo == '1')
+                    <option value="1" selected="">Tên nhà KH</option>
+                  @else
+                    <option value="1">Tên nhà KH</option>
+                  @endif
+
+                  @if($tim_theo == '2')
+                    <option value="2" selected="">Lĩnh vực nghiên cứu</option>
+                  @else
+                    <option value="2">Lĩnh vực nghiên cứu</option>
+                  @endif
+
+                  @if($tim_theo == '3')
+                    <option value="3" selected="">Hướng nghiên cứu</option>
+                  @else
+                    <option value="3">Hướng nghiên cứu</option>
+                  @endif
+
+                  @if($tim_theo == '4')
+                    <option value="4" selected="">Cơ quan công tác</option>
+                  @else
+                    <option value="4">Cơ quan công tác</option>
+                  @endif
+              </select>
+            </li>
+            <li>
+              <select class="select-style" name='tinh_thanh_pho'>
+                <option value="">Tỉnh, thành phố</option>
+                @foreach($tinh_thanh as $tt)
+                  @if($tinh_thanh_current == $tt->tinh_thanh_pho)
+                    <option value="{{$tt->tinh_thanh_pho}}" selected="">{{$tt->tinh_thanh_pho}}</option>
+                  @else 
+                    <option value="{{$tt->tinh_thanh_pho}}">{{$tt->tinh_thanh_pho}}</option>
+                  @endif
+                @endforeach
+              </select>
+            </li>
+            <li>
+              <select class="select-style" name="chuc_danh">
+                <option value="">Chức danh</option>
+                @foreach($hoc_vi as $hv)
+                  @if($hoc_vi_current == $hv->hoc_vi)
+                    <option value="{{$hv->hoc_vi}}" selected="">{{$hv->hoc_vi}}</option>
+                  @else
+                    <option value="{{$hv->hoc_vi}}">{{$hv->hoc_vi}}</option>
+                  @endif
+                @endforeach
+              </select>
+            </li>
+          </ul>
+        </div>
+  </div>
 <div class="row">
   <div class="col-md-12">
     <button id="back_page" type="button" class="btn btn-primary"><b><span class="glyphicon glyphicon-arrow-left

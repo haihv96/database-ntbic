@@ -32,6 +32,11 @@ class DetailController extends Controller
         
         return view('details.chuyen_gia')
         ->with([
+            'tinh_thanh' => $tt,
+            'hoc_vi' => $hv,
+            'tinh_thanh_current' => '',
+            'hoc_vi_current' => '',
+            'tim_theo' => '',
             'datas'=>$datas,
             'ket_qua_nghien_cuu' => $ket_qua_nghien_cuu,
             'cong_trinh_nghien_cuu' => $cong_trinh_nghien_cuu,

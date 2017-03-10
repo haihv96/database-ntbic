@@ -13,4 +13,7 @@ $(document).ready(function() {
 	$("#back_page").click(function(){
 		window.location.replace($.cookie("backurl"));
 	});
+
+	
 });
+

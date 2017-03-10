@@ -6,7 +6,65 @@
 @endsection
 <!-- main-content -->
 @section("content")
-<div class="row">  
+<div class="row col-md-12 filter-row">
+                <div class="filter">
+                    <ul class="list-search-filter">
+                        <li>
+                            <select name="tim_theo">
+                                @if($tim_theo == '0')
+                                    <option value="0" selected="">Tìm theo</option>
+                                @else
+                                    <option value="0">Tìm theo</option>
+                                @endif
+
+                                @if($tim_theo == '1')
+                                    <option value="1" selected="">Tên phát minh, sáng chế, giải pháp</option>
+                                @else
+                                    <option value="1">Tên phát minh, sáng chế, giải pháp</option>
+                                @endif
+
+                                @if($tim_theo == '2')
+                                    <option value="2" selected="">Điểm nổi bật</option>
+                                @else
+                                    <option value="2">Điểm nổi bật</option>
+                                @endif
+
+                                @if($tim_theo == '3')
+                                    <option value="3" selected="">Tác giả</option>
+                                @else
+                                    <option value="3">Tác giả</option>
+                                @endif
+                            </select>
+                        </li>
+                        <li>
+                            <select name='linh_vuc_khcn'>
+                              <option value="0">Lĩnh vực KH&CN</option>
+                              @foreach($linh_vuc as $lv)
+                                @if($linh_vuc_current == $lv->id)
+                                    <option value="{{$lv->id}}" selected="">{{$lv->linh_vuc}}</option>
+                                @else
+                                    <option value="{{$lv->id}}">{{$lv->linh_vuc}}</option>
+                                @endif
+                              @endforeach
+                            </select>
+                        </li>
+                        <li>
+                            <select name="loai">
+                              <option value="0">Loại</option>
+                              @foreach($loai_phat_minh as $loai)
+                                @if($loai_phat_minh_current == $loai->id)
+                                    <option value="{{$loai->id}}" selected="">{{$loai->loai_phat_minh_sang_che}}</option>
+                                @else
+                                    <option value="{{$loai->id}}">{{$loai->loai_phat_minh_sang_che}}</option>
+                                @endif
+                              @endforeach
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+    </div>
+<div class="row">
+
 <div class="col-md-12">
     <button id="back_page" type="button" class="btn btn-primary"><b><span class="glyphicon glyphicon-arrow-left
 "></span> Quay lại</b></button>
