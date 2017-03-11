@@ -1,0 +1,19 @@
+.form-group{
+	background-color: white;
+	padding:5px;
+	margin: 20px
+}
+.form-title{
+	color: blue;
+	font-weight: bold;
+	text-align: center;
+}
+.form-action{
+	width: 100%
+}
+.form-label{
+	font-weight: bold;
+}
+.add-btn{
+	margin: 5px
+}

@@ -59,7 +59,7 @@
 <link href="/webarch/webarch/HTML/assets/plugins/jquery-nestable/jquery.nestable.css" rel="stylesheet" type="text/css" media="screen"/>
 <!-- END PLUGIN GROUP_LIST CSS -->
 <link href="/public/css/lib/bootstrap-toggle.min.css" rel="stylesheet">
-
+@yield('css')
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -601,10 +601,10 @@
 
 <!-- END PAGE LEVEL PLUGINS -->  
 <!-- BEGIN  SCROLL GRIB PAGE LEVEL JS -->
-{{-- <script src="assets/plugins/jquery-block-ui/jqueryblockui.js" type="text/javascript"></script> --}}
-{{-- <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script> --}}
-{{-- <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script> --}}
-{{-- <script src="assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script> --}}
+{{-- <script src="/webarch/webarch/HTML/assets/plugins/jquery-block-ui/jqueryblockui.js" type="text/javascript"></script> --}}
+{{-- <script src="/webarch/webarch/HTML/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script> --}}
+{{-- <script src="/webarch/webarch/HTML/assets/plugins/pace/pace.min.js" type="text/javascript"></script> --}}
+{{-- <script src="/webarch/webarch/HTML/assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script> --}}
 <!-- END SCROLL GRIB LEVEL PLUGINS -->
 
 <!-- BEGIN CORE TEMPLATE JS -->
@@ -617,7 +617,6 @@
         $(".live-tile,.flip-list").liveTile();
     });
 </script>
-
 <!-- END  CORE TEMPLATE JS -->
 </body>
 </html>
