@@ -1,6 +1,6 @@
 <?php
 	Route::get('admin','admin\HomeController@index');
-	Route::get('login','admin\LoginController.php');
+	Route::get('login','admin\LoginController@index');
 	Route::group(['prefix'=>'admin'], function(){
 		Route::group(['prefix'=>'chuyen-gia'], function(){
 			Route::get('/','admin\ChuyenGiaController@index');
