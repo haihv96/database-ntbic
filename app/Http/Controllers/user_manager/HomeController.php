@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\user_manager;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class PhatMinhController extends Controller
+class HomeController extends Controller
 {
     //
 }

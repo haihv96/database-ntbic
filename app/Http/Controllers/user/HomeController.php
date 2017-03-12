@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\user;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class DtDaCacCapController extends Controller
+class HomeController extends Controller
 {
     //
 }

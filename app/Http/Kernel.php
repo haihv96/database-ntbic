@@ -56,5 +56,35 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+
+        'admin' => \App\Http\Middleware\AdminAuthenticated::class,
+        'moderator' => \App\Http\Middleware\ModeratorAuthenticated::class,
+        
+        'update_chuyen_gia' => \App\Http\Middleware\chuyen_gia\RedirectIfUpdateAuthenticated::class,
+        'read_chuyen_gia' => \App\Http\Middleware\chuyen_gia\RedirectIfReadAuthenticated::class,
+        'insert_chuyen_gia' => \App\Http\Middleware\chuyen_gia\RedirectIfInsertAuthenticated::class,
+        'delete_chuyen_gia' => \App\Http\Middleware\chuyen_gia\RedirectIfDeleteAuthenticated::class,
+
+        'delete_de_tai_du_an_cac_cap' => \App\Http\Middleware\de_tai_du_an_cac_cap\RedirectIfDeleteAuthenticated::class,
+        'update_de_tai_du_an_cac_cap' => \App\Http\Middleware\de_tai_du_an_cac_cap\RedirectIfUpdateAuthenticated::class,
+        'insert_de_tai_du_an_cac_cap' => \App\Http\Middleware\de_tai_du_an_cac_cap\RedirectIfInsertAuthenticated::class,
+        'read_de_tai_du_an_cac_cap' => \App\Http\Middleware\de_tai_du_an_cac_cap\RedirectIfReadAuthenticated::class,
+
+        'delete_phat_minh' => \App\Http\Middleware\phat_minh\RedirectIfDeleteAuthenticated::class,
+        'update_phat_minh' => \App\Http\Middleware\phat_minh\RedirectIfUpdateAuthenticated::class,
+        'insert_phat_minh' => \App\Http\Middleware\phat_minh\RedirectIfInsertAuthenticated::class,
+        'read_phat_minh' => \App\Http\Middleware\phat_minh\RedirectIfReadAuthenticated::class,
+
+        'delete_san_pham' => \App\Http\Middleware\san_pham\RedirectIfDeleteAuthenticated::class,
+        'udpate_san_pham' => \App\Http\Middleware\san_pham\RedirectIfUpdateAuthenticated::class,
+        'insert_san_pham' => \App\Http\Middleware\san_pham\RedirectIfInsertAuthenticated::class,
+        'read_san_pham' => \App\Http\Middleware\san_pham\RedirectIfReadAuthenticated::class,
+
+        'delete_doanh_nghiep' => \App\Http\Middleware\doanh_nghiep\RedirectIfDeleteAuthenticated::class,
+        'update_doanh_nghiep' => \App\Http\Middleware\doanh_nghiep\RedirectIfUpdateAuthenticated::class,
+        'insert_doanh_nghiep' => \App\Http\Middleware\doanh_nghiep\RedirectIfInsertAuthenticated::class,
+        'read_doanh_nghiep' => \App\Http\Middleware\doanh_nghiep\RedirectIfReadAuthenticated::class,
+
+
     ];
 }
