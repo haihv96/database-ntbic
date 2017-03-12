@@ -19,6 +19,7 @@
 	
 		<div class="grid simple">
 				<form id="form_iconic_validation" action="#">
+					<textarea name="">CHỈ CẦN DÙNG THẺ TEXTAREA TRONG HTML LÀ SẼ HIỆN RA CÁI NÀY</textarea>
                       <div class="form-group">
                         <label class="form-label">Tên chuyên gia</label>
                         

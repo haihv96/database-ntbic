@@ -608,6 +608,25 @@
 <!-- END SCROLL GRIB LEVEL PLUGINS -->
 
 <!-- BEGIN CORE TEMPLATE JS -->
+<script src="{{URL::asset('resources/views/tinymce/js/tinymce/tinymce.min.js')}}"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            entity_encoding : "raw",
+            height: 200,
+            theme: 'modern',
+            plugins: [
+                'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen',
+                'insertdatetime media nonbreaking save table contextmenu directionality',
+                'emoticons template paste textcolor colorpicker textpattern imagetools'
+            ],
+            toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            toolbar2: 'print preview media | forecolor backcolor emoticons | fontsizeselect',
+            image_advtab: true,
+            fontsize_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+        });
+    </script>
 <script src="/webarch/webarch/HTML/assets/js/core.js" type="text/javascript"></script>
 <script src="/webarch/webarch/HTML/assets/js/chat.js" type="text/javascript"></script>
 <script src="/webarch/webarch/HTML/assets/js/demo.js" type="text/javascript"></script>
