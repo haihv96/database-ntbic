@@ -14,6 +14,7 @@
   	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/home.css') }}">
   	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/responsive.css') }}">
   	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
         function initialize() {
             var myLatlng = new google.maps.LatLng(21.0197929,105.8563363);
@@ -103,7 +104,7 @@
 			               		
 		               		
 		               		<div id="search_home" class="input-group-btn btn-search-home">
-			                        <a class="btn submit">
+			                        <a class="btn submit" style=" padding: 6px 12px;">
 			                            <span class="glyphicon glyphicon-search search1"></span>
 			                            <span id="timkiem"> Tìm kiếm </span>
 			                        </a>
@@ -111,10 +112,11 @@
 	                        </div>
                         </div>
 	               	</fieldset>
+	               	
+
 	               <div>
 						<h3 class="inner2">
-
-							Hiện đang có <span class="num_c">23,550</span> chuyên gia; 
+							Hiện đang có <span class="num_c">23,553</span> chuyên gia; 
 
 						    <span class="num_c">22,810</span> đề tài, dự án các cấp; 
 
@@ -125,60 +127,76 @@
 						    <span class="num_c">68</span> quỹ đầu tư, hỗ trợ cho khoa học và công nghệ;
 
 						    <span class="num_c">446</span> trung tâm, viện nghiên cứu trong cơ sở dữ liệu
-
 						</h3>
 					</div>
+
+					
         		</div> 
         		{{-- end form --}}
 			</div>
 		</div>
+
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	    <script type="text/javascript">
+	      google.charts.load('current', {'packages':['corechart']});
+	      google.charts.setOnLoadCallback(drawChart);
+
+	      function drawChart() {
+
+	        var data = google.visualization.arrayToDataTable([
+	          ['Task', 'Hours per Day'],
+	          ['Work',     11],
+	          ['Eat',      2],
+	          ['Commute',  2],
+	          ['Watch TV', 2],
+	          ['Sleep',    7]
+	        ]);
+
+	        var options = {
+	          title: 'My Daily Activities'
+	        };
+
+	        var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+
+	        chart.draw(data, options);
+	      }
+	    </script>
+	    <script type="text/javascript">
+	      google.charts.load('current', {'packages':['corechart']});
+	      google.charts.setOnLoadCallback(drawChart);
+
+	      function drawChart() {
+
+	        var data = google.visualization.arrayToDataTable([
+	          ['Task', 'Hours per Day'],
+	          ['Work',     11],
+	          ['Eat',      2],
+	          ['Commute',  2],
+	          ['Watch TV', 2],
+	          ['Sleep',    7]
+	        ]);
+
+	        var options = {
+	          title: 'My Daily Activities'
+	        };
+
+	        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+	        chart.draw(data, options);
+	      }
+	    </script>
+
+
 		<!-- container -->
 		<div class="container">
 			<div class="w3-content w3-padding" style="max-width:1564px">
 
 			  <!-- Danh mục -->
-			  <div class="w3-container w3-padding-32" id="projects">
-			    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Danh mục </h3>
-			  </div>
-
-			  <div class="w3-row-padding">
-			    <div class="w3-col l2 m4 w3-margin-bottom">
-			      	<div class="w3-display-container">
-			        	<div class="w3-display-topleft w3-padding">Dữ liệu chuyên gia</div>
-			        	<a href="#"><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" class="anh"></a>
-			      	</div>
-			    </div>
-			    <div class="w3-col l2 m4 w3-margin-bottom">
-			      	<div class="w3-display-container">
-			        	<div class="w3-display-topleft w3-padding">Dữ liệu đề tài, dự án</div>
-			        	<a href="#"><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" ></a>
-			      	</div>
-			    </div>
-			    <div class="w3-col l2 m4 w3-margin-bottom">
-			      	<div class="w3-display-container">
-			        	<div class="w3-display-topleft w3-padding">Bằng phát minh và sáng chế</div>
-			        	<a href="#"><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" ></a>
-			     	</div>
-			    </div>
-			    <div class="w3-col l2 m4 w3-margin-bottom">
-			      	<div class="w3-display-container">
-			        	<div class="w3-display-topleft w3-padding">Sản phẩm và ứng dụng</div>
-			        	<a href=""><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" ></a>
-			      	</div>
-			    </div>
-			    <div class="w3-col l2 m4 w3-margin-bottom">
-			      	<div class="w3-display-container">
-			        	<div class="w3-display-topleft w3-padding">Sản phẩm và ứng dụng</div>
-			        	<a href=""><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" ></a>
-			      	</div>
-			    </div>
-			    <div class="w3-col l2 m4 w3-margin-bottom">
-			      	<div class="w3-display-container">
-			        	<div class="w3-display-topleft w3-padding">Sản phẩm và ứng dụng</div>
-			        	<a href=""><img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" ></a>
-			      	</div>
-			    </div>
-			  </div>
+				<div class="w3-container w3-padding-32" id="projects">
+				    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Biểu đồ </h3>
+				</div>
+				<div id="piechart1" class="col-lg-4" style=" height: 300px;"></div>
+				<div id="piechart2" class="col-lg-4" style=" height: 300px;"></div>
 			</div>
 
 
@@ -196,11 +214,12 @@
 				    <!-- Wrapper for slides -->
 				    <div class="carousel-inner" role="listbox">
 				      	<div class="item active">
+				      		
 				            <div class="w3-col l3 m6 w3-margin-bottom">
 							    <span class="span_v">
-							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+							    	<a href="http://128.199.155.163/database-ntbic/chuyen-gia/Nguyen-Lan-Dung-17897-">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
+									<img src="http://128.199.155.163/database-ntbic/storage/app/public/media/profile_khcn/Nguyen-Lan-Dung-17897-.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
 
@@ -208,58 +227,58 @@
 
 									<ul class="ul_listloop">
 										<li><a href="#" title="Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus">Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/gs-nguyen-lan-dung-di-nuoc-ngoai-hoc-trong-cay-nguoi-ta-cuoi-cho-401.html" title="GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây người ta cười cho″">GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây...</a></li>
+										<li><a href="#" title="GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây người ta cười cho″">GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây...</a></li>
 									</ul>
 
 								</span>
 							</div>
+							
 							<div class="w3-col l3 m6 w3-margin-bottom">
 							    <span class="span_v">
-							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+							    	<a href="http://128.199.155.163/database-ntbic/chuyen-gia/Ngo-Bao-Chau-17899-">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
+									<img src="http://128.199.155.163/database-ntbic/storage/app/public/media/profile_khcn/Ngo-Bao-Chau-17899-.jpg" class="img1"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
+									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS Ngô Bảo Châu</strong>
 
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus">Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/gs-nguyen-lan-dung-di-nuoc-ngoai-hoc-trong-cay-nguoi-ta-cuoi-cho-401.html" title="GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây người ta cười cho″">GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây...</a></li>
+										 <li><a href="#">Thời thơ ấu của Ngô Bảo Châu</a></li>
+										 <li><a href="#">Chính phủ mời Giáo sư Ngô Bảo Châu về nước làm...</a></li>
 									</ul>
 
 								</span>
 							</div>
 						    <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin1">
 						      	<span class="span_v">
-							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+							    	<a href="http://data.dev:1080/chuyen-gia/Luu-Le-Hang-17900-">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
+									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/Luu-Le-Hang-17900-.jpg" class="img1"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
+									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">TS.Lưu Lệ Hằng</strong>
 
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus">Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/gs-nguyen-lan-dung-di-nuoc-ngoai-hoc-trong-cay-nguoi-ta-cuoi-cho-401.html" title="GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây người ta cười cho″">GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây...</a></li>
+										<li><a href="#" title="Lưu Lệ Hằng và đường tới vinh quang">Lưu Lệ Hằng và đường tới vinh quang</a></li>
+										<li><a href="#" title="GS Lưu Lệ Hằng: Người hé mở bí ẩn của hệ Mặt Trời">GS Lưu Lệ Hằng: Người hé mở bí ẩn của hệ Mặt Trời</a></li>
 									</ul>
-
 								</span>
 						    </div>
 						    <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin2">
 						      	<span class="span_v">
-							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+							    	<a href="http://data.dev:1080/chuyen-gia/Ho-Tu-Bao-5734-">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
+									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/default.jpg" class="img1"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
+									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TSKH Hồ Tú Bảo</strong>
 
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus">Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/gs-nguyen-lan-dung-di-nuoc-ngoai-hoc-trong-cay-nguoi-ta-cuoi-cho-401.html" title="GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây người ta cười cho″">GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây...</a></li>
+										<li><a href="#">Hội thảo dành cho nghiên cứu sinh năm 2016</a></li>
+										<li><a href="#">GS Hồ Tú Bảo: Muốn trường tốt phải có thầy hay</a></li>		
 									</ul>
 
 								</span>
@@ -270,70 +289,69 @@
 						<div class="item">
 				            <div class="w3-col l3 m6 w3-margin-bottom">
 							    <span class="span_v">
-							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+							    	<a href="http://data.dev:1080/chuyen-gia/dam-Thanh-Son-17901-1991">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
+									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/dam-Thanh-Son-17901-1991.jpg" class="img1"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
+									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS Đàm Thanh Sơn</strong>
 
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus">Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/gs-nguyen-lan-dung-di-nuoc-ngoai-hoc-trong-cay-nguoi-ta-cuoi-cho-401.html" title="GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây người ta cười cho″">GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây...</a></li>
+										<li><a href="http://khoahoctot.vn/scientist/dam-thanh-son-than-dong-ha-noi-den-nha-vat-ly-hang-dau-the-gioi-412.html" title="Đàm Thanh Sơn: Thần đồng Hà Nội đến nhà Vật lý hàng đầu thế giới">Đàm Thanh Sơn: Thần đồng Hà Nội đến nhà Vật lý...</a></li>
+										<li><a href="http://khoahoctot.vn/scientist/dh-chicago-vinh-danh-gs-dam-thanh-son-392.html" title="ĐH Chicago vinh danh GS Đàm Thanh Sơn">ĐH Chicago vinh danh GS Đàm Thanh Sơn</a></li>
 									</ul>
 
 								</span>
 							</div>
 						    <div class="w3-col l3 m6 w3-margin-bottom" >
 						      	<span class="span_v">
-							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+							    	<a href="http://data.dev:1080/chuyen-gia/Phan-Huy-Le-17896-2321934">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
+									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/Phan-Huy-Le-17896-2321934.jpg" class="img1"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
+									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.Phan Huy Lê</strong>
 
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus">Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/gs-nguyen-lan-dung-di-nuoc-ngoai-hoc-trong-cay-nguoi-ta-cuoi-cho-401.html" title="GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây người ta cười cho″">GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây...</a></li>
+										<li><a href="http://khoahoctot.vn/scientist/ts-vu-the-khanh-co-the-khien-giao-su-duoi-mua-tat-dien-44.html" title="TS Vũ Thế Khanh có thể khiến Giáo sư 'đuổi mưa'... &quot;tắt điện&quot;?">TS Vũ Thế Khanh có thể khiến Giáo sư 'đuổi mưa'......</a></li>
+										<li><a href="http://khoahoctot.vn/scientist/dai-hoi-hoi-moi-truong-gtvt-vn-lan-thu-iii-55.html" title="Đại hội Hội Môi trường GTVT VN lần thứ III">Đại hội Hội Môi trường GTVT VN lần thứ III</a></li>
 									</ul>
 
 								</span>
 						    </div>
 						    <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin3">
 						      	<span class="span_v">
-							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+							    	<a href="http://data.dev:1080/chuyen-gia/Nguyen-Son-Binh-17902-">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
+									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/Nguyen-Son-Binh-17902-.jpg" class="img1"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
+									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS Nguyễn Sơn Bình</strong>
 
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus">Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/gs-nguyen-lan-dung-di-nuoc-ngoai-hoc-trong-cay-nguoi-ta-cuoi-cho-401.html" title="GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây người ta cười cho″">GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây...</a></li>
+									    <li><a href="http://khoahoctot.vn/scientist/nguoi-vn-lan-dau-vao-danh-sach-cac-nha-khoa-hoc-anh-huong-nhat-tg-54.html" title="Người VN lần đầu vào danh sách các nhà khoa học ảnh hưởng nhất TG">Người VN lần đầu vào danh sách các nhà khoa học...</a></li>
+										<li><a href="http://khoahoctot.vn/scientist/nha-khoa-hoc-trong-top-anh-huong-nhat-the-gioi-khong-du-can-dam-cuoi-vo-333.html" title="Nhà khoa học trong tốp 'ảnh hưởng nhất thế giới' không đủ can đảm cưới vợ">Nhà khoa học trong tốp 'ảnh hưởng nhất thế giới'...</a></li>
 									</ul>
 
 								</span>
 						    </div>
 						     <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin4">
 						      	<span class="span_v">
-							    	<a href="http://khoahoctot.vn/profiles/nguyen-lan-dung-14366.html" title="GS.TS.Nguyễn Lân Dũng">
+							    	<a href="http://data.dev:1080/chuyen-gia/Luu-Le-Hang-17900-">
 
-									<img src="https://www.w3schools.com/w3images/house4.jpg" class="img1"><br>
+									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/Luu-Le-Hang-17900-.jpg" class="img1"><br>
 
-									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
+									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">TS.Lưu Lệ Hằng</strong>
 
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus">Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/gs-nguyen-lan-dung-di-nuoc-ngoai-hoc-trong-cay-nguoi-ta-cuoi-cho-401.html" title="GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây người ta cười cho″">GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây...</a></li>
+										<li><a href="#" title="Lưu Lệ Hằng và đường tới vinh quang">Lưu Lệ Hằng và đường tới vinh quang</a></li>
+										<li><a href="#" title="GS Lưu Lệ Hằng: Người hé mở bí ẩn của hệ Mặt Trời">GS Lưu Lệ Hằng: Người hé mở bí ẩn của hệ Mặt Trời</a></li>
 									</ul>
-
 								</span>
 						    </div>
 						</div>
@@ -356,7 +374,7 @@
 			{{--Các công nghệ tiên tiến trên thế giới--}}
 
 
-			<div class="w3-content w3-padding" style="max-width:1564px">
+			<div class="w3-content w3-padding congnghe" style="max-width:1564px">
 
 			  <!-- Danh mục -->
 			  <div class="w3-container w3-padding-32" id="projects">
@@ -409,7 +427,7 @@
 
 		{{-- 	đối tác --}}
 
-			<div class="w3-content w3-padding" style="max-width:1564px">
+			<div class="w3-content w3-padding doitac" style="max-width:1564px">
 
 			  <!-- Danh mục -->
 			  	<div class="w3-container w3-padding-32" id="projects">
@@ -589,9 +607,9 @@
 
 			<div class="w3-content w3-padding" style="max-width:1564px" >
 				<div class="w3-container w3-padding-32" id="projects">
-				    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Tin tức </h3>
+				    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Bản đồ</h3>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-6 tintuc">
 					<div class="fl">
 
 						<div class="clearfix newstop">
@@ -640,13 +658,12 @@
 
 					</div>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-12" style="padding-bottom:2%;">
 					<!-- Add Google Maps -->
 					<div id="map_canvas"></div>
 
 				</div>
 			</div>
-
 		</div>
 		<div class="row div-footer">
 			<div class="container">
