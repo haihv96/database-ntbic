@@ -52,7 +52,7 @@
     <button id="back_page" type="button" class="btn btn-primary"><b><span class="glyphicon glyphicon-arrow-left
 "></span> Quay lại</b></button>
   </div>
-<div class="content_view col-md-9 div_main_content">
+<div class="content_view col-md-12 div_main_content">
 
 	<table  class="archives_list">
 
@@ -830,7 +830,7 @@
 
 </div>
 
-@include('details.sidebar')
+{{-- @include('details.sidebar') --}}
 </div>
 @endsection
 <!-- end main-content -->
