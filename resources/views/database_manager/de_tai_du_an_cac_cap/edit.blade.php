@@ -45,35 +45,35 @@
               <label class="form-label">Chuyên ngành</label>
               <div class="input-with-icon  right">                                       
                 <i class=""></i>
-                <input type="text" name="form1Name" id="form1Name" class="form-control" placeholder="">                                 
+                <input type="text" name="chuyen_nganh_khcn" id="form1Name" class="form-control" placeholder="{{$data->chuyen_nganh_khcn}}">                                 
               </div>
             </div>
             <div class="form-group">
               <label class="form-label">Năm bắt đầu</label>
               <div class="input-with-icon  right">                                       
                 <i class=""></i>
-                <input type="text" name="form1Name" id="form1Name" class="form-control" placeholder="">                                 
+                <input type="text" name="nam_bat_dau" id="form1Name" class="form-control" placeholder="{{$data->nam_bat_dau}}">                                 
               </div>
             </div>
             <div class="form-group">
               <label class="form-label">Năm kết thúc</label>
               <div class="input-with-icon  right">                                       
                 <i class=""></i>
-                <input type="text" name="form1Name" id="form1Name" class="form-control" placeholder="">                                 
+                <input type="text" name="nam_ket_thuc" id="form1Name" class="form-control" placeholder="{{$data->nam_ket_thuc}}">                                 
               </div>
             </div>          
             <div class="form-group">
               <label class="form-label">Cơ quan</label>
               <div class="input-with-icon  right">                                       
                 <i class=""></i>
-                <input type="text" name="form1Name" id="form1Name" class="form-control" placeholder="">                                 
+                <input type="text" name="co_quan" id="form1Name" class="form-control" placeholder="{{$data->co_quan}}">                                 
               </div>
             </div>
             <div class="form-group">
               <label class="form-label">Chủ nhiệm đề tài</label><span class="error">(*)</span>
               <div class="input-with-icon  right">                                       
                 <i class=""></i>
-                <input type="text" name="form1Name" id="form1Name" class="form-control" placeholder="">                                 
+                <input type="text" name="chu_nhiem_detai" id="form1Name" class="form-control" placeholder="{{$data->chu_nhiem_detai}}">                                 
               </div>
             </div>
            <div class="form-group">
@@ -81,7 +81,7 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="Hà Nội">                                 
+              <input type="text" name="diem_noi_bat" id="form1Url" class="form-control" placeholder="{{$data->diem_noi_bat}}">                                 
             </div>
           </div> 
           <div class="form-group">
@@ -89,7 +89,7 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="Hà Nội">                                 
+              <input type="text" name="mota_chung" id="form1Url" class="form-control" placeholder="{{$data->mota_chung}}">                                 
             </div>
           </div> 
           <div class="form-group">
@@ -97,7 +97,7 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="Hà Nội">                                 
+              <input type="text" name="mota_quytrinh_chuyengiao" id="form1Url" class="form-control" placeholder="{{$data->mota_quytrinh_chuyengiao}}">                                 
             </div>
           </div> 
           <div class="form-group">
@@ -105,7 +105,7 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="Hà Nội">                                 
+              <input type="text" name="form1Url" id="ket_qua_thuc_hien_ung_dung" class="form-control" placeholder="{{$data->ket_qua_thuc_hien_ung_dung}}">                                 
             </div>
           </div> 
           <div class="form-actions">  
