@@ -224,7 +224,7 @@
             <td>
 
             	Hướng nghiên cứu:<br>
-		          {{ $datas->huong_nghien_cuu }}
+		          {!! $datas->huong_nghien_cuu !!}
 
             </td>
 

@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="/public/css/admin_chuyen_gia.css">
 @endsection
 @section('main')
- <form action="{{route('')}}">
+ <form action="{{URL::asset('quan-tri-vien/quan-ly-du-lieu/san-pham/tao-moi')}}">
   <div class="row-fluid">
     <div class="span12">
       <button class="add-btn btn btn-success" action><span class="fa fa-pencil"></span>&nbsp;&nbsp;Thêm sản phẩm </button>
@@ -44,20 +44,19 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @for($i=0;$i<100;$i++)
+                  @foreach($datas as $key=>$sp)
                   <tr class="odd gradeX">
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0</td>
-                    <td>Win 95+</td>
-                    <td class="center"> 4</td>
-                    <td class="center">X</td>
-                    <td>17/10/1986</td>
+                    <td>{{$sp->ten_san_pham}}</td>
+                    <td>{{$sp->linh_vuc}}</td>
+                    <td>{{$sp->dac_diem_noi_bat}}</td>
+                    <td class="center"> {{$sp->mo_ta_chung}}</td>
+                    <td class="center">{{$sp->quy_trinh_chuyen_giao}}</td>
+                    <td>{{$sp->kha_nang_ung_dung}}</td>
                     
-                    <td class="center"><a href="{{URL::asset('quan-tri-vien/quan-ly-du-lieu/san-pham/sua/1')}}"><span class="fa fa-pencil-square"></span></a></td>
-                    <td class="center"><a href="#"><span class="fa fa-trash-o"></span></a></td>
+                    <td class="center"><a href="{{URL::asset('quan-tri-vien/quan-ly-du-lieu/san-pham/sua/'.$sp->id)}}"><span class="fa fa-pencil-square"></span></a></td>
+                    <td class="center"><a href="{{URL::asset('quan-tri-vien/quan-ly-du-lieu/san-pham/xoa/'.$sp->id)}}"><span class="fa fa-trash-o"></span></a></td>
                   </tr>
-                  @endfor
+                  @endforeach
                 </tbody>
               </table>
             </div>
