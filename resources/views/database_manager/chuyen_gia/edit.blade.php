@@ -18,13 +18,14 @@
   <h4 class="form-title">SỬA DỮ LIỆU CHUYÊN GIA</h4>
   
     <div class="grid simple">
-        <form id="form_iconic_validation" action="#">
+        <form id="form_iconic_validation" action="{{URL::asset('quan-tri-vien/quan-ly-du-lieu/chuyen-gia/sua/'.$chuyen_gia->id)}}" method="post">
+          {{csrf_field()}}
                       <div class="form-group">
                         <label class="form-label">Tên chuyên gia</label>
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Name" id="form1Name" class="form-control" placeholder="Phạm Ngọc Minh">                                 
+              <input type="text" name="ten" id="form1Name" class="form-control" value="{{$chuyen_gia->ho_va_ten}}">                                 
             </div>
                       </div>
                       <div class="form-group">
@@ -32,7 +33,7 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Email" id="form1Email" class="form-control" placeholder="Phó giáo sư tiến sĩ">                                 
+              <input type="text" name="hoc_vi" id="form1Email" class="form-control" value="{{$chuyen_gia->hoc_vi}}">                                 
             </div>
                       </div>
                       <div class="form-group">
@@ -40,17 +41,15 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="12/11/1958"> 
+              <input type="text" name="nam_sinh" id="form1Url" class="form-control" value="{{$chuyen_gia->nam_sinh}}"> 
             </div>
                       </div>
                       <div class="form-group">
                         <label class="form-label">Chuyên ngành</label>
-            <div class="input-with-icon  right">                                       
+            <div class="input-with-icon  right">   <div class="input-with-icon  right">                                       
               <i class=""></i>
-               <select name="gendericonic" id="gendericonic" class="select2 form-control"  >
-                          <option value="1">Male</option>
-                          <option value="2">Female</option>
-                        </select>
+              <input type="text" name="chuyen_nganh" id="form1Url" class="form-control" value="{{$chuyen_gia->chuyen_nganh}}"> 
+            </div>                                    
             </div>
                       </div>
                       <div class="form-group">
@@ -58,37 +57,37 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="Đại học quốc gia hà nội">                                 
+              <input type="text" name="co_quan" id="form1Url" class="form-control" value="{{$chuyen_gia->co_quan}}">                                 
+            </div>
+                      </div>
+            <div class="form-group">
+                        <label class="form-label">Hướng nghiên cứu</label>
+                        
+            <div>                                       
+              <i class=""></i>
+              <textarea  id="textEditer" name="huong_nghien_cuu">{{$chuyen_gia->huong_nghien_cuu}}</textarea>                                 
             </div>
                       </div>
                       <div class="form-group">
-                        <label class="form-label">Hướng nghiên cứu</label>
+                        <label class="form-label">Số công trình đã báo cáo</label>
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="công nghệ bảo vệ môi trường">                                 
+              <input type="text" name="so_cong_trinh" id="form1Url" class="form-control" value="{{$chuyen_gia->Sl_congTrinh_baiBao}}">                                 
             </div>
-          </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Tỉnh thành</label>
+                        
+            <div class="input-with-icon  right">                                       
+              <i class=""></i>
+              <input type="text" name="tinh_thanh" id="form1Url" class="form-control" value="{{$chuyen_gia->tinh_thanh}}">                                 
+            </div>
+                      </div> 
             <div class="form-group">
-              <label class="form-label">Số công trình đã báo cáo</label>
-                        
-            <div class="input-with-icon  right">                                       
-              <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="2">                                 
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tỉnh thành</label>
-                        
-            <div class="input-with-icon  right">                                       
-              <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="Hà Nội">                                 
-            </div>
-          </div> 
-          <div class=" form-group">
-            <span class="form-label">Chọn file ảnh upload</span>
-                <input name="file" type="file" multiple />
-          </div>         
+        <span class="form-label">Chọn file ảnh upload</span>
+            <input name="file_anh" type="file" multiple />
+        </div>            
           <div class="form-actions">  
           <div class="pull-right">
             <button type="submit" class="btn btn-success btn-cons"><i class="icon-ok"></i> Save</button>

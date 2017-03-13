@@ -24,17 +24,17 @@
 	$route_database_manager = function(){
 		//Admin and moderator can do it
 		Route::group(['prefix'=>'chuyen-gia'], function(){
-			Route::get('/','manager\database_manager\chuyen_gia\HomeController@index');
+			Route::get('/','manager\database_manager\chuyen_gia\HomeController@index')->name('chuyen_gia');
 			Route::group(['middleware'=>'insert_chuyen_gia'],function(){
 				Route::get('tao-moi','manager\database_manager\chuyen_gia\NewController@index');
-				Route::post('tao-moi','manager\database_manager\chuyen_gia\NewController@new_action');
+				Route::post('tao-moi','manager\database_manager\chuyen_gia\NewController@new_action')->name('them_chuyen_gia');
 			});
 			Route::group(['middleware'=>'delete_chuyen_gia'],function(){
 				Route::get('xoa/{id}','manager\database_manager\chuyen_gia\DeleteController@index');
 			});
 			Route::group(['middleware'=>'update_chuyen_gia'],function(){
 				Route::get('sua/{id}','manager\database_manager\chuyen_gia\EditController@index');
-				Route::post('sua/{id}','manager\database_manager\chuyen_gia\EditController@edit_action');
+				Route::post('sua/{id}','manager\database_manager\chuyen_gia\EditController@edit_action')->name('sua_chuyen_gia');
 			});
 		});
 

@@ -15,7 +15,7 @@
 @section('main')
   <div class="row-fluid">
     <div class="span12">
-      <button class="add-btn btn btn-success"><span class="fa fa-pencil"></span>&nbsp;&nbsp;Thêm chuyên gia</button>
+      <a href="{{URL::asset('quan-tri-vien/quan-ly-du-lieu/chuyen-gia/tao-moi')}}" class="add-btn btn btn-primary"><span class="fa fa-pencil"></span>&nbsp;&nbsp;Thêm chuyên gia</a>
     </div>
   </div>
   <div class="row-fluid">
@@ -31,32 +31,32 @@
                   <tr>
                     <th>Tên chuyên gia</th>
                     <th>Học vị</th>
+                    <th>Năm sinh</th>
                     <th>Chuyên ngành</th>
                     <th>Cơ quan</th>
-                    <th>Tỉnh thành</th>
-                    <th>Năm sinh</th>
                     <th>Nghiên cứu</th>
+                    <th>Tỉnh thành</th>
                     <th></th>
                     <th></th>
                   </tr>
                 </thead>
                 <tbody>
-                  @for($i=0;$i<100;$i++)
+                  @foreach($chuyen_gia as $cg)
                   <tr class="odd gradeX">
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0</td>
-                    <td>Win 95+</td>
-                    <td class="center"> 4</td>
-                    <td class="center">X</td>
-                    <td>17/10/1986</td>
-                    <td>Công nghệ thông tin</td>
-                    <td class="center"><a href="#"><span class="fa fa-pencil-square"></span></a></td>
-                    <td class="center"><a href="#"><span class="fa fa-trash-o"></span></a></td>
+                    <td><div class="chuyen_gia_inf">{{$cg->ho_va_ten}}</div></td>
+                    <td><div class="chuyen_gia_inf">{{$cg->hoc_vi}}</div></td>
+                    <td><div class="chuyen_gia_inf">{{$cg->nam_sinh}}</div></td>
+                    <td><div class="chuyen_gia_inf"> {{$cg->chuyen_nganh}}</div></td>
+                    <td><div class="chuyen_gia_inf">{{$cg->co_quan}}</div></td>
+                    <td><div class="chuyen_gia_inf">{!!$cg->huong_nghien_cuu!!}</div></td>
+                    <td><div class="chuyen_gia_inf">{{$cg->tinh_thanh}}</div></td>
+                    <td><div class="chuyen_gia_inf"><a href="{{URL::asset('quan-tri-vien/quan-ly-du-lieu/chuyen-gia/sua/'.$cg->id)}} "><span class="fa fa-pencil-square"></span></a></div></td>
+                    <td><div class="chuyen_gia_inf"><a href="{{URL::asset('quan-tri-vien/quan-ly-du-lieu/chuyen-gia/xoa/'.$cg->id)}} "><span class="fa fa-trash-o"></span></a></div></td>
                   </tr>
-                  @endfor
+                  @endforeach
                 </tbody>
               </table>
+              {!! $chuyen_gia->appends(request()->input())->links() !!}
             </div>
           </div>
         </div>
