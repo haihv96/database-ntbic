@@ -3,6 +3,7 @@ namespace App\Http\Controllers\manager\database_manager\chuyen_gia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\chuyen_gia_khcn;
+use App\Http\Requests\FormThemChuyenGiaRequest;
 class EditController extends Controller
 {
 	public function stripVN($str) {
@@ -30,7 +31,7 @@ class EditController extends Controller
     	$cg=chuyen_gia_khcn::find($id);
     	return view('database_manager.chuyen_gia.edit')->with(['chuyen_gia'=>$cg]);
     }
-    public function edit_action(Request $request,$id)
+    public function edit_action(FormThemChuyenGiaRequest $request,$id)
     {
        $chuyen_gia=chuyen_gia_khcn::find($id);
        $chuyen_gia->ho_va_ten=$request->ten;
@@ -43,7 +44,7 @@ class EditController extends Controller
        $chuyen_gia->tinh_thanh=$request->tinh_thanh;
        $text=$this->stripVN($request->ten).'-'.$id.'-'.str_replace("/", "", $request->nam_sinh);
        $chuyen_gia->linkid=$text;
-       if($request->hasFile('file_anh')){
+       if(Input::hasFile('file_anh')){
        		$request->file('file_anh')->move('/storage/app/public/media/test',$text.'.jpg',
        			$text.'.jpg'
        			);

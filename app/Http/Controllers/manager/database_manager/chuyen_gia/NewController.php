@@ -1,9 +1,10 @@
 <?php
 namespace App\Http\Controllers\manager\database_manager\chuyen_gia;
 use App\chuyen_gia_khcn;
-use Illuminate\Http\Request;
+use App\Http\Requests\FormThemChuyenGiaRequest;
+use Illuminate\Support\Facades\Input;
 use App\Http\Controllers\Controller;
-
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 class NewController extends Controller
 {
 	public function stripVN($str) {
@@ -32,7 +33,7 @@ class NewController extends Controller
     }
 
 
-    public function new_action(Request $request)
+    public function new_action(FormThemChuyenGiaRequest $request)
     {
        $chuyen_gia=new chuyen_gia_khcn;
        $chuyen_gia->ho_va_ten=$request->ten;
@@ -50,15 +51,16 @@ class NewController extends Controller
        $chuyen_gia1=chuyen_gia_khcn::find($id);
        $text=$this->stripVN($ten).'-'.$id.'-'.str_replace("/", "", $nam_sinh);
        $chuyen_gia1->linkid=$text;
-       if($request->hasFile('file_anh')){
-       		$request->file('file_anh')->move('/storage/app/public/media/test',$text.'.jpg',$text.'.jpg');
+
+       if($request->hasFile('file-anh')){
+       		$request->file('file-anh')->move('C:\xampp\htdocs\ntbic_data\storage\app\public\media',$text.'.jpg',$text.'.jpg');
        		$chuyen_gia1->$link_anh='/storage/app/public/media/profile_khcn/'.$text.'.jpg';
        }
        else{
        		$chuyen_gia1->link_anh='/storage/app/public/media/profile_khcn/default.jpg';
        		echo "not";
        }
-       $chuyen_gia1->save();
-       return redirect()->route('chuyen_gia');
+       //$chuyen_gia1->save();
+       //return redirect()->route('chuyen_gia');
     }
 }

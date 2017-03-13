@@ -25,7 +25,7 @@
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="ten" id="form1Name" class="form-control">                                 
+							<input type="text" name="ten" id="form1Name" class="form-control"> {!!$errors->first('ten')!!}                                
 						</div>
                       </div>
                       <div class="form-group">
@@ -41,7 +41,8 @@
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="nam_sinh" id="form1Url" class="form-control"> 
+							<input type="text" name="nam_sinh" id="form1Url" class="form-control">
+							{!!$errors->first('nam_sinh')!!} 
 						</div>
                       </div>
                       <div class="form-group">
@@ -86,7 +87,7 @@
                       </div> 
             <div class="form-group">
 				<span class="form-label">Chọn file ảnh upload</span>
-		        <input name="file_anh" type="file" multiple />
+		        <input name="file-anh" type="file" multiple />
 		    </div>            
 				  <div class="form-actions">  
 					<div class="pull-right">
