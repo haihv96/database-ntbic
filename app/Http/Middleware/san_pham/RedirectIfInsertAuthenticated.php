@@ -19,3 +19,4 @@ class RedirectIfInsertAuthenticated extends RedirectPermissionAuthenticated
         $this->table = 'san_pham_khcn';
         $this->action = 'insert';
     }
+}
