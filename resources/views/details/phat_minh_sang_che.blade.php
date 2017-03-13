@@ -69,7 +69,7 @@
     <button id="back_page" type="button" class="btn btn-primary"><b><span class="glyphicon glyphicon-arrow-left
 "></span> Quay lại</b></button>
   </div>
-    <div class="articles_detail col-md-9">
+    <div class="articles_detail col-md-12">
 
         <h2 class="title_pages">{{ $datas->ten }}</h2>
 
@@ -280,7 +280,7 @@
         </table> 
         
     </div>
-    @include('details.sidebar')
+    {{-- @include('details.sidebar') --}}
 </div>
 
     
