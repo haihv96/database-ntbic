@@ -222,9 +222,9 @@
 				      		
 				            <div class="w3-col l3 m6 w3-margin-bottom">
 							    <span class="span_v">
-							    	<a href="http://128.199.155.163/database-ntbic/chuyen-gia/Nguyen-Lan-Dung-17897-">
+							    	<a href="../chuyen-gia/Nguyen-Lan-Dung-17897-">
 
-									<img src="http://128.199.155.163/database-ntbic/storage/app/public/media/profile_khcn/Nguyen-Lan-Dung-17897-.jpg" class="img1"><br>
+									<img src="../storage/app/public/media/profile_khcn/Nguyen-Lan-Dung-17897-.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS.Nguyễn Lân Dũng</strong>
 
@@ -240,9 +240,9 @@
 							
 							<div class="w3-col l3 m6 w3-margin-bottom">
 							    <span class="span_v">
-							    	<a href="http://128.199.155.163/database-ntbic/chuyen-gia/Ngo-Bao-Chau-17899-">
+							    	<a href="../chuyen-gia/Ngo-Bao-Chau-17899-">
 
-									<img src="http://128.199.155.163/database-ntbic/storage/app/public/media/profile_khcn/Ngo-Bao-Chau-17899-.jpg" class="img1"><br>
+									<img src="../storage/app/public/media/profile_khcn/Ngo-Bao-Chau-17899-.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS Ngô Bảo Châu</strong>
 
@@ -257,9 +257,9 @@
 							</div>
 						    <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin1">
 						      	<span class="span_v">
-							    	<a href="http://data.dev:1080/chuyen-gia/Luu-Le-Hang-17900-">
+							    	<a href="../chuyen-gia/Luu-Le-Hang-17900-">
 
-									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/Luu-Le-Hang-17900-.jpg" class="img1"><br>
+									<img src="../storage/app/public/media/profile_khcn/Luu-Le-Hang-17900-.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">TS.Lưu Lệ Hằng</strong>
 
@@ -273,9 +273,9 @@
 						    </div>
 						    <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin2">
 						      	<span class="span_v">
-							    	<a href="http://data.dev:1080/chuyen-gia/Ho-Tu-Bao-5734-">
+							    	<a href="../chuyen-gia/Ho-Tu-Bao-5734-">
 
-									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/default.jpg" class="img1"><br>
+									<img src="../storage/app/public/media/profile_khcn/default.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TSKH Hồ Tú Bảo</strong>
 
@@ -294,60 +294,60 @@
 						<div class="item">
 				            <div class="w3-col l3 m6 w3-margin-bottom">
 							    <span class="span_v">
-							    	<a href="http://data.dev:1080/chuyen-gia/dam-Thanh-Son-17901-1991">
+							    	<a href="../chuyen-gia/dam-Thanh-Son-17901-1991">
 
-									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/dam-Thanh-Son-17901-1991.jpg" class="img1"><br>
+									<img src="../storage/app/public/media/profile_khcn/dam-Thanh-Son-17901-1991.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS Đàm Thanh Sơn</strong>
 
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="http://khoahoctot.vn/scientist/dam-thanh-son-than-dong-ha-noi-den-nha-vat-ly-hang-dau-the-gioi-412.html" title="Đàm Thanh Sơn: Thần đồng Hà Nội đến nhà Vật lý hàng đầu thế giới">Đàm Thanh Sơn: Thần đồng Hà Nội đến nhà Vật lý...</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/dh-chicago-vinh-danh-gs-dam-thanh-son-392.html" title="ĐH Chicago vinh danh GS Đàm Thanh Sơn">ĐH Chicago vinh danh GS Đàm Thanh Sơn</a></li>
+										<li><a href="#" title="Đàm Thanh Sơn: Thần đồng Hà Nội đến nhà Vật lý hàng đầu thế giới">Đàm Thanh Sơn: Thần đồng Hà Nội đến nhà Vật lý...</a></li>
+										<li><a href="#" title="ĐH Chicago vinh danh GS Đàm Thanh Sơn">ĐH Chicago vinh danh GS Đàm Thanh Sơn</a></li>
 									</ul>
 
 								</span>
 							</div>
 						    <div class="w3-col l3 m6 w3-margin-bottom" >
 						      	<span class="span_v">
-							    	<a href="http://data.dev:1080/chuyen-gia/Phan-Huy-Le-17896-2321934">
+							    	<a href="../chuyen-gia/Phan-Huy-Le-17896-2321934">
 
-									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/Phan-Huy-Le-17896-2321934.jpg" class="img1"><br>
+									<img src="../storage/app/public/media/profile_khcn/Phan-Huy-Le-17896-2321934.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.Phan Huy Lê</strong>
 
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="http://khoahoctot.vn/scientist/ts-vu-the-khanh-co-the-khien-giao-su-duoi-mua-tat-dien-44.html" title="TS Vũ Thế Khanh có thể khiến Giáo sư 'đuổi mưa'... &quot;tắt điện&quot;?">TS Vũ Thế Khanh có thể khiến Giáo sư 'đuổi mưa'......</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/dai-hoi-hoi-moi-truong-gtvt-vn-lan-thu-iii-55.html" title="Đại hội Hội Môi trường GTVT VN lần thứ III">Đại hội Hội Môi trường GTVT VN lần thứ III</a></li>
+										<li><a href="#" title="TS Vũ Thế Khanh có thể khiến Giáo sư 'đuổi mưa'... &quot;tắt điện&quot;?">TS Vũ Thế Khanh có thể khiến Giáo sư 'đuổi mưa'......</a></li>
+										<li><a href="#" title="Đại hội Hội Môi trường GTVT VN lần thứ III">Đại hội Hội Môi trường GTVT VN lần thứ III</a></li>
 									</ul>
 
 								</span>
 						    </div>
 						    <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin3">
 						      	<span class="span_v">
-							    	<a href="http://data.dev:1080/chuyen-gia/Nguyen-Son-Binh-17902-">
+							    	<a href="../chuyen-gia/Nguyen-Son-Binh-17902-">
 
-									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/Nguyen-Son-Binh-17902-.jpg" class="img1"><br>
+									<img src="../storage/app/public/media/profile_khcn/Nguyen-Son-Binh-17902-.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">GS.TS Nguyễn Sơn Bình</strong>
 
 									</a>
 
 									<ul class="ul_listloop">
-									    <li><a href="http://khoahoctot.vn/scientist/nguoi-vn-lan-dau-vao-danh-sach-cac-nha-khoa-hoc-anh-huong-nhat-tg-54.html" title="Người VN lần đầu vào danh sách các nhà khoa học ảnh hưởng nhất TG">Người VN lần đầu vào danh sách các nhà khoa học...</a></li>
-										<li><a href="http://khoahoctot.vn/scientist/nha-khoa-hoc-trong-top-anh-huong-nhat-the-gioi-khong-du-can-dam-cuoi-vo-333.html" title="Nhà khoa học trong tốp 'ảnh hưởng nhất thế giới' không đủ can đảm cưới vợ">Nhà khoa học trong tốp 'ảnh hưởng nhất thế giới'...</a></li>
+									    <li><a href="#" title="Người VN lần đầu vào danh sách các nhà khoa học ảnh hưởng nhất TG">Người VN lần đầu vào danh sách các nhà khoa học...</a></li>
+										<li><a href="#" title="Nhà khoa học trong tốp 'ảnh hưởng nhất thế giới' không đủ can đảm cưới vợ">Nhà khoa học trong tốp 'ảnh hưởng nhất thế giới'...</a></li>
 									</ul>
 
 								</span>
 						    </div>
 						     <div class="w3-col l3 m6 w3-margin-bottom" id="thongtin4">
 						      	<span class="span_v">
-							    	<a href="http://data.dev:1080/chuyen-gia/Luu-Le-Hang-17900-">
+							    	<a href="../chuyen-gia/Luu-Le-Hang-17900-">
 
-									<img src="http://data.dev:1080/storage/app/public/media/profile_khcn/Luu-Le-Hang-17900-.jpg" class="img1"><br>
+									<img src="../storage/app/public/media/profile_khcn/Luu-Le-Hang-17900-.jpg" class="img1"><br>
 
 									<strong style="font-size: 15px; padding-top: 5%;padding-left: 12%;">TS.Lưu Lệ Hằng</strong>
 
