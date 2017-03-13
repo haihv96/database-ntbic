@@ -35,21 +35,19 @@
               <table class="table table-hover" id="example" >
                 <thead>
                   <tr>
+                   <th>STT</th>
                     <th>Tên sản phẩm</th>
                     <th>Ảnh sản phẩm</th>
-                    
                     <th>Lĩnh vực</th>
-                    <th>Các điểm nổi bật</th>
-                    
+                    <th>Các điểm nổi bật</th>   
                     <th>Quy trình chuyển giao</th>
                     <th>Khả năng ứng dụng</th>
-                    
-                    
                   </tr>
                 </thead>
                 <tbody>
                   @foreach($datas as $key=>$sp)
                   <tr class="odd gradeX">
+                    <td>{{$sp->id}}</td>
                      <td>{{$sp->ten_san_pham}}</td>
                     <td>{{$sp->anh_san_pham}}</td>
                     
@@ -66,6 +64,8 @@
                 </tbody>
               </table>
             </div>
+            {!! $datas->links() !!} <!-- phan cac tab khac nhau  -->
+
           </div>
         </div>
       </div>
