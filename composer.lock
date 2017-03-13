@@ -4,13 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< Updated upstream
-    "hash": "6ee924e13e401370a291c2c000ef4aa7",
-    "content-hash": "8f03f288fdfabae5ae33fa7fd7c2c126",
-=======
-    "hash": "b8807f37f3bfd243afc40bc19013156f",
-    "content-hash": "8418503decf530ccbb5fb830adae9286",
->>>>>>> Stashed changes
+    "hash": "16a9ddec5857d13d4951d02248cc5c4d",
+    "content-hash": "efbd87bcf9291979f92d6b33f8c22bbb",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -740,16 +735,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.22.0",
+            "version": "1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558"
+                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bad29cb8d18ab0315e6c477751418a82c850d558",
-                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1e044bc4b34e91743943479f1be7a1d5eb93add0",
+                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0",
                 "shasum": ""
             },
             "require": {
@@ -814,7 +809,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-11-26 00:15:39"
+            "time": "2017-03-13 07:08:03"
         },
         {
             "name": "mtdowling/cron-expression",

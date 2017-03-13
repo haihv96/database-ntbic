@@ -24,21 +24,21 @@
               <label class="form-label">Tên đề tài</label><span class="error">(*)</span>
               <div class="input-with-icon  right">                                       
                 <i class=""></i>
-                <input type="text" name="ten_de_tai" id="form1Name" class="form-control" placeholder={{$data->ten_de_tai->first()}}>                             
+                <input type="text" name="ten_de_tai" id="form1Name" class="form-control" placeholder={{$data->ten_de_tai}}>                             
               </div>
             </div>
             <div class="form-group">
               <label class="form-label">Mã số - Ký hiệu</label><span class="error">(*)</span>
               <div class="input-with-icon  right">                                       
                 <i class=""></i>
-                <input type="text" name="form1Name" id="form1Name" class="form-control" placeholder="">                                 
+                <input type="text" name="maso_kyhieu" id="form1Name" class="form-control" placeholder="{{$data->maso_kyhieu}}">                                 
               </div>
             </div>         
             <div class="form-group">
               <label class="form-label">Lĩnh vực</label>
               <div class="input-with-icon  right">                                       
                 <i class=""></i>
-                <input type="text" name="form1Name" id="form1Name" class="form-control" placeholder="aa">                                 
+                <input type="text" name="linh_vuc" id="form1Name" class="form-control" placeholder="{{$data->linh_vuc}}">                                 
               </div>
             </div>
             <div class="form-group">
