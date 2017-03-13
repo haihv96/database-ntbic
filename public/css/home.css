@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 .top-banner {
     height: auto;
     background-image: url('/storage/app/public/media/banner/banner.jpg');
@@ -230,8 +229,6 @@ img {
 .span_v {
     text-align: center;
 }
-
-
 .dropdown-menu {
     left: auto;
     right: 0;
@@ -241,7 +238,6 @@ img {
     background-color: #ffffff;
     padding: 7%;
 }
-=======
 .top-banner {
     height: auto;
     background-image: url('/storage/app/public/media/banner/banner.jpg');
@@ -487,4 +483,3 @@ img {
 ul p {
     text-align: justify;
 }
->>>>>>> Stashed changes
