@@ -7,5 +7,8 @@ use App\Http\Controllers\Controller;
 
 class NewController extends Controller
 {
-    //
+    public function index()
+    {
+    	return view('database_manager.phat_minh.new');
+    }
 }
