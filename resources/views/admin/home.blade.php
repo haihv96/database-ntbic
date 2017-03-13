@@ -5,7 +5,7 @@
 
     </li>
 
-    <li class=""><a href="javascript:;"> <i class="fa fa-user"></i> <span class="title">Quản lý người dùng</span></a>
+    <li class=""><a href="{{ URL::asset('quan-tri-vien/quan-ly-nguoi-dung') }}"> <i class="fa fa-user"></i> <span class="title">Quản lý người dùng</span></a>
     </li>
     <li class=""><a href="javascript:;"> <i class="fa fa-group"></i>  <span
                     class="title">Quản lý dữ liệu</span> <span class="arrow "></span> </a>

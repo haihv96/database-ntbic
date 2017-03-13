@@ -630,6 +630,7 @@
 <script src="/webarch/webarch/HTML/assets/js/core.js" type="text/javascript"></script>
 <script src="/webarch/webarch/HTML/assets/js/chat.js" type="text/javascript"></script>
 <script src="/webarch/webarch/HTML/assets/js/demo.js" type="text/javascript"></script>
+<script src="{{ URL::asset('public/js/admin/myscript.js') }}" type="text/javascript"></script>
 {{-- <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> --}}
 <script type="text/javascript">
     $(document).ready(function () {

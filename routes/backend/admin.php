@@ -1,8 +1,8 @@
 <?php
 	
 	
-	Route::get('dang-nhap','user\LoginController@index')->name('login');
-	
+	Route::get('dang-nhap','Auth\LoginController@index')->name('login');
+	Route::post('dang-nhap','Auth\LoginController@login')->name('login');
 	// Route::group(['prefix'=>'bien-tap-vien', 'middleware'=>'moderator'], $route_database_manager);
 	// Route::group(['prefix'=>'quan-tri-vien', 'middleware'=>'admin'], $route_database_manager);
 	Route::group(['prefix'=>'quan-tri-vien', 'middleware'=>'admin'], function(){
