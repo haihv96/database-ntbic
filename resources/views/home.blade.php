@@ -13,93 +13,110 @@
   	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/master.css') }}">
   	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/home.css') }}">
   	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/responsive.css') }}">
-  	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-  	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   	 
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 				 <script type="text/javascript">
 			      google.charts.load('current', {'packages':['corechart']});
 			      google.charts.setOnLoadCallback(drawChart);
-
 			      function drawChart() {
-
 			        var data = google.visualization.arrayToDataTable([
 			          ['Task', 'Hours per Day'],
 			          ['TS',     39.8],
 			          ['ThS',      25.2],
 			          ['KS',  14.3],
-			          ['', 20.7],
-			          ['CN',    10]
+			          ['CN',    10],
+			           ['Khác', 20.7]
 			        ]);
-
 			        var options = {
 			          title: 'Nhà khoa học'
 			        };
-
 			        var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
-
 			        chart.draw(data, options);
 			      }
 			    </script>
 			    <script type="text/javascript">
 			      google.charts.load('current', {'packages':['corechart']});
 			      google.charts.setOnLoadCallback(drawChart);
-
 			      function drawChart() {
-
 			        var data = google.visualization.arrayToDataTable([
 			          ['Task', 'Hours per Day'],
-			          ['Khoa học kỹ thuật và công nghệ',     31.9],
-			          ['Khoa học xã hội ',  30.2],
-			          ['',  13.9],
-			          ['Khoa học nông nghiệp -Trồng trọt', 13.3],
-			          ['Khoa học nông nghiệp <none>',    10.7]
+			          ['KH&CN',     31.9],
+			          ['KHXH ',  30.2],
+			          ['KHNN-TT', 13.3],
+			          ['KHNN',    10.7],
+			          ['Khác',  13.9]
 			        ]);
-
 			        var options = {
 			          title: 'Đề tài -dự án'
 			        };
-
 			        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-
 			        chart.draw(data, options);
 			      }
 			    </script>
-			   
-			   
-		    <script>
-		        function initialize() {
-		            var myLatlng = new google.maps.LatLng(21.0197929,105.8563363);
-		            var mapOptions = {
-		                zoom: 9,
-		                center: myLatlng
-		            };
-		 
-		            var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-		 
-		            var contentString = "<table><tr><th>Trung tâm ươm tạo Công nghệ và Doanh nghiệp Khoa học Công nghệ- Viện ứng dụng công nghệ: 25 Lê Thánh Tông</td></tr></table>";
-		 
-		            var infowindow = new google.maps.InfoWindow({
-		                content: contentString
-		            });
-		 
-		            var marker = new google.maps.Marker({
-		                position: myLatlng,
-		                map: map,
-		                title: 'Trung tâm ươm tạo Công nghệ và Doanh nghiệp Khoa học Công nghệ- Viện ứng dụng công nghệ'
-		            });
-		            infowindow.open(map, marker);
-		        }
-		 
-		        google.maps.event.addDomListener(window, 'load', initialize);
-		 
-		 
-		    </script>
-		    <script>
+			    <script type="text/javascript">
+				    google.charts.load('current', {'packages':['corechart']});
+				    google.charts.setOnLoadCallback(drawChart);
+					  	function drawChart() {
+				      		var data = google.visualization.arrayToDataTable([
+					          ['Task', 'Hours per Day'],
+					          ['CNCTM-TĐH',     30.2],
+					          ['CNSH',  29.2],
+					          ['CNTT&TT', 17.7],
+					          ['CNVLM',    14.2],
+					          ['CNMT',  8.3]
+					        ]);
+					        var options = {
+					          title: 'Sản phẩm'
+					        };
+				        	var chart = new google.visualization.PieChart(document.getElementById('piechart3')); chart.draw(data, options);
+				      }
+				  </script>
+			    <script type="text/javascript">
+			      google.charts.load('current', {'packages':['corechart']});
+			      google.charts.setOnLoadCallback(drawChart);
+			      function drawChart() {
+			        var data = google.visualization.arrayToDataTable([
+			          ['Task', 'Hours per Day'],
+			          ['Công nghệ khác (Sáng chế)',     39.4],
+			          ['Công nghệ khác (Giải pháp hữu ích) ',  20.3],
+			          ['Công nghệ chế tạo máy - tự động hóa',  15.2],
+			          ['Công nghệ sinh học', 12.6],
+			          ['Công nghệ vật liệu mới ',    12.5]
+			        ]);
+			        var options = {
+			          title: 'Phát minh'
+			        };
+			        var chart = new google.visualization.PieChart(document.getElementById('piechart4'));
+			        chart.draw(data, options);
+			      }
+			    </script>
+			    <script type="text/javascript">
+			      google.charts.load('current', {'packages':['corechart']});
+			      google.charts.setOnLoadCallback(drawChart);
+			      function drawChart() {
+			        var data = google.visualization.arrayToDataTable([
+			          ['Task', 'Hours per Day'],
+			          ['Công nghệ khác',     94.6],
+			          ['Công nghệ vật liệu mới ',  2],
+			          ['Công nghệ sinh học',  1.8],
+			          ['Công nghệ chế tạo máy - tự động hóa', 1.3],
+			          ['Công nghệ môi trường ',    0.4]
+			        ]);
+			        var options = {
+			          title: 'Doanh nghiệp'
+			        };
+			        var chart = new google.visualization.PieChart(document.getElementById('piechart5'));
+			        chart.draw(data, options);
+			      }
+			    </script>
+			    
+	   
+		<script>
 			$(document).ready(function(){
 				    $(".dropdown-toggle").dropdown();
 				});
-			</script>
+		</script>
 
 	@yield('style')
 	<!-- end style -->
@@ -116,10 +133,7 @@
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
-		      	<li><a href="#">Tra cứu thông tin</a></li>
 		      	<li><a href="#">Hướng dẫn sử dụng</a></li>
-		        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Đăng nhập</a></li>
-		        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng ký</a></li>
 		      </ul>
 		    </div>
 		  </div>
@@ -196,13 +210,20 @@
 
 			  <!-- Danh mục -->
 				<div class="w3-container w3-padding-32" id="projects">
-				    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Biểu đồ </h3>
+				    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Thống kê chung </h3>
 				</div>
-				<div id="piechart1" class="col-lg-6" style=" height: 300px;"></div>
-				<div id="piechart2" class="col-lg-6" style=" height: 300px;"></div>
+				<div id="piechart1" class="col-lg-4" style=" height: 300px;"></div>
+				<div id="piechart2" class="col-lg-4" style=" height: 300px;"></div>
+				<div id="piechart3" class="col-lg-4" style=" height: 300px;"></div>
+
+			</div>
+			<div class="w3-content w3-padding" style="max-width:1564px">
+
+				<div id="piechart4" class="col-lg-6" style=" height: 300px;"></div>
+				<div id="piechart5" class="col-lg-6" style=" height: 300px;"></div>
+				
 				
 			</div>
-			
 
 
 			<!--chuyengia -->
@@ -231,8 +252,7 @@
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus">Giáo sư Nguyễn Lân Dũng chia sẻ về cây Hibiscus</a></li>
-										<li><a href="#" title="GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây người ta cười cho″">GS Nguyễn Lân Dũng: ″Đi nước ngoài học trồng cây...</a></li>
+										<p>Viện vi sinh vật và Công nghệ sinh học thuộc Đại học Quốc gia Hà Nội</p>
 									</ul>
 
 								</span>
@@ -249,8 +269,7 @@
 									</a>
 
 									<ul class="ul_listloop">
-										 <li><a href="#">Thời thơ ấu của Ngô Bảo Châu</a></li>
-										 <li><a href="#">Chính phủ mời Giáo sư Ngô Bảo Châu về nước làm...</a></li>
+										 <p>Trường Đại học Paris XI, Orsay, Pháp</p>
 									</ul>
 
 								</span>
@@ -266,8 +285,7 @@
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Lưu Lệ Hằng và đường tới vinh quang">Lưu Lệ Hằng và đường tới vinh quang</a></li>
-										<li><a href="#" title="GS Lưu Lệ Hằng: Người hé mở bí ẩn của hệ Mặt Trời">GS Lưu Lệ Hằng: Người hé mở bí ẩn của hệ Mặt Trời</a></li>
+										<p>Khoa Thiên văn học, Viện Đại học Harvard, Phòng thí nghiệm Lincoln, Viện Công nghệ Massachusetts</p>
 									</ul>
 								</span>
 						    </div>
@@ -282,8 +300,7 @@
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#">Hội thảo dành cho nghiên cứu sinh năm 2016</a></li>
-										<li><a href="#">GS Hồ Tú Bảo: Muốn trường tốt phải có thầy hay</a></li>		
+										<p>Viện John von Neumann, Đại học quốc gia thành phố Hồ Chí Minh</p>		
 									</ul>
 
 								</span>
@@ -303,8 +320,7 @@
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Đàm Thanh Sơn: Thần đồng Hà Nội đến nhà Vật lý hàng đầu thế giới">Đàm Thanh Sơn: Thần đồng Hà Nội đến nhà Vật lý...</a></li>
-										<li><a href="#" title="ĐH Chicago vinh danh GS Đàm Thanh Sơn">ĐH Chicago vinh danh GS Đàm Thanh Sơn</a></li>
+										<p>Viện Đại học Chicago</p>
 									</ul>
 
 								</span>
@@ -320,8 +336,7 @@
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="TS Vũ Thế Khanh có thể khiến Giáo sư 'đuổi mưa'... &quot;tắt điện&quot;?">TS Vũ Thế Khanh có thể khiến Giáo sư 'đuổi mưa'......</a></li>
-										<li><a href="#" title="Đại hội Hội Môi trường GTVT VN lần thứ III">Đại hội Hội Môi trường GTVT VN lần thứ III</a></li>
+										<p>Trung tâm Nghiên cứu Việt Nam và Giao lưu văn hóa đã phát triển thành Viện Việt Nam học và Khoa học phát triển</p>
 									</ul>
 
 								</span>
@@ -337,8 +352,7 @@
 									</a>
 
 									<ul class="ul_listloop">
-									    <li><a href="#" title="Người VN lần đầu vào danh sách các nhà khoa học ảnh hưởng nhất TG">Người VN lần đầu vào danh sách các nhà khoa học...</a></li>
-										<li><a href="#" title="Nhà khoa học trong tốp 'ảnh hưởng nhất thế giới' không đủ can đảm cưới vợ">Nhà khoa học trong tốp 'ảnh hưởng nhất thế giới'...</a></li>
+									   <p>Trường ĐH Northwestern, Mỹ</p>
 									</ul>
 
 								</span>
@@ -354,8 +368,7 @@
 									</a>
 
 									<ul class="ul_listloop">
-										<li><a href="#" title="Lưu Lệ Hằng và đường tới vinh quang">Lưu Lệ Hằng và đường tới vinh quang</a></li>
-										<li><a href="#" title="GS Lưu Lệ Hằng: Người hé mở bí ẩn của hệ Mặt Trời">GS Lưu Lệ Hằng: Người hé mở bí ẩn của hệ Mặt Trời</a></li>
+										<p>Khoa Thiên văn học, Viện Đại học Harvard, Phòng thí nghiệm Lincoln, Viện Công nghệ Massachusetts</p>
 									</ul>
 								</span>
 						    </div>
@@ -665,8 +678,7 @@
 				</div>
 				<div class="col-lg-12" style="padding-bottom:2%;">
 					<!-- Add Google Maps -->
-					<div id="map_canvas"></div>
-
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.32192326675!2d105.85650651455113!3d21.019801286003222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abee0f48e19b%3A0x23d765710433152b!2zVmnhu4duIOG7qG5nIEThu6VuZyBDw7RuZyBOZ2jhu4c!5e0!3m2!1svi!2s!4v1489416948702" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>

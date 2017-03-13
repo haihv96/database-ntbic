@@ -7,5 +7,8 @@ use App\Http\Controllers\Controller;
 
 class EditController extends Controller
 {
-    //
+    public function index()
+    {
+    	return view('database_manager.phat_minh.edit');
+    }
 }
