@@ -15,39 +15,91 @@
   	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/responsive.css') }}">
   	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
   	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script>
-        function initialize() {
-            var myLatlng = new google.maps.LatLng(21.0197929,105.8563363);
-            var mapOptions = {
-                zoom: 9,
-                center: myLatlng
-            };
- 
-            var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
- 
-            var contentString = "<table><tr><th>Trung tâm ươm tạo Công nghệ và Doanh nghiệp Khoa học Công nghệ- Viện ứng dụng công nghệ: 25 Lê Thánh Tông</td></tr></table>";
- 
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
- 
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: 'Trung tâm ươm tạo Công nghệ và Doanh nghiệp Khoa học Công nghệ- Viện ứng dụng công nghệ'
-            });
-            infowindow.open(map, marker);
-        }
- 
-        google.maps.event.addDomListener(window, 'load', initialize);
- 
- 
-    </script>
-    <script>
-	$(document).ready(function(){
-	    $(".dropdown-toggle").dropdown();
-	});
-</script>
+  	 
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+				 <script type="text/javascript">
+			      google.charts.load('current', {'packages':['corechart']});
+			      google.charts.setOnLoadCallback(drawChart);
+
+			      function drawChart() {
+
+			        var data = google.visualization.arrayToDataTable([
+			          ['Task', 'Hours per Day'],
+			          ['TS',     39.8],
+			          ['ThS',      25.2],
+			          ['KS',  14.3],
+			          ['', 20.7],
+			          ['CN',    10]
+			        ]);
+
+			        var options = {
+			          title: 'Nhà khoa học'
+			        };
+
+			        var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+
+			        chart.draw(data, options);
+			      }
+			    </script>
+			    <script type="text/javascript">
+			      google.charts.load('current', {'packages':['corechart']});
+			      google.charts.setOnLoadCallback(drawChart);
+
+			      function drawChart() {
+
+			        var data = google.visualization.arrayToDataTable([
+			          ['Task', 'Hours per Day'],
+			          ['Khoa học kỹ thuật và công nghệ',     31.9],
+			          ['Khoa học xã hội ',  30.2],
+			          ['',  13.9],
+			          ['Khoa học nông nghiệp -Trồng trọt', 13.3],
+			          ['Khoa học nông nghiệp <none>',    10.7]
+			        ]);
+
+			        var options = {
+			          title: 'Đề tài -dự án'
+			        };
+
+			        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+			        chart.draw(data, options);
+			      }
+			    </script>
+			   
+			   
+		    <script>
+		        function initialize() {
+		            var myLatlng = new google.maps.LatLng(21.0197929,105.8563363);
+		            var mapOptions = {
+		                zoom: 9,
+		                center: myLatlng
+		            };
+		 
+		            var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+		 
+		            var contentString = "<table><tr><th>Trung tâm ươm tạo Công nghệ và Doanh nghiệp Khoa học Công nghệ- Viện ứng dụng công nghệ: 25 Lê Thánh Tông</td></tr></table>";
+		 
+		            var infowindow = new google.maps.InfoWindow({
+		                content: contentString
+		            });
+		 
+		            var marker = new google.maps.Marker({
+		                position: myLatlng,
+		                map: map,
+		                title: 'Trung tâm ươm tạo Công nghệ và Doanh nghiệp Khoa học Công nghệ- Viện ứng dụng công nghệ'
+		            });
+		            infowindow.open(map, marker);
+		        }
+		 
+		        google.maps.event.addDomListener(window, 'load', initialize);
+		 
+		 
+		    </script>
+		    <script>
+			$(document).ready(function(){
+				    $(".dropdown-toggle").dropdown();
+				});
+			</script>
 
 	@yield('style')
 	<!-- end style -->
@@ -136,56 +188,7 @@
 			</div>
 		</div>
 
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	    <script type="text/javascript">
-	      google.charts.load('current', {'packages':['corechart']});
-	      google.charts.setOnLoadCallback(drawChart);
-
-	      function drawChart() {
-
-	        var data = google.visualization.arrayToDataTable([
-	          ['Task', 'Hours per Day'],
-	          ['Work',     11],
-	          ['Eat',      2],
-	          ['Commute',  2],
-	          ['Watch TV', 2],
-	          ['Sleep',    7]
-	        ]);
-
-	        var options = {
-	          title: 'My Daily Activities'
-	        };
-
-	        var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
-
-	        chart.draw(data, options);
-	      }
-	    </script>
-	    <script type="text/javascript">
-	      google.charts.load('current', {'packages':['corechart']});
-	      google.charts.setOnLoadCallback(drawChart);
-
-	      function drawChart() {
-
-	        var data = google.visualization.arrayToDataTable([
-	          ['Task', 'Hours per Day'],
-	          ['Work',     11],
-	          ['Eat',      2],
-	          ['Commute',  2],
-	          ['Watch TV', 2],
-	          ['Sleep',    7]
-	        ]);
-
-	        var options = {
-	          title: 'My Daily Activities'
-	        };
-
-	        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-
-	        chart.draw(data, options);
-	      }
-	    </script>
-
+		
 
 		<!-- container -->
 		<div class="container">
@@ -195,9 +198,11 @@
 				<div class="w3-container w3-padding-32" id="projects">
 				    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Biểu đồ </h3>
 				</div>
-				<div id="piechart1" class="col-lg-4" style=" height: 300px;"></div>
-				<div id="piechart2" class="col-lg-4" style=" height: 300px;"></div>
+				<div id="piechart1" class="col-lg-6" style=" height: 300px;"></div>
+				<div id="piechart2" class="col-lg-6" style=" height: 300px;"></div>
+				
 			</div>
+			
 
 
 			<!--chuyengia -->
