@@ -18,13 +18,13 @@
   <h4 class="form-title">SỬA DỮ LIỆU SẢN PHẨM </h4>
   
     <div class="grid simple">
-        <form id="form_iconic_validation" action="#">
+        <form id="form_iconic_validation" action="{{}}">
                       <div class="form-group">
                         <label class="form-label">Tên sản phẩm</label>
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Name" id="form1Name" class="form-control" placeholder="Tên sản phẩm">                                 
+              <input type="text" name="ten_san_pham" id="form1Name" class="form-control" placeholder="{{$datas->ten_san_pham}}">                                 
             </div>
                       </div>
                       <div class="form-group">
@@ -32,7 +32,16 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Email" id="form1Email" class="form-control" placeholder="Lĩnh vực">                                 
+               <select name="linh_vuc" id="gendericonic" class="select2 form-control"  >
+                         <option value="1">Công nghệ thông tin và truyền thông</option>
+                          <option value="2">Công nghệ sinh học</option>
+                          <option value="3">Công nghệ vật liệu mới</option>
+                          <option value="4">Công nghệ chế tạo máy - tự động ...</option>
+                          <option value="5">Công nghệ môi trường</option>
+                          <option value="6">Công nghệ năng lượng mới</option>
+                          <option value="7">Công nghệ vũ trụ</option>
+                          <option value="8">Công nghệ khác</option>
+                        </select>
             </div>
                       </div>
                       <div class="form-group">
@@ -40,14 +49,14 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="Đặc điểm nổi bật"> 
+              <input type="text" name="dac_diem_noi_bat" id="form1Url" class="form-control" placeholder="{{$datas->dac_diem_noi_bat}}"> 
             </div>
                       </div>
                       <div class="form-group">
                         <label class="form-label">Mô tả chung</label>
             <div class="input-with-icon  right">                                       
                <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="Mô tả chung"> 
+              <input type="text" name="mo_ta_chung" id="form1Url" class="form-control" placeholder="{{$datas->mo_ta_chung}}"> 
             </div>
                       </div>
                       <div class="form-group">
@@ -55,7 +64,7 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="Quy trình chuyển giao">                                 
+              <input type="text" name="quy_trinh_chuyen_giao" id="form1Url" class="form-control" placeholder="{{$datas->quy_trinh_chuyen_giao}}">                                 
             </div>
                       </div>
                       <div class="form-group">
@@ -63,7 +72,7 @@
                         
             <div class="input-with-icon  right">                                       
               <i class=""></i>
-              <input type="text" name="form1Url" id="form1Url" class="form-control" placeholder="khả năng ứng dụng">                                 
+              <input type="text" name="kha_nang_ung_dung" id="form1Url" class="form-control" placeholder="{{$datas->kha_nang_ung_dung}}">                                 
             </div>
           </div>
             

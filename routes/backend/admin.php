@@ -54,10 +54,10 @@
 		});
 
 		Route::group(['prefix'=>'san-pham'], function(){
-			Route::get('/','manager\database_manager\san_pham\HomeController@index');
+			Route::get('/','manager\database_manager\san_pham\HomeController@index')->name('san-pham');
 			Route::group(['middleware'=>'insert_san_pham'],function(){
 				Route::get('tao-moi','manager\database_manager\san_pham\NewController@index');
-				Route::post('tao-moi','manager\database_manager\san_pham\NewController@new_action');
+				Route::post('tao-moi','manager\database_manager\san_pham\NewController@new_action')->name('tao_san_pham');
 			});
 			Route::group(['middleware'=>'udpate_san_pham'],function(){
 				Route::get('sua/{id}','manager\database_manager\san_pham\EditController@index');

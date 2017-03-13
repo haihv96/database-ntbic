@@ -13,6 +13,9 @@
 <link rel="stylesheet" type="text/css" href="/public/css/admin_chuyen_gia.css">
 @endsection
 @section('main')
+<!--php alert-->
+
+
  <form action="{{URL::asset('quan-tri-vien/quan-ly-du-lieu/san-pham/tao-moi')}}">
   <div class="row-fluid">
     <div class="span12">
@@ -33,23 +36,26 @@
                 <thead>
                   <tr>
                     <th>Tên sản phẩm</th>
+                    <th>Ảnh sản phẩm</th>
+                    
                     <th>Lĩnh vực</th>
                     <th>Các điểm nổi bật</th>
-                    <th>Mô tả chung</th>
+                    
                     <th>Quy trình chuyển giao</th>
                     <th>Khả năng ứng dụng</th>
                     
-                    <th></th>
-                    <th></th>
+                    
                   </tr>
                 </thead>
                 <tbody>
                   @foreach($datas as $key=>$sp)
                   <tr class="odd gradeX">
-                    <td>{{$sp->ten_san_pham}}</td>
+                     <td>{{$sp->ten_san_pham}}</td>
+                    <td>{{$sp->anh_san_pham}}</td>
+                    
                     <td>{{$sp->linh_vuc}}</td>
                     <td>{{$sp->dac_diem_noi_bat}}</td>
-                    <td class="center"> {{$sp->mo_ta_chung}}</td>
+                   
                     <td class="center">{{$sp->quy_trinh_chuyen_giao}}</td>
                     <td>{{$sp->kha_nang_ung_dung}}</td>
                     
