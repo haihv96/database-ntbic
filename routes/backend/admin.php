@@ -57,11 +57,11 @@
 			Route::get('/','manager\database_manager\san_pham\HomeController@index')->name('san-pham');
 			Route::group(['middleware'=>'insert_san_pham'],function(){
 				Route::get('tao-moi','manager\database_manager\san_pham\NewController@index');
-				Route::post('tao-moi','manager\database_manager\san_pham\NewController@new_action')->name('tao_san_pham');
+				Route::post('tao-moi','manager\database_manager\san_pham\NewController@new_action')->name('tao-san-pham');
 			});
 			Route::group(['middleware'=>'udpate_san_pham'],function(){
 				Route::get('sua/{id}','manager\database_manager\san_pham\EditController@index');
-				Route::post('sua/{id}','manager\database_manager\san_pham\EditController@edit_action');
+				Route::post('sua','manager\database_manager\san_pham\EditController@edit_action')->name('sua-san-pham');
 			});
 			Route::group(['middleware'=>'delete_san_pham'],function(){
 				Route::get('xoa/{id}','manager\database_manager\san_pham\DeleteController@index');

@@ -18,7 +18,7 @@
 	<h4 class="form-title">THÊM SẢN PHẨM</h4>
 	
 		<div class="grid simple">
-				<form id="form_iconic_validation" action="{{route('tao_san_pham')}}" method="post">
+				<form id="form_iconic_validation" action="{{route('tao-san-pham')}}" method="post">
 				 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<textarea name="">CHỈ CẦN DÙNG THẺ TEXTAREA TRONG HTML LÀ SẼ HIỆN RA CÁI NÀY</textarea>
                       <div class="form-group">

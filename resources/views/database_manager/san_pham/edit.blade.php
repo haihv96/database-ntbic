@@ -18,7 +18,9 @@
   <h4 class="form-title">SỬA DỮ LIỆU SẢN PHẨM </h4>
   
     <div class="grid simple">
-        <form id="form_iconic_validation" action="{{}}">
+        <form id="form_iconic_validation" action="{{route('sua-san-pham')}}" method="post">
+                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                     <input type="hidden" name="id" value="{{ $datas->id }}">
                       <div class="form-group">
                         <label class="form-label">Tên sản phẩm</label>
                         
@@ -75,7 +77,18 @@
               <input type="text" name="kha_nang_ung_dung" id="form1Url" class="form-control" placeholder="{{$datas->kha_nang_ung_dung}}">                                 
             </div>
           </div>
-            
+           <div class="form-group">
+                        <label class="form-label">LinkURL</label>
+                        
+            <div class="input-with-icon  right">                                       
+              <i class=""></i>
+              <input type="text" name="link" id="form1Url" class="form-control" placeholder="{{$datas->link}}">                                 
+            </div>
+          </div>
+           <div class=" form-group">
+            <span class="form-label">Chọn file ảnh upload</span>
+                <input name="anh_san_pham" type="file" multiple />
+          </div>  
           <div class="form-actions">  
           <div class="pull-right">
             <button type="submit" class="btn btn-success btn-cons"><i class="icon-ok"></i> Save</button>
