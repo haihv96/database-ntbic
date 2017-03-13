@@ -15,13 +15,13 @@
 
 @section('main')
 <div class="form-group">
-	<h4 class="form-title">THÊM CHUYÊN GIA</h4>
+	<h4 class="form-title">THÊM SẢN PHẨM</h4>
 	
 		<div class="grid simple">
 				<form id="form_iconic_validation" action="#">
 					<textarea name="">CHỈ CẦN DÙNG THẺ TEXTAREA TRONG HTML LÀ SẼ HIỆN RA CÁI NÀY</textarea>
                       <div class="form-group">
-                        <label class="form-label">Tên chuyên gia</label>
+                        <label class="form-label">Tên SẢN PHẨM</label>
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
@@ -29,7 +29,7 @@
 						</div>
                       </div>
                       <div class="form-group">
-                        <label class="form-label">Học vị</label>
+                        <label class="form-label">Lĩnh Vực</label>
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
@@ -37,7 +37,7 @@
 						</div>
                       </div>
                       <div class="form-group">
-                        <label class="form-label">Năm sinh</label>
+                        <label class="form-label">Các điểm nổi bật</label>
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
@@ -45,17 +45,14 @@
 						</div>
                       </div>
                       <div class="form-group">
-                        <label class="form-label">Chuyên ngành</label>
+                        <label class="form-label">Mô tả chung</label>
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							 <select name="gendericonic" id="gendericonic" class="select2 form-control"  >
-                          <option value="1">Male</option>
-                          <option value="2">Female</option>
-                        </select>
+							<input type="text" name="form1Url" id="form1Url" class="form-control">                                 
 						</div>
                       </div>
                       <div class="form-group">
-                        <label class="form-label">Cơ quan</label>
+                        <label class="form-label">Quy trình chuyển giao</label>
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
@@ -63,33 +60,15 @@
 						</div>
                       </div>
                       <div class="form-group">
-                        <label class="form-label">Hướng nghiên cứu</label>
+                        <label class="form-label">Khả năng ứng dụng</label>
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
 							<input type="text" name="form1Url" id="form1Url" class="form-control">                                 
 						</div>
                       </div>
-                      <div class="form-group">
-                        <label class="form-label">Số công trình đã báo cáo</label>
-                        
-						<div class="input-with-icon  right">                                       
-							<i class=""></i>
-							<input type="text" name="form1Url" id="form1Url" class="form-control">                                 
-						</div>
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label">Tỉnh thành</label>
-                        
-						<div class="input-with-icon  right">                                       
-							<i class=""></i>
-							<input type="text" name="form1Url" id="form1Url" class="form-control">                                 
-						</div>
-                      </div> 
-            <div class="form-group">
-				<span class="form-label">Chọn file ảnh upload</span>
-		        <input name="file" type="file" multiple />
-		    </div>            
+                      
+                      
 				  <div class="form-actions">  
 					<div class="pull-right">
 					  <button type="submit" class="btn btn-success btn-cons"><i class="icon-ok"></i> Save</button>
