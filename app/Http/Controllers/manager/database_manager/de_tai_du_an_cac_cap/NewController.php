@@ -35,11 +35,12 @@ class NewController extends Controller
     	return $str;}
 
         //Validation
-        $rules = array('ten_de_tai' => 'required', 'maso_kyhieu' => 'required','chu_nhiem_detai' => 'required',);
+        $rules = array('ten_de_tai' => 'required', 'maso_kyhieu' => 'required','chu_nhiem_detai' => 'required','chuyen_nganh_khcn' => 'required',);
         $messages = [
             'ten_de_tai.required' => 'Chưa nhập tên cho đề tài!',
             'maso_kyhieu.required' => 'Chưa nhập Mã số - Ký hiệu!',
             'chu_nhiem_detai.required' => 'Chưa nhập tên của chủ nhiệm cho đề tài này!',
+            'chuyen_nganh_khcn.required' => 'Chưa nhập số liệu cho chuyên ngành!',
         ];
 
         $validator = Validator::make($request->all(), $rules,$messages);

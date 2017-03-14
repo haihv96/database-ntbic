@@ -19,13 +19,16 @@
       <button class="add-btn btn btn-success"><span class="fa fa-pencil"></span>&nbsp;&nbsp;Thêm đề tài dự án các cấp</button></a>
     </div>
   </div>
-   @if (session()->has('flash_notification.message'))
+  <div class="content-wrapper">
+    @if (session()->has('flash_notification.message'))
                 <div class="alert alert-{{ session('flash_notification.level') }}">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 
                     {!! session('flash_notification.message') !!}
                 </div>
               @endif
+  </div>
+  
   <div class="row-fluid">
     <div class="span12">
         <div class="grid simple ">
@@ -41,6 +44,7 @@
                     <th>Tên đề tài</th>
                     <th>Mã số - Kí hiệu</th>
                     <th>Lĩnh vực</th>
+                    <th>Chuyên ngành</th>
                     <th>Cơ quan</th>
                     <th>Năm bắt đầu</th>
                     <th>Năm kết thúc</th>
@@ -56,22 +60,28 @@
                     <td>{{$row->ten_de_tai}}</td>
                     <td>{{$row->maso_kyhieu}}</td>
                     <td class="center"> {{$row->linh_vuc}}</td>
+                    <td class="center"> {{$row->chuyen_nganh_khcn}}</td>
                     <td class="center">{{$row->co_quan}}</td>
                     <td>{{$row->nam_bat_dau}}</td>
                     <td>{{$row->nam_ket_thuc}}</td>
                     <td>{{$row->chu_nhiem_detai}}</td>
                     <td class="center"><a href="{!! URL::asset('quan-tri-vien/quan-ly-du-lieu/de-tai-du-an-cac-cap/sua/'.$row->id) !!}"><span class="fa fa-pencil-square"></span></a></td>
-                    <td class="center"><a href="#"><span class="fa fa-trash-o"></span></a></td>
+                    <td class="center"><a href="{{URL::asset('quan-tri-vien/quan-ly-du-lieu/de-tai-du-an-cac-cap/xoa/'.$row->id)}} "><span class="fa fa-trash-o"></span></a></td>
                   </tr>
                   @endforeach
                 </tbody>
               </table>
             </div>
+          
             {!! $datas->appends(request()->input())->links() !!}
           </div>
         </div>
       </div>
 @endsection
+
+<script>
+$('div.alert').delay(300).fadeOut(350);
+</script>
 
 @section('script')
 <script src="/webarch/webarch/HTML/assets/plugins/jquery-1.8.3.min.js" type="text/javascript"></script>

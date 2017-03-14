@@ -25,7 +25,7 @@
                         <p class="error">{{$errors->first('ten_de_tai')}}</p>
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="ten_de_tai" id="form1Name" class="form-control" value={{old('ten_de_tai')}}>                                 
+							<input type="text" name="ten_de_tai" id="form1Name" class="form-control" value="{{old('ten_de_tai')}}" placeholder="Tên đề tài">                                 
 						</div>
                       </div>
                       <div class="form-group">
@@ -34,7 +34,7 @@
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="maso_kyhieu" id="form1Email" class="form-control" value={{old('maso_kyhieu')}}>                                 
+							<input type="text" name="maso_kyhieu" id="form1Email" class="form-control" value="{{old('maso_kyhieu')}}" placeholder="Mã số - Ký hiệu">                                 
 						</div>
                       </div>
                       <div class="form-group">
@@ -42,15 +42,16 @@
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="linh_vuc" id="form1Url" class="form-control" value={{old('linh_vuc')}}> 
+							<input type="text" name="linh_vuc" id="form1Url" class="form-control" value="{{old('linh_vuc')}}" placeholder="Lĩnh vực"> 
 						</div>
                       </div>
                       <div class="form-group">
-                        <label class="form-label">Chuyên ngành</label>
+                        <label class="form-label">Chuyên ngành</label><span class="error">(*)</span>
+                        <p class="error">{{$errors->first('chuyen_nganh_khcn')}}</p>
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="chuyen_nganh_khcn" id="form1Url" class="form-control" value={{old('chuyen_nganh_khcn')}}>                                 
+							<input type="text" name="chuyen_nganh_khcn" id="form1Url" class="form-control" value="{{old('chuyen_nganh_khcn')}}" placeholder="Chuyên ngành">                                 
 						</div>
                       </div>
                       <div class="form-group">
@@ -58,7 +59,7 @@
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="nam_bat_dau" id="form1Url" class="form-control" value={{old('nam_bat_dau')}}>                                 
+							<input type="text" name="nam_bat_dau" id="form1Url" class="form-control" value="{{old('nam_bat_dau')}}" placeholder="Năm bắt đầu">                                 
 						</div>
                       </div>
                       <div class="form-group">
@@ -66,7 +67,7 @@
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="nam_ket_thuc" id="form1Url" class="form-control" value={{old('nam_ket_thuc')}}>                                 
+							<input type="text" name="nam_ket_thuc" id="form1Url" class="form-control" value="{{old('nam_ket_thuc')}}" placeholder="Năm kết thúc">                                 
 						</div>
                       </div>
                       <div class="form-group">
@@ -74,7 +75,7 @@
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="co_quan" id="form1Url" class="form-control" value={{old('co_quan')}}>                                 
+							<input type="text" name="co_quan" id="form1Url" class="form-control" value="{{old('co_quan')}}" placeholder="Cơ quan">                                 
 						</div>
                       </div>
                       <div class="form-group">
@@ -83,7 +84,7 @@
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="chu_nhiem_detai" id="form1Url" class="form-control" value={{old('chu_nhiem_detai')}}>                                 
+							<input type="text" name="chu_nhiem_detai" id="form1Url" class="form-control" value="{{old('chu_nhiem_detai')}}" placeholder="Chủ nhiệm đề tài">                                 
 						</div>
                       </div> 
                       <div class="form-group">
@@ -91,31 +92,31 @@
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
-							<input type="text" name="diem_noi_bat" id="form1Url" class="form-control" value={{old('diem_noi_bat')}}>                                 
+							<input type="text" name="diem_noi_bat" id="form1Url" class="form-control" value="{{old('diem_noi_bat')}}" placeholder="Điểm nổi bật">                                 
 						</div>
                       </div> 
                       <div class="form-group">
                         <label class="form-label">Mô tả chung</label>
                         
-						<div class="input-with-icon  right">                                       
+						<div >                                       
 							<i class=""></i>
-							<input type="text" name="mota_chung" id="form1Url" class="form-control" value={{old('mota_chung')}}>                                 
+							<textarea id="textEditer" name="mota_chung"></textarea>                                 
 						</div>
-                      </div> 
+                      </div>
                       <div class="form-group">
                         <label class="form-label">Mô tả quy trình chuyển giao</label>
                         
-						<div class="input-with-icon  right">                                       
+						<div>                                       
 							<i class=""></i>
-							<input type="text" name="mota_quytrinh_chuyengiao" id="form1Url" class="form-control" value={{old('mota_quytrinh_chuyengiao')}}>                                 
+							<textarea id="textEditer" name="mota_quytrinh_chuyengiao"></textarea>                                  
 						</div>
                       </div> 
                       <div class="form-group">
                         <label class="form-label">Kết quả thực hiện</label>
                         
-						<div class="input-with-icon  right">                                       
+						<div>                                       
 							<i class=""></i>
-							<input type="text" name="ket_qua_thuc_hien_ung_dung" id="form1Url" class="form-control" value={{old('ket_qua_thuc_hien_ung_dung')}}>                                 
+							<textarea id="textEditer" name="ket_qua_thuc_hien_ung_dung"></textarea>                                   
 						</div>
                       </div> 
 				  <div class="form-actions">  
