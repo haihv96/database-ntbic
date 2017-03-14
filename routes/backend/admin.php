@@ -42,7 +42,7 @@
 			Route::get('/','manager\database_manager\doanh_nghiep\HomeController@index');
 			Route::group(['middleware'=>'insert_doanh_nghiep'],function(){
 				Route::get('tao-moi','manager\database_manager\doanh_nghiep\NewController@index');
-				Route::post('tao-moi','manager\database_manager\doanh-nghiep\NewController@new_action');
+				Route::post('tao-moi','manager\database_manager\doanh_nghiep\NewController@new_action');
 			});
 			Route::group(['middleware'=>'update_doanh_nghiep'],function(){
 				Route::get('sua/{id}','manager\database_manager\doanh_nghiep\EditController@index');

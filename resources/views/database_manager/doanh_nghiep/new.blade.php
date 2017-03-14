@@ -16,9 +16,17 @@
 @section('main')
 <div class="form-group">
 	<h4 class="form-title">THÊM DOANH NGHIỆP</h4>
-	
+	@if (count($errors) > 0)
+	    <div class="alert alert-danger">
+	        <ul>
+	            @foreach ($errors->all() as $error)
+	                <li>{{ $error }}</li>
+	            @endforeach
+	        </ul>
+	    </div>
+	@endif
 		<div class="grid simple">
-				<form id="form_iconic_validation" action="#" method="POST">
+				<form id="form_iconic_validation" action="#" method="POST" enctype="multipart/form-data">
 				{{ csrf_field() }}
 					<h4 class="form-label">I. Thông tin chung </h4>
                       <div class="form-group">
@@ -145,7 +153,7 @@
                       </div>
 
                 <div class="form-group">
-                        <label class="form-label">Số điện thoại</label>
+                        <label class="form-label">Số điện thoại người đại diện</label>
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
@@ -154,7 +162,7 @@
                       </div>
 
                 <div class="form-group">
-                        <label class="form-label">Email</label>
+                        <label class="form-label">Email người đại diện</label>
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
@@ -163,7 +171,7 @@
                       </div>
 
                 <div class="form-group">
-                        <label class="form-label">Địa chỉ</label>
+                        <label class="form-label">Địa chỉ người đại diện</label>
                         
 						<div class="input-with-icon  right">                                       
 							<i class=""></i>
@@ -254,15 +262,16 @@
             
             <div class="form-group">
 				<span class="form-label">Logo profile</span>
-		        <input name="logo" type="file" multiple />
-		    </div>            
-				  <div class="form-actions">  
-					<div class="pull-right">
-					  <button type="submit" class="btn btn-success btn-cons"><i class="icon-ok"></i> Save</button>
-					  <button type="button" class="btn btn-white btn-cons">Cancel</button>
-					</div>
-					</div>
-				</form>
+		        <input type="file" name="logo" multiple>
+		    </div> 
+
+			<div class="form-actions">  
+				<div class="pull-right">
+					<button type="submit" class="btn btn-success btn-cons"><i class="icon-ok"></i> Save</button>
+					<button type="button" class="btn btn-white btn-cons">Cancel</button>
+				</div>
+			</div>
+		</form>
 			</div>
 </div>
 @endsection
